@@ -1,0 +1,6 @@
+body{ background-color: #33CCCC}
+
+#bord{border: blue double medium;
+           margin-top: 150px; padding: 35px 35px 20px; width: 400px; background-color: white;}
+
+.fond{background: white}
