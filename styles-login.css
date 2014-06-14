@@ -1,14 +1,26 @@
-body{ background-color: #33CCCC}
+body{ background-image: url("Imagenes/fondo.jpg");
 
-#bord{border: blue double medium;
-           margin-top: 150px; padding: 35px 35px 20px; width: 400px; background-color: white;}
 
-.fond{background: white}
+}
+
+#bord{
+
+
+
+           margin-top: 150px; padding: 35px 35px 20px; width: 400px; }
+
+.fond{
+
+
+	background: transparent;
+
+
+}
 
 .franja{
 
 
-background: #fff;
+background: rgba(0, 0, 0, 0.39);
 width: 475px;
 height: 850px;
 position: absolute;
@@ -23,5 +35,27 @@ margin-left: 32%;
 position: absolute;
 margin-left: 32%;
 
-	
+
+}
+
+.caja-texto{
+
+
+height: 28px;
+background: transparent;
+width: 200px;
+font-size: 16px;
+color: #fff;
+border: 2px solid #ADFF00;
+
+
+}
+
+.titulo-caja
+{
+
+	font-size: 19px;
+color: #FFF;
+font-weight: bold;
+
 }
