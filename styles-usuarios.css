@@ -1,3 +1,4 @@
+/*Diseño del salir*/
 .der{
 margin-top: -106px;
 margin-right: 0px;
@@ -5,26 +6,25 @@ margin-bottom: 20px;
 margin-left: 70em;
 position: absolute;
 }
+/*diseño del fondo*/
 body{background-color:  #33CCCC}
+/*Diseño dela informacion del menú*/
 #dis{
 	background: white;
     width: 615px;
     height: 377px;
 }
-<!--
+/*diseño del menú*/
 #menu {
 	font-family: Arial;
 	font-size: 0.8em;
 }
 
 #menu li {
-	/* Indicamos que la posición de 'li' sea adjunte siempre a la izquierda */
 	float: left;
-	/* Eliminamos las marcas que genera el li como pueden ser las redonadas o recuadros */
 	list-style-type: none;
 }
 
-/* Por defecto ul genera una separación hacia la derecha. con margin:0 queda anulada */
 #menu ul {
 	margin: 0;
 	padding: 0;
@@ -38,11 +38,9 @@ body{background-color:  #33CCCC}
 	padding: 3px 10px 3px 10px;
 	text-align: center;
 	border: 1px solid #6643ff;
-	/* Pintamos las lineas de todos los lados, excepto el izquierdo */
 	border-width: 1px 1px 1px 0;
 }
 
-/* El primer recuadro, no tiene la linea izquierda. Aqui se la colocamos */
 #menu a#primero {
 	border: 1px solid #6643ff;
 	background-color: black;

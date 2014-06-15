@@ -1,61 +1,43 @@
-body{ background-image: url("Imagenes/fondo.jpg");
+/*Imegen del Login*/
+body{ background-image: url("Imagenes/fondo.jpg");}
 
-
-}
-
+/*posición del Login*/
 #bord{
-
-
-
-           margin-top: 150px; padding: 35px 35px 20px; width: 400px; }
-
-.fond{
-
-
-	background: transparent;
-
-
+  margin-top: 150px; 
+  padding: 35px 35px 20px;
+  width: 400px;
 }
 
+/*Fondo de la franja*/
+.fond{
+	background: transparent;
+}
+/*Posición de la franja*/
 .franja{
-
-
 background: rgba(0, 0, 0, 0.39);
 width: 475px;
 height: 850px;
 position: absolute;
 margin-top: -178px;
 margin-left: 32%;
-
 }
-
-.formulario
-{
-
+/*Posición y estilos del login*/
+.formulario{
 position: absolute;
 margin-left: 32%;
-
-
 }
 
 .caja-texto{
-
-
 height: 28px;
 background: transparent;
 width: 200px;
 font-size: 16px;
 color: #fff;
 border: 2px solid #ADFF00;
-
-
 }
 
-.titulo-caja
-{
-
+.titulo-caja{
 	font-size: 19px;
-color: #FFF;
-font-weight: bold;
-
+    color: #FFF;
+    font-weight: bold;
 }

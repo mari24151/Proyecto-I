@@ -1,3 +1,4 @@
+/*estilo del salir*/
 .der{
 margin-top: -106px;
 margin-right: 0px;
@@ -5,27 +6,25 @@ margin-bottom: 20px;
 margin-left: 70em;
 position: absolute;
 }
+/*estilo del fonde de la pagina*/
 body{background-color:  #33CCCC}
+/*estilos del div donde va la info*/
 #dis{
 	background: white;
     width: 615px;
     height: 377px;
 }
-
-<!--
+/*Estilos del menú*/
 #menu {
 	font-family: Arial;
 	font-size: 0.8em;
 }
 
 #menu li {
-	/* Indicamos que la posición de 'li' sea adjunte siempre a la izquierda */
 	float: left;
-	/* Eliminamos las marcas que genera el li como pueden ser las redonadas o recuadros */
 	list-style-type: none;
 }
 
-/* Por defecto ul genera una separación hacia la derecha. con margin:0 queda anulada */
 #menu ul {
 	margin: 0;
 	padding: 0;
@@ -39,11 +38,9 @@ body{background-color:  #33CCCC}
 	padding: 3px 10px 3px 10px;
 	text-align: center;
 	border: 1px solid #6643ff;
-	/* Pintamos las lineas de todos los lados, excepto el izquierdo */
 	border-width: 1px 1px 1px 0;
 }
 
-/* El primer recuadro, no tiene la linea izquierda. Aqui se la colocamos */
 #menu a#primero {
 	border: 1px solid #6643ff;
 	background-color: black;
@@ -52,17 +49,18 @@ body{background-color:  #33CCCC}
 #menu a:hover {
 	background: #d6ccff;
 }
-
+/* estilos del menu de las páginas o páginas mostradas*/
 .b{ font-weight: bold;}
 
 .la a:visited{
 	color: #002880;
     text-decoration: underline;
 }
-
+/*estilos del pie de página*/
 div.nbt{
 	margin: 10px 350px 20px 0;
 	text-align: right;
+
 }
 
 span.nft{
@@ -76,8 +74,13 @@ span.nfb{
 	display: inline-block;
 	font-weight: bold;
 	width: 27px;
-	height: 23px;
+	height: 53px;
 	text-align: center;
 	cursor: default;
 	padding-top: 4px;
+}
+
+/*estilo en la lista*/
+#prim{
+	color: red;
 }
