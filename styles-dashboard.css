@@ -5,12 +5,13 @@ margin-bottom: 20px;
 margin-left: 70em;
 position: absolute;
 }
-body{background-color:  #33CCCC}
+
 #dis{
 	background: white;
     width: 615px;
     height: 377px;
 }
+body{background-color:  #33CCCC}
 <!--
 #menu {
 	font-family: Arial;

@@ -52,3 +52,32 @@ body{background-color:  #33CCCC}
 #menu a:hover {
 	background: #d6ccff;
 }
+
+.b{ font-weight: bold;}
+
+.la a:visited{
+	color: #002880;
+    text-decoration: underline;
+}
+
+div.nbt{
+	margin: 10px 350px 20px 0;
+	text-align: right;
+}
+
+span.nft{
+	display: inline-block;
+	font-weight: bold;
+	height: 24px;
+	padding: 2px 5px;
+}
+
+span.nfb{
+	display: inline-block;
+	font-weight: bold;
+	width: 27px;
+	height: 23px;
+	text-align: center;
+	cursor: default;
+	padding-top: 4px;
+}

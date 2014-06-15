@@ -45,6 +45,7 @@ body{background-color:  #33CCCC}
 /* El primer recuadro, no tiene la linea izquierda. Aqui se la colocamos */
 #menu a#primero {
 	border: 1px solid #6643ff;
+	background-color: black;
 }
 
 #menu a:hover {
