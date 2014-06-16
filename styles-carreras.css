@@ -49,13 +49,7 @@ body{background-color:  #33CCCC}
 #menu a:hover {
 	background: #d6ccff;
 }
-/* estilos del menu de las páginas o páginas mostradas*/
-.b{ font-weight: bold;}
 
-.la a:visited{
-	color: #002880;
-    text-decoration: underline;
-}
 /*estilos del pie de página*/
 div.nbt{
 	margin: 10px 350px 20px 0;
@@ -78,9 +72,4 @@ span.nfb{
 	text-align: center;
 	cursor: default;
 	padding-top: 4px;
-}
-
-/*estilo en la lista*/
-#prim{
-	color: red;
 }

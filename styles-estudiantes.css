@@ -51,15 +51,3 @@ body{background-color:  #33CCCC}
 #menu a:hover {
 	background: #d6ccff;
 }
-
-/* estilos del menu de las páginas o páginas mostradas*/
-.b{ font-weight: bold;}
-
-.la a:visited{
-	color: #002880;
-    text-decoration: underline;
-}
-/*estilo en la lista*/
-#prim{
-	color: red;
-}
