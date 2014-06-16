@@ -51,3 +51,16 @@ body{background-color:  #33CCCC}
 #menu a:hover {
 	background: #d6ccff;
 }
+
+/*Diseño de la Lista*/
+.b{ font-weight: bold;}
+
+.la a:visited{
+	color: #002880;
+    text-decoration: underline;
+}
+
+/*estilo en la lista*/
+#prim{
+	color: red;
+}
