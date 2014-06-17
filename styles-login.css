@@ -41,3 +41,18 @@ border: 2px solid #ADFF00;
     color: #FFF;
     font-weight: bold;
 }
+
+/*Estilo al Boton*/
+button{
+       font-size: 15px;
+       font-family: cursive;
+       font-weight: bold;
+       color: #fff;
+       background: rgba(128, 128, 128, 0.81);
+       border: 0px;
+       width: 129px;
+       height: 45px;
+
+       }
+
+

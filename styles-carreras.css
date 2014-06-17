@@ -73,3 +73,22 @@ span.nfb{
 	cursor: default;
 	padding-top: 4px;
 }
+/*Color de la linea*/
+hr{
+	border: 5px;
+	width: inherit;
+	color: black;
+	background-color: black;
+	height: 5px
+  }
+/*Alineacion de la informacion*/
+
+#line{
+	  text-align: right;
+	  width: 227px;
+	  height: 3px;
+     }
+#cod{
+     height: 1px
+}
+
