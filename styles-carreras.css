@@ -74,14 +74,16 @@ span.nfb{
 	cursor: default;
 	padding-top: 4px;
 }
+
 /*Color de la linea*/
-hr{
+/* hr{
 	border: 5px;
 	width: inherit;
 	color: black;
 	background-color: black;
 	height: 5px
-  }
+  }*/
+
 /*Alineacion de la informacion*/
 
 #line{
@@ -90,6 +92,40 @@ hr{
 	  height: 3px;
      }
 #cod{
-     height: 1px
+     height: 1px;
+     margin: 17px;
 }
 
+/*Alineacion del texto dentro del div*/
+.derh{
+	text-align: right;
+    position: absolute;
+    width: 333px;
+    margin: -41px;
+}
+
+.derha{
+	text-align: right;
+    position: absolute;
+    width: 271px;
+    margin: -41px;
+}
+
+.dea{
+	text-align: right;
+    position: absolute;
+    width: 332px;
+    margin: -41px;
+}
+
+.mar{
+	margin: 20px;
+}
+
+.mat{
+	margin: 20px;
+}
+
+.mt{
+	margin: 20px;
+}

@@ -50,3 +50,27 @@ body{background-color:  #33CCCC}
 #menu a:hover {
 	background: #d6ccff;
 }
+
+/*estilos del pie de página*/
+div.nbt{
+	margin: 10px 350px 20px 0;
+	text-align: center;
+
+}
+
+span.nft{
+	display: inline-block;
+	font-weight: bold;
+	height: 24px;
+	padding: 2px 5px;
+}
+
+span.nfb{
+	display: inline-block;
+	font-weight: bold;
+	width: 27px;
+	height: 53px;
+	text-align: center;
+	cursor: default;
+	padding-top: 4px;
+}
