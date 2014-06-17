@@ -15,6 +15,7 @@ body{background-color:  #33CCCC}
 	background: white;
     width: 615px;
     height: 377px;
+    border: 8px double #000080;
 }
 /*Diseño del Menú*/
 #menu {
@@ -35,11 +36,11 @@ body{background-color:  #33CCCC}
 #menu a {
 	display: inline;
 	text-decoration: none;
-	color: #6643ff;
+	color: #F30B39;
 	background: #f0edff;
 	padding: 3px 10px 3px 10px;
 	text-align: center;
-	border: 1px solid #6643ff;
+	border: 1px solid #0DF8B6;
 	border-width: 1px 1px 1px 0;
 }
 
@@ -51,3 +52,4 @@ body{background-color:  #33CCCC}
 #menu a:hover {
 	background: #d6ccff;
 }
+
