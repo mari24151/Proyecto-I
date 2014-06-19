@@ -76,3 +76,14 @@ span.nfb{
 	cursor: default;
 	padding-top: 4px;
 }
+
+
+.z{
+	margin: 20px;
+}
+/*Posicion de la imagen de salida*/
+#salir{
+margin: -5px;
+position: absolute;
+padding-left: 11px;
+}

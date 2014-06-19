@@ -74,3 +74,36 @@ span.nfb{
 	cursor: default;
 	padding-top: 4px;
 }
+
+/*Estilo a los nombres dentro del div*/
+.al{
+	margin: 20px;
+}
+
+.tit{
+	margin: 12px;
+	padding: 4px;
+}
+
+/*Posicion de las imagenes de editar y eliminar*/
+
+#edi{
+	width: 28px;
+    height: 29px;
+    padding: 0px;
+    position: absolute;
+    margin-left: 367px;
+}
+
+#eli{
+	width: 28px;
+    height: 29px;
+    position: absolute;
+    margin-left: 424px;
+}
+/*Posicion de la imagen de salida*/
+#salir{
+margin: -5px;
+position: absolute;
+padding-left: 11px;
+}
