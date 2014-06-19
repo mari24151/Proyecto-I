@@ -6,16 +6,18 @@ margin-bottom: 20px;
 margin-left: 70em;
 position: absolute;
 }
-/*diseño del fondo*/
+
+/*Diseño del fondo de la pagina web*/
 body{background-color:  #33CCCC}
-/*Diseño dela informacion del menú*/
+
+/*Diseño del div o donde va la info*/
 #dis{
 	background: white;
     width: 615px;
     height: 377px;
     border: 8px double #000080;
 }
-/*diseño del menú*/
+/*Diseño del Menú*/
 #menu {
 	font-family: Arial;
 	font-size: 0.8em;
@@ -51,6 +53,7 @@ body{background-color:  #33CCCC}
 	background: #d6ccff;
 }
 
+
 /*estilos del pie de página*/
 div.nbt{
 	margin: 10px 350px 20px 0;
@@ -84,7 +87,6 @@ span.nfb{
 	margin: 12px;
 	padding: 4px;
 }
-
 /*Posicion de las imagenes de editar y eliminar*/
 
 #edi{
@@ -101,9 +103,18 @@ span.nfb{
     position: absolute;
     margin-left: 424px;
 }
+
 /*Posicion de la imagen de salida*/
 #salir{
 margin: -5px;
 position: absolute;
 padding-left: 11px;
+}
+
+/*posicion de la imagen de egregar*/
+#agr{
+	margin-left: 556px;
+    position: absolute;
+    padding-left: 5px;
+    margin-top: -49px;
 }
