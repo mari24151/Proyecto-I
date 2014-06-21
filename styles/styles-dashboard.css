@@ -1,9 +1,9 @@
 /*Estilo posición del salir*/
 .der{
-margin-top: -106px;
+margin-top: -91px;
 margin-right: 0px;
 margin-bottom: 20px;
-margin-left: 70em;
+margin-left: 63em;
 position: absolute;
 }
 
@@ -13,6 +13,7 @@ position: absolute;
     width: 615px;
     height: 377px;
     border: 8px double #000080;
+    margin-left: 360px;
 }
 /*Diseño del fondo de la página*/
 body{background-color:  #33CCCC}
@@ -20,7 +21,7 @@ body{background-color:  #33CCCC}
 /*Diseño del menú*/
 #menu {
 	font-family: Arial;
-	font-size: 0.8em;
+	font-size: 19px;
 }
 
 #menu li {
@@ -55,7 +56,7 @@ body{background-color:  #33CCCC}
 
 /*estilos del pie de página*/
 div.nbt{
-	margin: 10px 350px 20px 0;
+	margin-left: 339px;
 	text-align: center;
 
 }
@@ -77,7 +78,6 @@ span.nfb{
 	padding-top: 4px;
 }
 
-
 .z{
 	margin: 20px;
 }
@@ -86,4 +86,34 @@ span.nfb{
 margin: -5px;
 position: absolute;
 padding-left: 11px;
+}
+
+/*Fondo de la franja*/
+.fond{
+	background: transparent;
+}
+/*Posición de la franja*/
+.franja{
+background: rgba(0, 0, 0, 0.39);
+width: 1139px;
+height: 901px;
+position: absolute;
+margin-top: -178px;
+margin-left: 6%;
+}
+
+/*posicion de la imagen de perfil*/
+.im{
+	margin-left: 132px;
+	
+}
+
+/*Posicion del Dashboard*/
+.con{
+	margin-left: 258px;
+	
+}
+/*direcion del menu*/
+.mn{
+	margin-left: 360px;
 }

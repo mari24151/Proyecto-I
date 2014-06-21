@@ -1,9 +1,9 @@
 /*estilo del salir*/
 .der{
-margin-top: -106px;
+margin-top: -91px;
 margin-right: 0px;
 margin-bottom: 20px;
-margin-left: 70em;
+margin-left: 63em;
 position: absolute;
 }
 /*estilo del fonde de la pagina*/
@@ -14,11 +14,12 @@ body{background-color:  #33CCCC}
     width: 615px;
     height: 377px;
     border: 8px double #000080;
+    margin-left: 360px;
 }
 /*Estilos del menú*/
 #menu {
 	font-family: Arial;
-	font-size: 0.8em;
+	font-size: 19px;
 }
 
 #menu li {
@@ -51,9 +52,9 @@ body{background-color:  #33CCCC}
 	background: #d6ccff;
 }
 
-/*estilos del pie de página*/
+/*estilo pie de pagina*/
 div.nbt{
-	margin: 10px 350px 20px 0;
+	margin-left: 339px;
 	text-align: center;
 
 }
@@ -74,15 +75,6 @@ span.nfb{
 	cursor: default;
 	padding-top: 4px;
 }
-
-/*Color de la linea*/
-/* hr{
-	border: 5px;
-	width: inherit;
-	color: black;
-	background-color: black;
-	height: 5px
-  }*/
 
 /*Alineacion de la informacion*/
 
@@ -160,4 +152,33 @@ padding-left: 11px;
     position: absolute;
     padding-left: 5px;
     margin-top: -49px;
+}
+/*posicion de la imagnen del usuario*/
+.im{
+	margin-left: 132px;
+	
+}
+
+/*Posicion del Dashboard*/
+.con{
+	margin-left: 258px;
+	
+}
+/*direcion del menu*/
+.mn{
+	margin-left: 360px;
+}
+
+/*Fondo de la franja*/
+.fond{
+	background: transparent;
+}
+/*Posición de la franja*/
+.franja{
+background: rgba(0, 0, 0, 0.39);
+width: 1139px;
+height: 909px;
+position: absolute;
+margin-top: -178px;
+margin-left: 6%;
 }
