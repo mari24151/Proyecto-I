@@ -76,3 +76,10 @@ margin-left: 6%;
 .mn{
 	margin-left: 251px;
 }
+/*posicion de la imagen de egregar*/
+#agr{
+	margin-left: 556px;
+    position: absolute;
+    padding-left: 5px;
+    margin-top: -49px;
+}

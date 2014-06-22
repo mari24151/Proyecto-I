@@ -14,7 +14,7 @@ body{background-image: url("../Imagenes/fondo.jpg");}
 #dis{
   background: white;
   width: 777px;
-  height: 398px;
+  height: 425px;
   border: 8px double #000080;
   margin-left: 252px;
   position: absolute;
@@ -45,7 +45,7 @@ body{background-image: url("../Imagenes/fondo.jpg");}
 	background: #f0edff;
 	padding: 3px 10px 3px 10px;
 	text-align: center;
-	border: 1px solid #0DF8B6;
+	border: 1px solid #0BFF46;
 	border-width: 1px 1px 1px 0;
 }
 
@@ -75,4 +75,11 @@ margin-left: 6%;
 /*direcion del menu*/
 .mn{
 	margin-left: 251px;
+}
+/*posicion de la imagen de egregar*/
+#agr{
+	margin-left: 556px;
+    position: absolute;
+    padding-left: 5px;
+    margin-top: -49px;
 }
