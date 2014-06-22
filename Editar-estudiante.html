@@ -1,28 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Editar Nombres</title>
-	<link rel="stylesheet" type="text/css" href="styles/styles-editar-estudiante.css">
+    <title>Editar Estudiante</title>
+   <link rel="stylesheet" type="text/css" href="styles/styles-editar-estudiante.css">
 </head>
 <body>
-<h4 align="center">Editar Estudiante</h4>
-<img src="Imagenes/logo-usuario.png" width="70" height="70">
+<div class="franja">
+   
+</div>
+<!--imagen del usuario-->
+<figure class="im">
+  <img src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80">
+  <figcaption>UTN Perfil</figcaption>
+</figure>
+
+<!--Salir al Login-->
+<p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
+<br>
+<!--Lista de las paginas del menú-->
+<p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a> >Estudiantes</p>
+<br>
+<br>
+<!--Menú de la página-->
+<div id="menu" class="mn">
+   <ul>
+      <li><a href="Dahsboard.html">Dashboard</a></li>
+      <li><a href="Carreras.html">Carreras</a></li>
+      <li><a href="Estudiantes.html">Estudiantes</a></li>
+      <li><a href="Usuarios.html">Usuarios</a></li>
+   </ul>
+</div>   
+</ul>
+<!--Informacion dentro del manú-->
+<div id="dis">
+<h1>Editar Estudiante</h1>
 <form action="" name="Editar" method="get">
     <br>
+    <div>
     <label for="name" id="letr">Nombre</label><br>
-    <input type="tex" name="name" id="name">
+    <input type="tex" name="name" id="name"  value="Pablo">
     <br>
     <label for="apellidos" id="letr">Apellidos</label><br>
-    <input type="tex" name="apellidos" id="apellidos">
+    <input type="tex" name="apellidos" id="apellidos" value="Quesada">
     <br>
     <label for="ced" id="letr">C&eacute;dula</label><br>
-    <input type="tex" name="ced" id="ced">
+    <input type="tex" name="ced" id="ced" value="204560678">
     <br>
     <label for="carr" id="letr">Carrera</label><br>
-    <input type="tex" name="carr" id="carr">
+    <input type="tex" name="carr" id="carr" value="ISW">
     <br>
     <label for="sex" id="letr">Nivel de &Iacute;ngles:</label>
-    <input type="radio" name="sex" value="bn">Bueno
+    <input type="radio" name="sex" value="bn" checked="checked">Bueno
     <input type="radio" name="sex" value="ma">Promedio
     <input type="radio" name="sex" value="ma">Malo
     <br>
@@ -30,31 +58,46 @@
     <label for="direc" id="letr">Calidades/Skills</label><br>
     <textarea name="direc" rows="4" cols"50"></textarea>
     <br>
+    </div>
+    <div style="margin-left: 400px; margin-top: -407px;">
     <p><b>Proyectos desarrollados:</b></p>
     <br>
     <label for="carr" id="letr">Curso</label><br>
-    <input type="tex" name="cur" id="cur">
+    <input type="tex" name="cur" id="cur" value="Redes">
     <br>
     <label for="carr" id="letr">Duraci&oacute;n</label><br>
-    <input type="tex" name="dur" id="dur">
+    <input type="tex" name="dur" id="dur" value="cuatro meses">
     <br>
     <label for="carr" id="letr">Tecnolog&iacute;as Utilizadas</label><br>
-    <input type="tex" name="carr" id="carr">
+    <input type="tex" name="carr" id="carr" value="Computadoras">
     <br>
     <label for="direc" id="letr">Descipci&oacute;n del Proyecto</label><br>
     <textarea name="descp" rows="4" cols"50"></textarea>
     <br>
     <label for="carr" id="letr">Fecha</label><br>
-    <input type="tex" name="fec" id="fec">
+    <input type="tex" name="fec" id="fec" value="12/04/2014">
     <br>
     <label for="carr" id="letr">Calificaci&oacute;n</label><br>
-    <input type="tex" name="dur" id="dur">
+    <input type="tex" name="dur" id="dur" value="100">
     <br>
     <label for="direc" id="letr">Comentarios del Profesor</label><br>
     <textarea name="comen" rows="4" cols"50"></textarea>
     <br>
     <button type="button">Editar</button>
     <button type="button"><a href="Estudiantes.html">Cancelar</a></button>
+    </div>
 </form>
+</div>
+<br>
+<!--Pie de página-->
+<div id="pie">
+<div class="nbt">
+   <span class="nft">P&aacute;ginas</span>
+   <a class="nfb" href="Dahsboard">1</a>
+   <a class="nfb" href="Carreras.html">2</a>
+   <a class="nfb" href="Estudiantes.html">3</a>
+   <a class="nfb" href="Usuarios.html">4</a>
+</div>
+</div>
 </body>
 </html>

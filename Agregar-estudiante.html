@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Editar Nombres</title>
-	<link rel="stylesheet" type="text/css" href="styles/styles-agregar-estudiante.css">
+    <title>Agregar Estudiante</title>
+   <link rel="stylesheet" type="text/css" href="styles/styles-agregar-estudiante.css">
 </head>
 <body>
-<h4 align="center">Editar Estudiante</h4>
-<img src="Imagenes/logo-usuario.png" width="70" height="70">
+<div class="franja">
+   
+</div>
+<!--imagen del usuario-->
+<figure class="im">
+  <img src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80">
+  <figcaption>UTN Perfil</figcaption>
+</figure>
+
+<!--Salir al Login-->
+<p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
+<br>
+<!--Lista de las paginas del menú-->
+<p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a> >Estudiantes</p>
+<br>
+<br>
+<!--Menú de la página-->
+<div id="menu" class="mn">
+   <ul>
+      <li><a href="Dahsboard.html">Dashboard</a></li>
+      <li><a href="Carreras.html">Carreras</a></li>
+      <li><a href="Estudiantes.html">Estudiantes</a></li>
+      <li><a href="Usuarios.html">Usuarios</a></li>
+   </ul>
+</div>   
+</ul>
+<!--Informacion dentro del manú-->
+<div id="dis">
+<h1>Agregar Estudiante</h1>
 <form action="" name="Editar" method="get">
     <br>
+    <div>
     <label for="name" id="letr">Nombre</label><br>
     <input type="tex" name="name" id="name">
     <br>
@@ -30,6 +58,8 @@
     <label for="direc" id="letr">Calidades/Skills</label><br>
     <textarea name="direc" rows="4" cols"50"></textarea>
     <br>
+    </div>
+    <div style="margin-left: 400px; margin-top: -407px;">
     <p><b>Proyectos desarrollados:</b></p>
     <br>
     <label for="carr" id="letr">Curso</label><br>
@@ -55,6 +85,19 @@
     <br>
     <button type="button">Editar</button>
     <button type="button"><a href="Estudiantes.html">Cancelar</a></button>
+    </div>
 </form>
+</div>
+<br>
+<!--Pie de página-->
+<div id="pie">
+<div class="nbt">
+   <span class="nft">P&aacute;ginas</span>
+   <a class="nfb" href="Dahsboard">1</a>
+   <a class="nfb" href="Carreras.html">2</a>
+   <a class="nfb" href="Estudiantes.html">3</a>
+   <a class="nfb" href="Usuarios.html">4</a>
+</div>
+</div>
 </body>
 </html>
