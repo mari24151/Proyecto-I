@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Editar Carreras</title>
-   <link rel="stylesheet" type="text/css" href="styles/styles-editar-carreras.css">
+	<title>Editar Usuarios</title>
+   <link rel="stylesheet" type="text/css" href="styles/styles-editar-usuario.css">
 </head>
 <body>
 <div class="franja">
@@ -18,7 +18,7 @@
 <p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
 <br>
 <!--Lista de las paginas del menú-->
-<p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a> >Carreras</p>
+<p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a> >Usuarios</p>
 <br>
 <br>
 <!--Menú de la página-->
@@ -33,18 +33,25 @@
 </ul>
 <!--Informacion dentro del manú-->
 <div id="dis">
-<h1>Editar Carreras</h1>
-<form action="" name="editar-carreras" method="get">
+<h1>Editar Usuario</h1>
+<form action="" name="Usuario-editar" method="get">
 
-   <label for="user">C&oacute;digo</label>
+   <label for="user">Nombre de Usuario</label>
    <input type="tex" name="user" id="user">
    <br>
-   <label for="name">Nombre Carrera</label>
+   <label for="name">Nombre</label>
    <input type="tex" name="name" id="name">
    <br>
+   <label for="ced">C&eacute;dula</label>
+   <input type="tex" name="ced" id="ced">
    <br>
-   <button type="button">Editar</button>
-    <button type="button"><a href="Carreras.html">Cancelar</a></button>
+   <label for="rl">Role</label>
+   <input type="radio" name="rl" value="Admin">Administrador
+   <input type="radio" name="rl" value="drc">Director de Carreras
+   <br>
+   <br>
+   <button type="button">Crear</button>
+    <button type="button"><a href="Usuarios.html">Cancelar</a></button>
 </form>
 </div>
 <br>

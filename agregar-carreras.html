@@ -1,20 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Agregar Carrera</title>
+	<title>Agregar Carreras</title>
+   <link rel="stylesheet" type="text/css" href="styles/styles-agregar-carreras.css">
 </head>
 <body>
-<h1>Carreras</h1>
-<form action="" name="Editar-carrera" method="get">
-	<label for="name">Nombre Completo</label>
-	<input type="tex" name="name" id="name">
-	<br>
-	<label for="cod">C&oacute;digo de la Carrera</label>
-	<input type="tex" name="cod" id="cod">
-	<br>
-	<button type="button">Editar</button>
+<div class="franja">
+   
+</div>
+<!--imagen del usuario-->
+<figure class="im">
+  <img src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80">
+  <figcaption>UTN Perfil</figcaption>
+</figure>
+
+<!--Salir al Login-->
+<p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
+<br>
+<!--Lista de las paginas del menú-->
+<p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a> >Carreras</p>
+<br>
+<br>
+<!--Menú de la página-->
+<div id="menu" class="mn">
+   <ul>
+      <li><a href="Dahsboard.html">Dashboard</a></li>
+      <li><a href="Carreras.html">Carreras</a></li>
+      <li><a href="Estudiantes.html">Estudiantes</a></li>
+      <li><a href="Usuarios.html">Usuarios</a></li>
+   </ul>
+</div>   
+</ul>
+<!--Informacion dentro del manú-->
+<div id="dis">
+<h1>Agregar Carreras</h1>
+<form action="" name="agregar-carreras" method="get">
+
+   <label for="user">C&oacute;digo</label>
+   <input type="tex" name="user" id="user">
+   <br>
+   <label for="name">Nombre Carrera</label>
+   <input type="tex" name="name" id="name">
+   <br>
+   <br>
+   <button type="button">Agregar</button>
     <button type="button"><a href="Carreras.html">Cancelar</a></button>
 </form>
-
+</div>
+<br>
+<!--Pie de página-->
+<div id="pie">
+<div class="nbt">
+   <span class="nft">P&aacute;ginas</span>
+   <a class="nfb" href="Dahsboard">1</a>
+   <a class="nfb" href="Carreras.html">2</a>
+   <a class="nfb" href="Estudiantes.html">3</a>
+   <a class="nfb" href="Usuarios.html">4</a>
+</div>
+</div>
 </body>
 </html>

@@ -1,13 +1,13 @@
 /*estilo del salir*/
 .der{
-margin-top: -91px;
 margin-right: 0px;
 margin-bottom: 20px;
 margin-left: 63em;
 position: absolute;
+z-index: 2;
 }
 /*estilo del fonde de la pagina*/
-body{background-color:  #33CCCC}
+body{background-image: url("../Imagenes/fondo.jpg");}
 /*estilos del div donde va la info*/
 #dis{
 	background: white;
@@ -15,11 +15,15 @@ body{background-color:  #33CCCC}
     height: 377px;
     border: 8px double #000080;
     margin-left: 360px;
+    position: absolute;
+    z-index: 2;
 }
 /*Estilos del menú*/
 #menu {
 	font-family: Arial;
 	font-size: 19px;
+	position: absolute;
+    z-index: 3;
 }
 
 #menu li {
@@ -56,6 +60,9 @@ body{background-color:  #33CCCC}
 div.nbt{
 	margin-left: 339px;
 	text-align: center;
+    position: relative;
+    z-index: 4;
+    margin-top: 400px;
 
 }
 
@@ -76,68 +83,6 @@ span.nfb{
 	padding-top: 4px;
 }
 
-/*Alineacion de la informacion*/
-
-#line{
-	  text-align: right;
-	  width: 227px;
-	  height: 3px;
-     }
-#cod{
-     height: 1px;
-     margin: 17px;
-}
-
-/*Alineacion del texto dentro del div*/
-.derh{
-	text-align: right;
-    position: absolute;
-    width: 333px;
-    margin: -41px;
-}
-
-.derha{
-	text-align: right;
-    position: absolute;
-    width: 271px;
-    margin: -41px;
-}
-
-.dea{
-	text-align: right;
-    position: absolute;
-    width: 332px;
-    margin: -41px;
-}
-
-.mar{
-	margin: 20px;
-}
-
-.mat{
-	margin: 20px;
-}
-
-.mt{
-	margin: 20px;
-}
-
-/*Posicion de las imagenes de editar y eliminar*/
-
-#edi{
-	width: 28px;
-    height: 29px;
-    padding: 0px;
-    position: absolute;
-    margin-left: 367px;
-}
-
-#eli{
-	width: 28px;
-    height: 29px;
-    position: absolute;
-    margin-left: 424px;
-}
 
 /*Posicion de la imagen de salida*/
 #salir{
@@ -156,6 +101,8 @@ padding-left: 11px;
 /*posicion de la imagnen del usuario*/
 .im{
 	margin-left: 132px;
+	position: absolute;
+    z-index: 2;
 	
 }
 
@@ -175,7 +122,7 @@ padding-left: 11px;
 }
 /*Posición de la franja*/
 .franja{
-background: rgba(0, 0, 0, 0.39);
+background: #fff;
 width: 1139px;
 height: 909px;
 position: absolute;

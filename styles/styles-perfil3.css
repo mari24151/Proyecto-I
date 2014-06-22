@@ -1,0 +1,12 @@
+/*Estilos del fondo*/
+body{background-color: #33CCCC}
+
+/*Estilo de la letra*/
+#letr{
+	font-style: italic;
+	color: black;
+}
+
+p{
+	font-style: italic;
+}

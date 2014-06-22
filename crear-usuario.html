@@ -1,10 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Usuarios Editar</title>
+	<title>Crear Usuario</title>
+   <link rel="stylesheet" type="text/css" href="styles/styles-crear-usuario.css">
 </head>
 <body>
-<h1>Crear o Editar nuevo Usuario</h1>
+<div class="franja">
+   
+</div>
+<!--imagen del usuario-->
+<figure class="im">
+  <img src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80">
+  <figcaption>UTN Perfil</figcaption>
+</figure>
+
+<!--Salir al Login-->
+<p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
+<br>
+<!--Lista de las paginas del menú-->
+<p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a> >Usuarios</p>
+<br>
+<br>
+<!--Menú de la página-->
+<div id="menu" class="mn">
+   <ul>
+      <li><a href="Dahsboard.html">Dashboard</a></li>
+      <li><a href="Carreras.html">Carreras</a></li>
+      <li><a href="Estudiantes.html">Estudiantes</a></li>
+      <li><a href="Usuarios.html">Usuarios</a></li>
+   </ul>
+</div>   
+</ul>
+<!--Informacion dentro del manú-->
+<div id="dis">
+<h1>Crear nuevo Usuario</h1>
 <form action="" name="Usuario-editar" method="get">
 
    <label for="user">Nombre de Usuario</label>
@@ -15,12 +44,26 @@
    <br>
    <label for="ced">C&eacute;dula</label>
    <input type="tex" name="ced" id="ced">
+   <br>
    <label for="rl">Role</label>
    <input type="radio" name="rl" value="Admin">Administrador
    <input type="radio" name="rl" value="drc">Director de Carreras
    <br>
-   <button type="button">Editar</button>
-    <button type="button"><a href="Estudiantes.html">Cancelar</a></button>
+   <br>
+   <button type="button">Crear</button>
+    <button type="button"><a href="Usuarios.html">Cancelar</a></button>
 </form>
+</div>
+<br>
+<!--Pie de página-->
+<div id="pie">
+<div class="nbt">
+   <span class="nft">P&aacute;ginas</span>
+   <a class="nfb" href="Dahsboard">1</a>
+   <a class="nfb" href="Carreras.html">2</a>
+   <a class="nfb" href="Estudiantes.html">3</a>
+   <a class="nfb" href="Usuarios.html">4</a>
+</div>
+</div>
 </body>
 </html>
