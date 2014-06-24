@@ -26,6 +26,7 @@ body{background-image: url("../Imagenes/fondo.jpg");}
 margin: -5px;
 position: absolute;
 padding-left: 11px;
+width: 45px;
 }
 
 /*Fondo de la franja*/

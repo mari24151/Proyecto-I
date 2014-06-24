@@ -13,7 +13,7 @@ color: white;
 	background: white;
     width: 615px;
     height: 377px;
-    border: 8px double #080809;
+    border: 8px double #000000;
     margin-left: 360px;
     position: absolute;
     z-index: 2;
@@ -29,7 +29,7 @@ padding-left: 11px;
 width: 45px;
 }
 
-/*Fondo de la franja*/
+/*estilo de la franja*/
 .fond{
 	background: transparent;
 }

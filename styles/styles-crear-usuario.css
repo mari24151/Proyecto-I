@@ -26,6 +26,7 @@ body{background-image: url("../Imagenes/fondo.jpg");}
 margin: -5px;
 position: absolute;
 padding-left: 11px;
+width: 45px;
 }
 
 /*Fondo de la franja*/
@@ -106,7 +107,7 @@ span.nfb{
 }
 
 #menu a {
-	display: inline;
+display: inline;
 text-decoration: none;
 color: #020202;
 background: #FAA4FA;
