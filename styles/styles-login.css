@@ -33,7 +33,7 @@ background: transparent;
 width: 200px;
 font-size: 16px;
 color: #fff;
-border: 2px solid #5C5E5C;
+border: 2px solid #FC05C0;
 }
 
 .titulo-caja{
@@ -44,15 +44,16 @@ border: 2px solid #5C5E5C;
 
 /*Estilo al Boton*/
 button{
-       font-size: 15px;
-       font-family: cursive;
-       font-weight: bold;
-       color: #fff;
-       background: rgba(144, 153, 147, 1);
-       border: 0px;
-       width: 129px;
-       height: 45px;
-
-       }
-
-
+   font-size: 15px;
+   font-family: cursive;
+   font-weight: bold;
+   color: #fff;
+   background: rgba(253, 6, 234, 0.57);
+   border: 0px;
+   width: 129px;
+   height: 45px;
+}
+/*Color de la letra del color*/
+.c{
+  color: black;
+}

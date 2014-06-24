@@ -64,7 +64,7 @@ background-color: rgb(6, 198, 247);
 }
 /*Posición de la franja*/
 .franja{
-background: #fff;
+background: rgba(26, 253, 6, 0.4);
 width: 1139px;
 height: 901px;
 position: absolute;

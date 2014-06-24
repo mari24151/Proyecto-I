@@ -39,7 +39,7 @@ body{background-image: url("../Imagenes/fondo.jpg");}
 }
 
 #menu a {
-	display: inline;
+display: inline;
 text-decoration: none;
 color: #0A0A0A;
 background: #A0F1F8;
@@ -50,7 +50,7 @@ border-width: 1px 1px 1px 1px;
 }
 
 #menu a#primero {
-	border: 1px solid #0F0F0F;
+border: 1px solid #0F0F0F;
 background-color: rgb(6, 198, 247);
 }
 
@@ -64,7 +64,7 @@ background-color: rgb(6, 198, 247);
 }
 /*Posición de la franja*/
 .franja{
-background: #fff;
+background: rgba(26, 253, 6, 0.4);
 width: 1139px;
 height: 901px;
 position: absolute;

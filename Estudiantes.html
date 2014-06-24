@@ -12,13 +12,13 @@
 <!--imagen del usuario-->
 <figure class="im">
   <img src="Imagenes/logo-usuario.png" alt="Nombre Usuario" width="70" height="70">
-  <figcaption>UTN Perfil</figcaption>
+  <figcaption class="cl">UTN Perfil</figcaption>
 </figure>
 <!--Salir al Login-->
 <p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
 <br>
 <!--Lista de las paginas del menu-->
-<p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a> >Estudiantes</p>
+<p style="position: relative; padding-top: 100px;" class="cl"><a href="Dahsboard.html" class="con">Dashboard</a> >Estudiantes</p>
 <br>
 <br>
 <!--Menú-->
@@ -36,22 +36,23 @@
 <center><h2>Lista de Estudiantes</h2></center>
 <a href="Agregar-estudiante.html"><img src="Imagenes/Logo-agregar.png" width="40" height="50" id="agr"></a>
 <table CELLSPACING="10" CELLPADDING="15">
-	<tr scope="col"><strong>Nombres de los Estudiantes</strong></tr>
-	<hr>
+	<tr>
+	   <th><strong strong style="margin-right: 100px;">Nombres de los Estudiantes</strong></th>
+	</tr>
 	<tr>
 		<td><a href="Editar-estudiante.html">Pablo Quesada</a></td>
 		<td><a href="Editar-carreras.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a></td>
-		<td><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></td>
+		<td><a href="#" onmouseDown="alert('Se elimino exitosamente')"><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></a></td>
 	</tr>
 	<tr>
 		<td><a href="Editar-estudiante.html">Alejandra M&eacute;ndez</a></td>
 		<td><a href="Editar-carreras.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a></td>
-		<td><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></td>
+		<td><a href="#" onmouseDown="alert('Se elimino exitosamente')"><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></a></td>
 	</tr>
 	<tr>
 		<td><a href="Editar-estudiante.html">Daniel Rodr&iacute;guez</td>
 		<td><a href="Editar-carreras.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a></td>
-		<td><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></td>
+		<td><a href="#" onmouseDown="alert('Se elimino exitosamente')"><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></a></td>
 	</tr>
 </table>
 </div>

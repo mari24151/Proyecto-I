@@ -12,7 +12,7 @@
 <!--imagen del usuario-->
 <figure class="im">
   <img src="Imagenes/logo-usuario.png" width="90" height="80">
-  <figcaption>UTN Perfil</figcaption>
+  <figcaption class="cl">UTN Perfil</figcaption>
 </figure>
 <!--funcion que devuelve al inicio del admin-->
 <p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
@@ -20,7 +20,7 @@
 <!--menú o lista de las páginas que se usan-->
 <br>
 <!--Lista de las paginas del menu-->
-<p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a> >Carreras</p>
+<p style="position: relative; padding-top: 100px;" class="cl"><a href="Dahsboard.html" class="con">Dashboard</a> >Carreras</p>
 <br>
 <!-- Menú del la página-->
 <div id="menu" class="mn">
@@ -37,27 +37,27 @@
 <center><h3>Lista de Carreras</h3></center>
 <a href="agregar-carreras.html"><img src="Imagenes/Logo-agregar.png" width="40" height="50" id="agr"></a>
 <table CELLSPACING="10" CELLPADDING="15">
-	<tr scope="col"><strong>C&oacute;digo</strong></tr>
-	<tr scope="col"><strong>Nombre</strong></tr>
-	<hr>
+	<tr>
+    	<th><strong strong style="margin-right: 100px;">C&oacute;digo</strong></th>
+	    <th><strong strong style="margin-right: 100px;">Nombre</strong></th>
+    </tr>
 	<tr>
 		<td><a href="Editar-carreras.html">ISW</a></td>
 		<td><a href="Editar-carreras.html">Ingenier&iacute;a de Software</a></td>
 		<td><a href="Editar-carreras.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a></td>
-		<td><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></td>
+		<td><a href="#" onmouseDown="alert('Se elimino exitosamente')"><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></a></td>
 	</tr>
 	<tr>
 		<td><a href="Editar-carreras.html">COFI</a></td>
 		<td><a href="Editar-carreras.html">Contabilidad</a></td>
-		<td><a href="Editar-carreras.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a>
-        </td>
-        <td><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></td>
+		<td><a href="Editar-carreras.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a></td>
+        <td><a href="#" onmouseDown="alert('Se elimino exitosamente')"><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></a></td>
 	</tr>
 	<tr>
 		<td><a href="Editar-carreras.html">ADM</a></td>
 		<td><a href="Editar-carreras.html">Comercio Internacional</a></td>
 		<td><a href="Editar-carreras.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a></td>
-		<td><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></td>
+		<td><a href="#" onmouseDown="alert('Se elimino exitosamente')"><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></a></td>
 	</tr>
 </table>	
 </div>

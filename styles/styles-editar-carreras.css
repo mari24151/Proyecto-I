@@ -5,6 +5,7 @@ margin-bottom: 20px;
 margin-left: 63em;
 position: absolute;
 z-index: 2;
+color: white;
 }
 
 /*Diseño del div donde va la información*/
@@ -12,7 +13,7 @@ z-index: 2;
 	background: white;
     width: 615px;
     height: 377px;
-    border: 8px double #000080;
+    border: 8px double #080809;
     margin-left: 360px;
     position: absolute;
     z-index: 2;
@@ -25,6 +26,7 @@ body{background-image: url("../Imagenes/fondo.jpg");}
 margin: -5px;
 position: absolute;
 padding-left: 11px;
+width: 45px;
 }
 
 /*Fondo de la franja*/
@@ -33,7 +35,7 @@ padding-left: 11px;
 }
 /*Posición de la franja*/
 .franja{
-background: #fff;
+background: rgba(26, 253, 6, 0.4);
 width: 1139px;
 height: 901px;
 position: absolute;
@@ -51,7 +53,7 @@ margin-left: 6%;
 /*Posicion del Dashboard*/
 .con{
 	margin-left: 258px;
-	
+	color: white;
 }
 /*direcion del menu*/
 .mn{
@@ -72,6 +74,7 @@ span.nft{
 	font-weight: bold;
 	height: 24px;
 	padding: 2px 5px;
+	color: white;
 }
 
 span.nfb{
@@ -82,6 +85,7 @@ span.nfb{
 	text-align: center;
 	cursor: default;
 	padding-top: 4px;
+	color: white;
 }
 
 /*Diseño del menú*/
@@ -103,21 +107,25 @@ span.nfb{
 }
 
 #menu a {
-	display: inline;
-	text-decoration: none;
-	color: #F30B39;
-	background: #f0edff;
-	padding: 3px 10px 3px 10px;
-	text-align: center;
-	border: 1px solid #0DF8B6;
-	border-width: 1px 1px 1px 0;
+display: inline;
+text-decoration: none;
+color: #020202;
+background: #FAA4FA;
+padding: 3px 10px 3px 10px;
+text-align: center;
+border: 1px solid #191A19;
+border-width: 1px 1px 1px 1px;
 }
 
-#menu a#primero {
-	border: 1px solid #6643ff;
-	background-color: black;
+##menu a#primero {
+	border: 1px solid #0C0C0C;
+background-color: rgb(250, 3, 230);
 }
 
 #menu a:hover {
 	background: #d6ccff;
+}
+/*color de la letra del usuario*/
+.cl{
+	color: white;
 }

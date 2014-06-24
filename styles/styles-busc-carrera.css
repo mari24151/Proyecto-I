@@ -15,7 +15,7 @@ body{background-image: url("../Imagenes/fondo.jpg");}
   background: white;
   width: 777px;
   height: 425px;
-  border: 8px double #000080;
+  border: 8px double #090808;
   margin-left: 252px;
   position: absolute;
   z-index: 2;
@@ -39,19 +39,19 @@ body{background-image: url("../Imagenes/fondo.jpg");}
 }
 
 #menu a {
-	display: inline;
-	text-decoration: none;
-	color: #F30B39;
-	background: #f0edff;
-	padding: 3px 10px 3px 10px;
-	text-align: center;
-	border: 1px solid #0BFF46;
-	border-width: 1px 1px 1px 0;
+display: inline;
+text-decoration: none;
+color: #0A0A0A;
+background: #A0F1F8;
+padding: 3px 10px 3px 10px;
+text-align: center;
+border: 1px solid #070707;
+border-width: 1px 1px 1px 1px;
 }
 
 #menu a#primero {
-	border: 1px solid #6643ff;
-	background-color: black;
+border: 1px solid #0F0F0F;
+background-color: rgb(6, 198, 247);
 }
 
 #menu a:hover {
@@ -64,7 +64,7 @@ body{background-image: url("../Imagenes/fondo.jpg");}
 }
 /*Posición de la franja*/
 .franja{
-background: #fff;
+background: rgba(26, 253, 6, 0.4);
 width: 1139px;
 height: 901px;
 position: absolute;
