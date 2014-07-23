@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+<meta charset="UTF-8">
 <title>Perfiles UTN-Area Administrativa</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="styles/styles-dashboard.css">
+<!-- Latest compiled and minified CSS -->
 </head>
 
 <body>
+<script type="text/javascript" src="Java/menu-mobil.js"></script>
+
+<!-- Latest compiled and minified JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+
 <div class="franja">
 	
 </div>
+<div class="conteiner">
+<div class="row">
 <!--imagen del usuario-->
 <figure class="im">
   <img src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80">
@@ -18,12 +28,14 @@
 <!--Salir al Login-->
 <p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
 <br>
+</div>
+</div>
 <!--Lista de las paginas del menú-->
 <p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a></p>
 <br>
 <br>
 <!--Menú de la página-->
-<div id="menu" class="mn">
+<div id="menu" class="mn" class="hidden-xs">
 	<ul>
 		<li><a href="Dahsboard.html" id="primero">Dashboard</a></li>
 		<li><a href="Carreras.html">Carreras</a></li>
@@ -31,7 +43,6 @@
 		<li><a href="Usuarios.html">Usuarios</a></li>
 	</ul>
 </div>	
-</ul>
 <!--Informacion dentro del manú-->
 <div id="dis">
 <br>
@@ -42,6 +53,17 @@
 <p class="z">2014/05/04- Database, P</p>
 <p class="z">2014/09/05- PHP, Code</p>
 <p class="z">2014/04/09- Ruby</p>	
+</div>
+<a href="#" id="mobile-menu-button" class="btn btn-default visible-xs">
+	<span class="glyphicon glyphicon-th-list"></span>
+</a>
+<div id="menu" class="visible-xs">
+	<ul id="mobile-main-menu">
+		<li><a href="Dahsboard.html" id="primero">Dashboard</a></li>
+		<li><a href="Carreras.html">Carreras</a></li>
+		<li><a href="Estudiantes.html">Estudiantes</a></li>
+		<li><a href="Usuarios.html">Usuarios</a></li>
+	</ul>
 </div>
 <br>
 <!--Pie de página-->
@@ -54,6 +76,5 @@
 	<a class="nfb" href="Usuarios.html">4</a>
 </div>
 </div>
-
 </body>
 </html>

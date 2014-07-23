@@ -130,3 +130,29 @@ margin-left: 6%;
 .cl{
 	color: white;
 }
+/*estilos del 2° menu*/
+#mobile-menu-button{
+	float: right;
+	width: 44px;
+	margin: 20px 0;
+}
+#mobile-main-menu{
+	display: none;
+}
+#mobile-main-menu a{
+	display: block;
+	width: 100em;
+	padding: 10px 0;
+	border-top: 1px solid #eee;
+	color: #aaa;
+	text-align: center;
+	text-transform: uppercase;
+}
+#mobile-main-menu li{
+	margin: 0;
+}
+#mobile-main-menu a:hover{
+	color: #fff;
+	text-decoration: none;
+	background-color: #a3d900;
+}
