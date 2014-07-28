@@ -156,3 +156,13 @@ margin-left: 6%;
 	text-decoration: none;
 	background-color: #a3d900;
 }
+
+/*Estilos que cambian estilo original del bootstrap pocision*/
+
+.pocisionDash{
+	position: relative; 
+	padding-top: 100px;
+	padding-bottom: 46px;
+    padding: 119px 309px;
+    background-color: rgba(255, 255, 255, 0);
+}

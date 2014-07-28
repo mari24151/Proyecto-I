@@ -9,10 +9,14 @@
 </head>
 
 <body>
-<script type="text/javascript" src="Java/menu-mobil.js"></script>
+<!--
+<script type="text/javascript" src="Java/menu-mobil.js"></script>-->
 
 <!-- Latest compiled and minified JavaScript -->
    <script src="js/bootstrap.min.js"></script>
+
+
+
 
 <div class="franja">
 	
@@ -27,22 +31,21 @@
 <p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
 <br>
 <!--Lista de las paginas del menú-->
-<p style="position: relative; padding-top: 100px;"><a href="Dahsboard.html" class="con">Dashboard</a></p>
-<br>
-<br>
-<div class="conteiner">
-<div class="row">
-<!--Menú de la página-->
+<ol class="breadcrumb pocisionDash">
+  <li class="active"><a href="Dahsboard.html">Dashboard</a></li>
+</ol>
+
+<!--primer Menu de la pagina-->
 <div id="menu" class="mn" class="hidden-xs nav nav-pills">
-	<ul>
+	<ul class="nav nav-tabs" role="tablist">
 		<li><a href="Dahsboard.html" id="primero">Dashboard</a></li>
 		<li><a href="Carreras.html">Carreras</a></li>
 		<li><a href="Estudiantes.html">Estudiantes</a></li>
 		<li><a href="Usuarios.html">Usuarios</a></li>
 	</ul>
-</div>	
+</div>
 <!--Informacion dentro del manú-->
-<div id="dis">
+<div id="dis" class="well well-lg">
 <br>
 <br>
 <center><h3>Ultima B&uacute;squeda Realizada</h3></center>
@@ -52,19 +55,10 @@
 <p class="z">2014/09/05- PHP, Code</p>
 <p class="z">2014/04/09- Ruby</p>	
 </div>
-</div>
-</div>
-<a href="#" id="mobile-menu-button" class="btn btn-default visible-xs">
+
+<!--<a href="#" id="mobile-menu-button" class="btn btn-default visible-xs">
 	<span class="glyphicon glyphicon-th-list"></span>
-</a>
-<div id="menu" class="visible-xs">
-	<ul id="mobile-main-menu">
-		<li><a href="Dahsboard.html" id="primero">Dashboard</a></li>
-		<li><a href="Carreras.html">Carreras</a></li>
-		<li><a href="Estudiantes.html">Estudiantes</a></li>
-		<li><a href="Usuarios.html">Usuarios</a></li>
-	</ul>
-</div>
+</a>-->
 <br>
 <!--Pie de página-->
 <div id="pie">

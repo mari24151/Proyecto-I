@@ -40,5 +40,15 @@ function editarCarreras(){
         name = document.getElementById('name').value;
 
     
-    var carreras = {"codigo": codigo, "name": name };
+    //var carreras = {"codigo": codigo, "name": name };
+     
+     var nuevo = document.createElement("name");
+     nuevo.innerHTML = codigo;
+
+
+    var otrlista = document.getElementById("otrlista")
+    otrlista.appendChild(nuevo);
+
+    document.getElementById("name").value = " ";
+
 }
