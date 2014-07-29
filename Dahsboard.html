@@ -8,19 +8,35 @@
 <!-- Latest compiled and minified CSS -->
 </head>
 
+
+
+
+
+
+
 <body>
-<!--
-<script type="text/javascript" src="Java/menu-mobil.js"></script>-->
+<script type="text/javascript" src="Java/menu-mobil.js"></script>
+
+<div class="row">
+  <div class="col-xs-6 col-md-3">
+   <!-- <a href="#" class="thumbnail">-->
+    <img data-src="holder.js/100%x180" src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80">
+     <figcaption class="cl">UTN Perfil</figcaption>
+    </a>
+  </div>
+  <!--Pocision de la franja-->
+<div class="franja">
+	
+</div>
+  
+</div>
+
 
 <!-- Latest compiled and minified JavaScript -->
    <script src="js/bootstrap.min.js"></script>
 
 
 
-<!--Pocision de la franja-->
-<div class="franja">
-	
-</div>
 <!--imagen del usuario-->
 <figure class="im">
   <img src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80">
@@ -30,6 +46,7 @@
 <!--Salir al Login-->
 <p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
 <br>
+
 <!--Lista de las paginas del menú-->
 <ol class="breadcrumb pocisionDash">
   <li class="active"><a href="Dahsboard.html">Dashboard</a></li>
@@ -44,6 +61,7 @@
 		<li><a href="Usuarios.html">Usuarios</a></li>
 	</ul>
 </div>
+
 <!--Informacion dentro del manú-->
 <div id="dis" class="well well-lg">
 <br>
@@ -56,18 +74,21 @@
 <p class="z">2014/04/09- Ruby</p>	
 </div>
 
-<!--<a href="#" id="mobile-menu-button" class="btn btn-default visible-xs">
+<a href="#" id="mobile-menu-button" class="btn btn-default visible-xs">
 	<span class="glyphicon glyphicon-th-list"></span>
-</a>-->
+</a>
 <br>
+
+
 <!--Pie de página-->
 <div id="pie">
-<div class="nbt">
-	<span class="nft">P&aacute;ginas</span>
-	<span class="nfb">1</span>
-	<a class="nfb" href="Carreras.html">2</a>
-	<a class="nfb" href="Estudiantes.html">3</a>
-	<a class="nfb" href="Usuarios.html">4</a>
+<div class="nbt pagination">
+	<li><a href="#">&laquo;</a></li>
+  <li class="active"><a href="Dahsboard.html">1</a></li>
+  <li><a href="Carreras.html">2</a></li>
+  <li><a href="Estudiantes.html">3</a></li>
+  <li><a href="Usuarios.html">4</a></li>
+   <li><a href="#">&raquo;</a></li>
 </div>
 </div>
 </body>

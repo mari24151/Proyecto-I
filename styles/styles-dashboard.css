@@ -17,6 +17,7 @@ color: white;
     margin-left: 360px;
     position: absolute;
     z-index: 2;
+    margin-top: -69px;
 }
 /*Diseño del fondo de la página*/
 body{background-image: url("../Imagenes/fondo.jpg");}
@@ -105,7 +106,7 @@ background: rgba(26, 253, 6, 0.4);
 width: 1139px;
 height: 901px;
 position: absolute;
-margin-top: -178px;
+margin-top: -127px;
 margin-left: 6%;
 }
 
@@ -124,6 +125,7 @@ margin-left: 6%;
 /*direcion del menu*/
 .mn{
 	margin-left: 360px;
+	margin-top: -75px;
 }
 
 /*color de la letra del usuario*/
