@@ -5,6 +5,8 @@
 	<title>Pefiles UTN</title>
     <!--Link de los estilos de css-->
     <link rel="stylesheet" type="text/css" href="styles/styles-login.css">
+    <!--Link de bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 
@@ -19,21 +21,25 @@
 <!--Colocar el formulario en el centro de la página-->
 <center class="formulario">
 <!--Login-->
-<form action="" name="Login" method="get" id="bord">
+<form role="form" action="" name="Login" method="get" id="bord" >
     <img src="Imagenes/logo-utn.png" alt="Universidad tecnica nacional" height="100" width="250">
     <br>
     <br>
     <br>
+    <div class="form-group" class="input-group">
     <label class="titulo-caja" for="username">Usuario</label><br>
-    <input class="caja-texto" type="tex" name="username" id="username" placeholder="Username">
+    <input class="caja-texto" class="form-control" type="tex" name="username" id="username" placeholder="Username">
+    </div>
     <br>
     <br>
+    <div class="form-group" class="input-group">
     <label class="titulo-caja" for="pass">Contrase&ntilde;a</label><br>
-    <input class="caja-texto" type="password" name="pass" id="pass" placeholder="Password">
+    <input class="caja-texto" class="form-control" type="password" name="pass" id="pass" placeholder="Password">
+    </div>
     <br>
     <br>
     <br>
-    <button type="button"><a href="Dahsboard.html" class="c">Ingresar</a></button>
+    <button type="button" class="btn btn-default"><a href="Dahsboard.html" class="c">Ingresar</a></button>
 </form>
 </center>
 </body>
