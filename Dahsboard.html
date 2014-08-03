@@ -8,44 +8,46 @@
 <!--Link de los estilos de css-->
 <link rel="stylesheet" type="text/css" href="styles/styles-dashboard.css">
 </head>
-
-
-
-
+ 
 
 
 
 <body>
 <!-- Latest compiled and minified JavaScript -->
    <script src="js/bootstrap.min.js"></script>
-<!--Link de las funciones para el menu mas pequeño-->
-<script type="text/javascript" src="Java/menu-mobil.js"></script>
-
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-   <!-- <a href="#" class="thumbnail">-->
-    <img data-src="holder.js/100%x180" src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80" class="posicionimag">
-     <figcaption class="cl">UTN Perfil</figcaption>
-    </a>
-  </div>
-
-</div>
 
 
 
-<div class="row">
-  <div class="col-xs-6 col-md-3">
-   <!-- <a href="#" class="thumbnail">-->
-   <!-- <img data-src="holder.js/100%x180" src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80" class="posicionimag">
-     <figcaption class="cl">UTN Perfil</figcaption>
-    </a>-->
-  </div>
-<!--Pocision de la franja-->
-<div class="franja">
-	
-</div>
 
-</div>
+
+<nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">UTN</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="#">Carreras</a></li>
+            <li><a href="#">Estudiantes</a></li>
+            <li><a href="#">Usuarios</a></li>
+            <li><a href="#"> <span class="  glyphicon glyphicon-off"></span>  Salir</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav> 
+
+
+
  <!--Pocision de la franja-->
 <!--<div class="franja">
 	
@@ -57,29 +59,12 @@
   <figcaption class="cl">UTN Perfil</figcaption>
 </figure>-->
 
-<!--Salir al Login-->
-<p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
-<br>
-
-<!--Lista de las paginas del menú-->
-<ol class="breadcrumb pocisionDash">
-  <li class="active"><a href="Dahsboard.html">Dashboard</a></li>
-</ol>
 
 
-<div class="container">
-<!--primer Menu de la pagina-->
-<div id="menu" class="mn" class="hidden-xs nav nav-pills">
-	<ul class="nav nav-tabs" role="tablist">
-		<li><a href="Dahsboard.html" id="primero">Dashboard</a></li>
-		<li><a href="Carreras.html">Carreras</a></li>
-		<li><a href="Estudiantes.html">Estudiantes</a></li>
-		<li><a href="Usuarios.html">Usuarios</a></li>
-	</ul>
-</div>
-</div>
-<!--Informacion dentro del manú-->
-<div id="dis" class="well well-lg">
+<div class="panel panel-default">
+
+  <div class="panel-body">
+   <!--Informacion dentro del manú-->
 <br>
 <br>
 <center><h3>Ultima B&uacute;squeda Realizada</h3></center>
@@ -87,25 +72,12 @@
 <p class="z">2014/08/01- Angular JP</p>
 <p class="z">2014/05/04- Database, P</p>
 <p class="z">2014/09/05- PHP, Code</p>
-<p class="z">2014/04/09- Ruby</p>	
+<p class="z">2014/04/09- Ruby</p> 
+
+  </div>
 </div>
-<br>
 
 
-<a href="#" id="mobile-menu-button" class="btn btn-default visible-xs">
-	<span class="glyphicon glyphicon-th-list"></span>
-</a>
 
-<!--Pie de página-->
-<div id="pie">
-<div class="nbt pagination">
-	<li><a href="#">&laquo;</a></li>
-  <li class="active"><a href="Dahsboard.html">1</a></li>
-  <li><a href="Carreras.html">2</a></li>
-  <li><a href="Estudiantes.html">3</a></li>
-  <li><a href="Usuarios.html">4</a></li>
-   <li><a href="#">&raquo;</a></li>
-</div>
-</div>
 </body>
 </html>
