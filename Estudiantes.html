@@ -15,69 +15,53 @@
 
 
 <body>
-<!--Pocision de la franja-->
+<!--Pocision de la franja
 <div class="franja">
 	
-</div>
-<!--imagen del usuario-->
+</div>-->
+
+<!--imagen del usuario
 <figure class="im">
   <img src="Imagenes/logo-usuario.png" alt="Nombre Usuario" width="70" height="70">
   <figcaption class="cl">UTN Perfil</figcaption>
-</figure>
-<!--Salir al Login-->
+</figure>-->
+<!--Salir al Login
 <p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
-<br>
-<!--Lista de las paginas del menu-->
+<br>-->
+<!--Lista de las paginas del menu
 <p style="position: relative; padding-top: 100px;" class="cl"><a href="Dahsboard.html" class="con">Dashboard</a> >Estudiantes</p>
 <br>
-<br>
-<!--Menú-->
-<div id="menu" class="mn">
-	<ul>
-		<li><a href="Dahsboard.html">Dashboard</a></li>
-		<li><a href="Carreras.html">Carreras</a></li>
-		<li><a href="Estudiantes.html" id="primero">Estudiantes</a></li>
-		<li><a href="Usuarios.html">Usuarios</a></li>
-	</ul>
-</div>	
-</ul>
-<!--div o donde va la información-->
-<div id="dis">
-<center><h2>Lista de Estudiantes</h2></center>
-<a href="Agregar-estudiante.html"><img src="Imagenes/Logo-agregar.png" width="40" height="50" id="agr"></a>
-<table CELLSPACING="10" CELLPADDING="15">
-	<tr>
-	   <th><strong strong style="margin-right: 100px;">Nombres de los Estudiantes</strong></th>
-	</tr>
-	<tr>
-		<td><a href="Editar-estudiante.html">Pablo Quesada</a></td>
-		<td><a href="Editar-estudiante.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a></td>
-		<td><a href="#" onmouseDown="alert('Se elimino exitosamente')"><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></a></td>
-	</tr>
-	<tr>
-		<td><a href="Editar-estudiante.html">Alejandra M&eacute;ndez</a></td>
-		<td><a href="Editar-estudiante.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a></td>
-		<td><a href="#" onmouseDown="alert('Se elimino exitosamente')"><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></a></td>
-	</tr>
-	<tr>
-		<td><a href="Editar-estudiante.html">Daniel Rodr&iacute;guez</td>
-		<td><a href="Editar-estudiante.html"><img src="Imagenes/Logo-editar.png" width: "35" height="40"></a></td>
-		<td><a href="#" onmouseDown="alert('Se elimino exitosamente')"><img src="Imagenes/Logo-eliminar.png" width: "35" height="40"></a></td>
-	</tr>
-</table>
-</div>
-<br>
+<br>-->
 
-<!--Pie de página-->
-<div id="pie">
-<div class="nbt pagination">
-	<li><a href="#">&laquo;</a></li>
-  <li><a href="Dahsboard.html">1</a></li>
-  <li><a href="Carreras.html">2</a></li>
-  <li class="active"><a href="Estudiantes.html">3</a></li>
-  <li><a href="Usuarios.html">4</a></li>
-   <li><a href="#">&raquo;</a></li>
-</div>
-</div>
+<!-- Latest compiled and minified JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+
+   <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">UTN</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Dashboard</a></li>
+            <li><a href="#">Carreras</a></li>
+            <li><a href="#">Estudiantes</a></li>
+            <li><a href="#">Usuarios</a></li>
+            <li><a href="#"> <span class="  glyphicon glyphicon-off"></span>  Salir</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav> 
+
+
 </body>
 </html>
