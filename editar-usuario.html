@@ -3,6 +3,8 @@
 <head lang="es">
 <meta charset="UTF-8">
 	<title>Editar Usuarios</title>
+   <!--Link de bootstrap css-->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
    <!--Link de los estilos de css-->
    <link rel="stylesheet" type="text/css" href="styles/styles-editar-usuario.css">
 </head>
@@ -10,66 +12,57 @@
 
 
 <body>
-<!--Posicion de la franja-->
-<div class="franja">
-   
-</div>
-<!--imagen del usuario-->
-<figure class="im">
-  <img src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80">
-  <figcaption class="cl">UTN Perfil</figcaption>
-</figure>
+<!-- Latest compiled and minified JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
 
-<!--Salir al Login-->
-<p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
-<br>
-<!--Lista de las paginas del menú-->
-<p style="position: relative; padding-top: 100px;" class="cl"><a href="Dahsboard.html" class="con">Dashboard</a> >Usuarios</p>
-<br>
-<br>
-<!--Menú de la página-->
-<div id="menu" class="mn">
-   <ul>
-      <li><a href="Dahsboard.html">Dashboard</a></li>
-      <li><a href="Carreras.html">Carreras</a></li>
-      <li><a href="Estudiantes.html">Estudiantes</a></li>
-      <li><a href="Usuarios.html">Usuarios</a></li>
-   </ul>
-</div>   
-</ul>
-<!--Informacion dentro del manú-->
-<div id="dis">
-<h1>Editar Usuario</h1>
-<form action="" name="Usuario-editar" method="get">
 
-   <label for="user">Nombre de Usuario</label>
-   <input type="tex" name="user" id="user" value="Pera">
+   <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">UTN</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+          <ul class="nav navbar-nav">
+            <li><a href="Dahsboard.html">Dashboard</a></li>
+            <li><a href="Carreras.html">Carreras</a></li>
+            <li><a href="Estudiantes.html">Estudiantes</a></li>
+            <li><a href="Usuarios.html">Usuarios</a></li>
+            <li><a href="Login.html"> <span class="  glyphicon glyphicon-off"></span>  Salir</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav> 
+
+<div class="panel panel-default">
+  <div class="panel-heading">Editar Usuario</div>
+  <div class="panel-body">
+  <div class="input-group input-group-sm">
+    <span class="input-group-addon">C&eacute;dula</span>
+    <input type="text" class="form-control">
+   </div>
    <br>
-   <label for="name">Nombre</label>
-   <input type="tex" name="name" id="name" value="Pablo Quesada">
    <br>
-   <label for="ced">C&eacute;dula</label>
-   <input type="tex" name="ced" id="ced" value="204560678">
-   <br>
-   <label for="rl">Role</label>
-   <input type="radio" name="rl" value="Admin">Administrador
-   <input type="radio" name="rl" value="drc"  checked="checked">Director de Carreras
+    <div class="input-group input-group-sm">
+    <span class="input-group-addon">Nombre de Usuario</span>
+    <input type="text" class="form-control">
+   </div>
    <br>
    <br>
-   <button type="button">Crear</button>
-    <button type="button"><a href="Usuarios.html">Cancelar</a></button>
-</form>
+   <div class="input-group input-group-sm">
+    <span class="input-group-addon">Nombre Completo</span>
+    <input type="text" class="form-control">
+   </div>
+  </div>
 </div>
-<br>
-<!--Pie de página-->
-<div id="pie">
-<div class="nbt">
-   <span class="nft">P&aacute;ginas</span>
-   <a class="nfb" href="Dahsboard.html">1</a>
-   <a class="nfb" href="Carreras.html">2</a>
-   <a class="nfb" href="Estudiantes.html">3</a>
-   <a class="nfb" href="Usuarios.html">4</a>
-</div>
-</div>
+
 </body>
 </html>
