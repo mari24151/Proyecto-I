@@ -3,102 +3,93 @@
 <head lang="es">
 <meta charset="UTF-8">
     <title>Agregar Estudiante</title>
+         <!--Link de bootstrap css-->
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <!--Link de los estilos-->
    <link rel="stylesheet" type="text/css" href="styles/styles-agregar-estudiante.css">
 </head>
-<body>
-<div class="franja">
-   
-</div>
-<!--imagen del usuario-->
-<figure class="im">
-  <img src="Imagenes/logo-usuario.png" alt="Nombre del Usuario" width="70" height="80">
-  <figcaption class="cl">UTN Perfil</figcaption>
-</figure>
 
-<!--Salir al Login-->
-<p class="der">Bienbenido Administrador<a href="Login.html"><img src="Imagenes/Logo-salir.png" id="salir"></a></p>
-<br>
-<!--Lista de las paginas del menú-->
-<p style="position: relative; padding-top: 100px;" class="cl"><a href="Dahsboard.html" class="con">Dashboard</a> >Estudiantes</p>
-<br>
-<br>
-<!--Menú de la página-->
-<div id="menu" class="mn">
-   <ul>
-      <li><a href="Dahsboard.html">Dashboard</a></li>
-      <li><a href="Carreras.html">Carreras</a></li>
-      <li><a href="Estudiantes.html">Estudiantes</a></li>
-      <li><a href="Usuarios.html">Usuarios</a></li>
-   </ul>
-</div>   
-</ul>
-<!--Informacion dentro del manú-->
-<div id="dis">
-<h1>Agregar Estudiante</h1>
-<form action="" name="Editar" method="get">
+
+
+
+<body>
+<!-- Latest compiled and minified JavaScript -->
+   <script src="js/bootstrap.min.js"></script>
+
+
+   <nav class="navbar navbar-inverse" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">UTN</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+          <ul class="nav navbar-nav">
+            <li><a href="Dahsboard.html">Dashboard</a></li>
+            <li><a href="Carreras.html">Carreras</a></li>
+            <li><a href="Estudiantes.html">Estudiantes</a></li>
+            <li><a href="Usuarios.html">Usuarios</a></li>
+            <li><a href="Login.html"> <span class="  glyphicon glyphicon-off"></span>  Salir</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav> 
+
+<div class="panel panel-default">
+  <div class="panel-heading">Nueva Carrera</div>
+  <div class="panel-body">
+  <div class="input-group input-group-sm">
+    <span class="input-group-addon">Nombre</span>
+    <input type="text" class="form-control">
+   </div>
+   <br>
+   <br>
+   <div class="row">
+   <div class="col-md-8">
+    <div class="input-group input-group-sm">
+    <span class="input-group-addon">C&eacute;dula</span>
+    <input type="text" class="form-control">
+   </div>
+   </div>
+   </div>
     <br>
-    <div>
-    <label for="name" id="letr">Nombre</label><br>
-    <input type="tex" name="name" id="name">
-    <br>
-    <label for="apellidos" id="letr">Apellidos</label><br>
-    <input type="tex" name="apellidos" id="apellidos">
-    <br>
-    <label for="ced" id="letr">C&eacute;dula</label><br>
-    <input type="tex" name="ced" id="ced">
-    <br>
-    <label for="carr" id="letr">Carrera</label><br>
-    <input type="tex" name="carr" id="carr">
-    <br>
-    <label for="sex" id="letr">Nivel de &Iacute;ngles:</label>
-    <input type="radio" name="sex" value="bn">Bueno
-    <input type="radio" name="sex" value="ma">Promedio
-    <input type="radio" name="sex" value="ma">Malo
-    <br>
-    <br>
-    <label for="direc" id="letr">Calidades/Skills</label><br>
-    <textarea name="direc" rows="4" cols"50"></textarea>
-    <br>
-    </div>
-    <div style="margin-left: 400px; margin-top: -407px;">
-    <p><b>Proyectos desarrollados:</b></p>
-    <br>
-    <label for="carr" id="letr">Curso</label><br>
-    <input type="tex" name="cur" id="cur">
-    <br>
-    <label for="carr" id="letr">Duraci&oacute;n</label><br>
-    <input type="tex" name="dur" id="dur">
-    <br>
-    <label for="carr" id="letr">Tecnolog&iacute;as Utilizadas</label><br>
-    <input type="tex" name="carr" id="carr">
-    <br>
-    <label for="direc" id="letr">Descipci&oacute;n del Proyecto</label><br>
-    <textarea name="descp" rows="4" cols"50"></textarea>
-    <br>
-    <label for="carr" id="letr">Fecha</label><br>
-    <input type="tex" name="fec" id="fec">
-    <br>
-    <label for="carr" id="letr">Calificaci&oacute;n</label><br>
-    <input type="tex" name="dur" id="dur">
-    <br>
-    <label for="direc" id="letr">Comentarios del Profesor</label><br>
-    <textarea name="comen" rows="4" cols"50"></textarea>
-    <br>
-    <button type="button">Editar</button>
-    <button type="button"><a href="Estudiantes.html">Cancelar</a></button>
-    </div>
-</form>
+   <br>
+   <div class="btn-group open">
+    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+      Carreras
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Carrera 1</a></li>
+      <li><a href="#">Carrera 2</a></li>
+    </ul>
+  </div>
+   <br>
+   <h3>Nivel de ingles</h3>
+   <div class="radio">
+ <label>
+  <input type="radio" name="valor" id="alto" value="obcion1"> Alto
+</label>
+ </div>
+ <div class="radio">
+  <label>
+  <input type="radio" name="valor" id="medio" value="obcion2"> Medio
+</label>
 </div>
-<br>
-<!--Pie de página-->
-<div id="pie">
-<div class="nbt">
-   <span class="nft">P&aacute;ginas</span>
-   <a class="nfb" href="Dahsboard.html">1</a>
-   <a class="nfb" href="Carreras.html">2</a>
-   <a class="nfb" href="Estudiantes.html">3</a>
-   <a class="nfb" href="Usuarios.html">4</a>
+<div class="radio">
+  <label>
+  <input type="radio" name="valor" id="bajo" value="obcion3"> Bajo
+</label>
 </div>
+  </div>
 </div>
 </body>
 </html>
