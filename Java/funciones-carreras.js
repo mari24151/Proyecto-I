@@ -1,11 +1,9 @@
 
-//funcion jQuery
-function prepararFuncion() {   
-    $( "#agregar" ).click(function() { guardarCarrera() ;});
-}
-
 //guardar carreras
 function guardarCarrera() {
+
+     //darle la funcion al boton
+    $( "#agregar" ).click(function() { guardarCarrera() ;});
     // obtener datos del form
     var codigo = document.getElementById('codigo').value,
         name = document.getElementById('name').value,
@@ -25,7 +23,6 @@ function guardarCarrera() {
     // volver guardar en localstoraage
     localStorage.setItem('carrera',JSON.stringify(carrera));
 }
-
 
 //Eliminar Carreras 
 function eliminarCarrera(element) {
