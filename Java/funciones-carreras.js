@@ -1,15 +1,18 @@
 
+
+function preparar() {   
+    $( "#agregar" ).click(function() { guardarCarrera() ;});
+}
+
 //guardar carreras
 function guardarCarrera() {
 
-     //darle la funcion al boton
-    $( "#agregar" ).click(function() { guardarCarrera() ;});
     // obtener datos del form
     var codigo = document.getElementById('codigo').value,
-        name = document.getElementById('name').value,
+        nombre= document.getElementById('nombre').value,
     
     // crear objeto estudiante
-    var carrera = { "codigo": codigo, "name": name };
+    var carrera = { "codigo": codigo, "nombre": nombre };
     
     // leer los estudiantes de localstorage
     var carrera = JSON.parse(localStorage.getItem('carrera'));
@@ -22,7 +25,14 @@ function guardarCarrera() {
 
     // volver guardar en localstoraage
     localStorage.setItem('carrera',JSON.stringify(carrera));
+
+    document.getElementById("agregar").innerHTML= "Se guardo exitosamente" + carrera;
 }
+
+
+
+
+
 
 //Eliminar Carreras 
 function eliminarCarrera(element) {

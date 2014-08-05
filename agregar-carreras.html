@@ -9,6 +9,7 @@
    <link rel="stylesheet" type="text/css" href="styles/styles-agregar-carreras.css">
    <!--Link de las funciones de javaScript-->
    <script src="Java/funciones-carreras.js"></script>
+   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
 
@@ -55,7 +56,7 @@
   <div class="col-md-4">
   <div class="input-group input-group-sm">
     <span class="input-group-addon">C&oacute;digo</span>
-    <input type="text" class="form-control">
+    <input type="text" id="codigo" class="form-control">
    </div>
    </div>
    </div>
@@ -65,8 +66,8 @@
    <div class="row">
   <div class="col-md-4">
     <div class="input-group input-group-sm">
-    <span class="input-group-addon">Nombre de Carrera</span>
-    <input type="text" class="form-control">
+    <span class="input-group-addon">Nombre</span>
+    <input type="text" id="nombre" class="form-control">
    </div>
    </div>
    </div>
@@ -79,7 +80,7 @@
 </div>
 
 <script type="text/javascript">
-  guardarCarrera();
+  preparar();
 </script>
 
 </body>
