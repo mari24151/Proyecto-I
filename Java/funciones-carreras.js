@@ -1,3 +1,9 @@
+
+//funcion jQuery
+function prepararFuncion() {   
+    $( "#agregar" ).click(function() { guardarCarrera() ;});
+}
+
 //guardar carreras
 function guardarCarrera() {
     // obtener datos del form
