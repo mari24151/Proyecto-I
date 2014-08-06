@@ -25,8 +25,6 @@ function guardarCarrera() {
 
     // volver guardar en localstoraage
     localStorage.setItem('carrera',JSON.stringify(carrera));
-
-    document.getElementById("agregar").innerHTML= "Se guardo exitosamente" + carrera;
 }
 
 
