@@ -63,3 +63,9 @@ function editarCarreras(){
     document.getElementById("name").value = " ";
 
 }
+
+
+// leer Carreras
+function leerCarrera(){
+    
+}
