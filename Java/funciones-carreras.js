@@ -67,5 +67,7 @@ function editarCarreras(){
 
 // leer Carreras
 function leerCarrera(abcodigo, abnombre){
+
+    
     
 }
