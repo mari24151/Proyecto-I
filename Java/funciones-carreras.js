@@ -36,6 +36,13 @@ function editarCarreras(){
 }
 
 
+// Mostrar Carreras
+function mostrarCarrera(){
+
+
+    
+}
+
 
 //Eliminar Carreras 
 function eliminarCarrera(element) {
@@ -48,9 +55,3 @@ function eliminarCarrera(element) {
 }
 
 
-// Mostrar Carreras
-function mostrarCarrera(){
-
-
-    
-}
