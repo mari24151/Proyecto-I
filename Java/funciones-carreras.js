@@ -7,24 +7,24 @@ function preparar() {
 //guardar carreras
 function guardarCarrera() {
 
-    // obtener datos del form
-    var codigo = document.getElementById('codigo').value,
-        nombre= document.getElementById('nombre').value,
+      // obtener datos del form
+    var codigo = document.getElementById('codigo').value;
+        nombre= document.getElementById('nombre').value;
     
     // crear objeto estudiante
     var carrera = { "codigo": codigo, "nombre": nombre };
     
     // leer los estudiantes de localstorage
-    var carrera = JSON.parse(localStorage.getItem('carrera'));
-    if (carrera === null) {
-        carrera = [];
+    var carreras = JSON.parse(localStorage.getItem('carrera1'));
+    if (carreras === null) {
+        carreras = [];
     }
 
     // agregar el estudiante
-    carrera.push(carrera);
+    carreras.push(carrera);
 
     // volver guardar en localstoraage
-    localStorage.setItem('carrera',JSON.stringify(carrera));
+    localStorage.setItem('carrera',JSON.stringify(carreras));
 }
 
 
