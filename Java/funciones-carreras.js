@@ -63,7 +63,7 @@ function mostrarCarrera(bbcodigo, bbnombre){
             }
         };
 
-        document.getElementById("table-carreras").innerHTML = carrera;  
+        document.getElementById("tabla-carreras").innerHTML = carrera;  
 }
 
 
