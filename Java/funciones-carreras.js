@@ -28,7 +28,12 @@ function guardarCarrera() {
 }
 
 
+// Editar Carreras
+function editarCarreras(){
 
+        
+
+}
 
 
 
@@ -40,13 +45,6 @@ function eliminarCarrera(element) {
     } else {
         document.location.href='Carreras.html';
     }
-}
-
-
-// Editar Carreras
-
-function editarCarreras(){
-
 }
 
 
