@@ -47,11 +47,6 @@ function eliminarCarrera(element) {
 
 function editarCarreras(){
 
- var = editar [
-            codigo = "",
-            nombre = ""             
- ]
-
 }
 
 
