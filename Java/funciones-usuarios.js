@@ -41,18 +41,19 @@ function mostrarUsuarios(){
             if(usuarios[i] != undefined)
             {
             usuario += "<tr>";
-            usuario += '<td class="lbl-codigo"><a href="#">'+usuarios[i].codigo+'</a></td>';
+            usuario += '<td class="lbl-codigo"><a href="#">'+usuarios[i].cedula+'</a></td>';
+            usuario +=  '<td class="lbl-alias">'+usuarios[i].alias+'</td>';
             usuario +=  '<td class="lbl-nombre">'+usuarios[i].nombre+'</td>';
             usuario += "<td>";
             usuario += '<div class="btn-group">';
             usuario += ' <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Opciones<span class="caret"></span></button>';
-            usuario += '<ul class="dropdown-menu" role="menu"><li><a class="editar" id="'+carreras[i].codigo+'" href="editar.html?codigo='+carreras[i].codigo+'">Editar</a></li><li><a class="eliminar" id="'+carreras[i].codigo+'" href="#">Eliminar</a></li></ul>';
+            usuario += '<ul class="dropdown-menu" role="menu"><li><a class="editar" id="'+usuarios[i].cedula+'" href="editar.html?codigo='+usuarios[i].cedula+'">Editar</a></li><li><a class="eliminar" id="'+usuarios[i].cedula+'" href="#">Eliminar</a></li></ul>';
             usuario += '</div>';
             usuario += "</td>";
             usuario += "</tr>";
             }
         };
 
-        document.getElementById("tabla-carreras").innerHTML = carrera;  
+        document.getElementById("tabla-usuario").innerHTML = usuario;  
 }
 
