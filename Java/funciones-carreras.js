@@ -1,5 +1,4 @@
-
-
+// funcion que llama a agregar para luego mostrar en la ventana  
 function preparar() {   
     $( "#agregar" ).click(function() { guardarCarrera() ;});
 }
@@ -25,14 +24,6 @@ function guardarCarrera() {
 
     // volver guardar en localstoraage
     localStorage.setItem('carreras',JSON.stringify(carreras));
-
-}
-
-
-// Editar Carreras
-function editarCarreras(){
-
-        
 
 }
 

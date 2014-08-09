@@ -1,32 +1,31 @@
-//guardar usuario
+// funcion que llama a agregar para luego mostrar en la ventana  
+function prepararUsuario() {   
+    $( "#agregar" ).click(function() { guardarUsuario() ;});
+}
+
+//guardar carreras
 function guardarUsuario() {
-    // obtener datos del form
-    var codigo = document.getElementById('codigo').value,
-        name = document.getElementById('name').value,
+
+      // obtener datos del form
+    var cedula = document.getElementById('cedula').value;
+        alias= document.getElementById('alias').value;
+        nombre= document.getElementById('nombre').value;
     
-    // crear objeto estudiante
-    var usuario = { "codigo": codigo, "name": name };
+    // crear objeto usuarios
+    var usuario = { "cedula": cedula, "alias": alias,"nombre": nombre };
     
-    // leer los estudiantes de localstorage
- usuario = JSON.parse(localStorage.getItem('usuario'));
-    if (usuario === null) {
-        usuario = [];
+    // leer los usuarios de localstorage
+    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
+    if (usuarios === null) {
+        usuarios = [];
     }
 
-    // agregar el estudiante
-    usuario.push(usuario);
+    // agregar los usuarios
+    usuarios.push(usuario);
 
     // volver guardar en localstoraage
-    localStorage.setItem('usuario',JSON.stringify(usuario));
+    localStorage.setItem('usuarios',JSON.stringify(usuarios));
+
 }
 
 
-//Eliminar Carreras 
-function eliminarCarrera(element) {
-    if (confirm('Deseas eliminar el usuario selecionada')) {
-        alert('El usuario: '+element.value+ ' ha sido eliminado');
-        document.location.href='editar-usuario.html';
-    } else {
-        document.location.href='Usuarios.html';
-    }
-}

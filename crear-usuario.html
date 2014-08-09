@@ -49,26 +49,29 @@
   <div class="panel-body">
   <div class="input-group input-group-sm">
     <span class="input-group-addon">C&eacute;dula</span>
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" id="cedula">
    </div>
    <br>
    <br>
     <div class="input-group input-group-sm">
     <span class="input-group-addon">Nombre de Usuario</span>
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" id="alias">
    </div>
    <br>
    <br>
    <div class="input-group input-group-sm">
     <span class="input-group-addon">Nombre Completo</span>
-    <input type="text" class="form-control">
+    <input type="text" class="form-control" id="nombre">
    </div>
   </div>
 </div>
 <br>
 <br>
    <!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success">Aceptar</button> 
+<button type="button" class="btn btn-success" id="agregar">Aceptar</button> 
 
+<script type="text/javascript">
+  prepararUsuario()
+</script>
 </body>
 </html>
