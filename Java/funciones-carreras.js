@@ -50,8 +50,8 @@ function editarCarreras(){
 }
 
 
-// leer Carreras
-function leerCarrera(){
+// Mostrar Carreras
+function mostrarCarrera(){
 
 
     
