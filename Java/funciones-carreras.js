@@ -47,27 +47,17 @@ function eliminarCarrera(element) {
 
 function editarCarreras(){
 
-    var codigo = document.getElementById('codigo').value,
-        name = document.getElementById('name').value;
-
-    
-    //var carreras = {"codigo": codigo, "name": name };
-     
-     var nuevo = document.createElement("name");
-     nuevo.innerHTML = codigo;
-
-
-    var otrlista = document.getElementById("otrlista")
-    otrlista.appendChild(nuevo);
-
-    document.getElementById("name").value = " ";
+ var = editar [
+            codigo = "",
+            nombre = ""             
+ ]
 
 }
 
 
 // leer Carreras
-function leerCarrera(abcodigo, abnombre){
+function leerCarrera(){
 
-    
+
     
 }
