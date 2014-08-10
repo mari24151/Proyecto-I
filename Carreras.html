@@ -14,6 +14,8 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
+
+
 <body>
 <!-- Latest compiled and minified JavaScript -->
    <script src="js/bootstrap.min.js"></script>
@@ -51,7 +53,10 @@
  
   <!-- Table -->
   <table class="table" id="tabla-carreras">
-  
+  <div id="modal" style="display:none">
+<div id="ventana" class="contenedor" style="display:none">
+</div>
+</div>
   </table>
 </div>
 <br>
@@ -60,11 +65,15 @@
 <button type="button" class="btn btn-success"><a href="agregar-carreras.html">Agregar</a></button>
 </div>
 
+
+
 <script type="text/javascript">
   mostrarCarrera();
   eliminarCarrera();
   editarCarrera();
+  toogle();
 </script>
+
 
 </body>
 </html>
