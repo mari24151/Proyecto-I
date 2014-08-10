@@ -25,8 +25,7 @@ function guardarUsuario() {
 
     // volver guardar en localstoraage
     localStorage.setItem('usuarios',JSON.stringify(usuarios));
-    
-    document.getElementById("mensaje").innerHTML = '<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Carrera agregada con exito!</div>';
+
 }
 
 
@@ -61,9 +60,8 @@ function mostrarUsuarios(){
         document.getElementById("tabla-usuario").innerHTML = usuario;  
 }
 
-function editarCarrera()
-
-{
+// funcion de editar usuarios 
+function editarUsuarios(){
 
     var cedulaUsuario;
     var aliasUsuario;
@@ -120,9 +118,7 @@ function editarCarrera()
 
             };
 
-            localStorage.setItem('usuarios',JSON.stringify(usuarios));
-
-            document.getElementById("mensaje").innerHTML = '<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Carrera editada con exito!</div>';
+            localStorage.setItem('usuarios',JSON.stringify(usuarios));    
 
  
             });
@@ -135,39 +131,38 @@ function editarCarrera()
 
 
 //funcion que elimina los usuarios
-function  eliminarUsuarios()
-{
+function  eliminarUsuarios(){
 
 
         $(".eliminar").click(function() 
             {
 
-            var codigo_carrera =  $(this).attr("id");
+            var cedulaUsuario =  $(this).attr("id");
 
-            var carreras = JSON.parse(localStorage.getItem('carreras'));
+            var usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-            for (var i = 0; i < carreras.length; i++) {
+            for (var i = 0; i < usuarios.length; i++) {
 
-                if(carreras[i] != undefined)
+                if(usuarios[i] != undefined)
             {
 
-                if(carreras[i].codigo == codigo_carrera)
+                if(usuarios[i].cedula == cedulaUsuario)
                 {
 
-                        delete carreras[i];
+                        delete usuarios[i];
 
                 }
             }
 
             };
 
-         localStorage.setItem('carreras',JSON.stringify(carreras));
+         localStorage.setItem('Usuarios',JSON.stringify(usuarios));
 
             document.getElementById("mensaje").innerHTML = '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Carrera eliminada con exito!</div>';
         
-                cargarCarrera();
+                mostrarUsuarios();
 
-                eliminarCarrera();
+                eliminarUsuarios();
 
             });
 }
