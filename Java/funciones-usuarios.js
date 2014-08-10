@@ -25,6 +25,8 @@ function guardarUsuario() {
 
     // volver guardar en localstoraage
     localStorage.setItem('usuarios',JSON.stringify(usuarios));
+    
+    document.getElementById("mensaje").innerHTML = '<div class="alert alert-success" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Carrera agregada con exito!</div>';
 }
 
 
@@ -58,4 +60,119 @@ function mostrarUsuarios(){
 
         document.getElementById("tabla-usuario").innerHTML = usuario;  
 }
+
+function editarCarrera()
+
+{
+
+    var cedulaUsuario;
+    var aliasUsuario;
+    var nombreUsuario;
+    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
+
+    var cedulaUsuario = window.location.href.slice(window.location.href.indexOf('=') + 1);
+
+
+
+    for (var i = 0; i < usuarios.length; i++) {
+
+                if( usuarios[i] != undefined)
+            {
+
+
+              if(usuarios[i].cedula == cedulaUsuario)
+                {
+
+                  aliasUsuario = usuarios[i].alias;
+
+                }else if (usuarios[i].nombre == nombreUsuario);
+
+            }
+        
+
+    };
+
+
+    document.getElementById("cedula").value = cedulaUsuario;
+    document.getElementById("alias").value = aliasUsuario;
+    document.getElementById("nombre").value = nombreUsuario;
+
+
+        $("#btn-editar").click(function() 
+
+            {
+
+                for (var i = 0; i < usuarios.length; i++) {
+
+                if(usuarios[i] != undefined)
+            {
+
+
+            if(carreras[i].cedula == cedulaUsuario)
+            {
+
+                usuarios[i].alias = document.getElementById("alias").value;
+
+            }else if (carreras[i].nombre == nombreUsuario);
+
+            }
+        
+
+            };
+
+            localStorage.setItem('usuarios',JSON.stringify(usuarios));
+
+            document.getElementById("mensaje").innerHTML = '<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Carrera editada con exito!</div>';
+
+ 
+            });
+
+
+}
+
+
+
+
+
+//funcion que elimina los usuarios
+function  eliminarUsuarios()
+{
+
+
+        $(".eliminar").click(function() 
+            {
+
+            var codigo_carrera =  $(this).attr("id");
+
+            var carreras = JSON.parse(localStorage.getItem('carreras'));
+
+            for (var i = 0; i < carreras.length; i++) {
+
+                if(carreras[i] != undefined)
+            {
+
+                if(carreras[i].codigo == codigo_carrera)
+                {
+
+                        delete carreras[i];
+
+                }
+            }
+
+            };
+
+         localStorage.setItem('carreras',JSON.stringify(carreras));
+
+            document.getElementById("mensaje").innerHTML = '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Carrera eliminada con exito!</div>';
+        
+                cargarCarrera();
+
+                eliminarCarrera();
+
+            });
+}
+
+
+
+
 
