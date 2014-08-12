@@ -9,9 +9,12 @@
 <!--Link de estilos-->
 <link rel="stylesheet" type="text/css" href="styles/styles-carreras.css">
 <!--Link de las funciones de javaScript-->
-   <script src="Java/funciones-carreras.js"></script>
-   <!--Link de jqueri-->
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+ <script src="Java/funciones-carreras.js"></script>
+<!--Para la ventana modal-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css">
+<script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
 </head>
 
 
@@ -63,6 +66,10 @@
 </div>
 
 
+<div data-role="page">
+  <div data-role="main" class="ui-content">
+    <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all">Show Popup</a>
+</div>
 
 <script type="text/javascript">
   mostrarCarrera();
