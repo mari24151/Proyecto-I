@@ -12,3 +12,6 @@ body{background-image: url("../Imagenes/fondo.jpg");}
 }
 
 /*estilo para el boton de agregar*/
+#col{
+	color: black;
+}
