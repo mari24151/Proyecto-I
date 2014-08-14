@@ -33,12 +33,12 @@ function guardarUsuario() {
 // Mostrar Usuarios en la tabla 
 function mostrarUsuarios(){
 
-    
+    //agregar las filas y columnas a la tabla
         var columnas = "<tr><th>Cedula</th><th>Nombre Usuario</th><th>Nombre</th><th>Opciones</th></tr>";
 
         var usuarios = JSON.parse(localStorage.getItem('usuarios'));
         var usuario = columnas;
-
+      //agregar los usuarios a la tabla 
         for (var i = 0 ; i < usuarios.length; i++) {
             
             if(usuarios[i] != undefined)
@@ -56,19 +56,21 @@ function mostrarUsuarios(){
             usuario += "</tr>";
             }
         };
-
+//mostrarlos en la tabla
         document.getElementById("tabla-usuario").innerHTML = usuario;  
 }
+
+
 
 // funcion de editar usuarios 
 function editarUsuarios(){
 
-   var cedulaUsuario;
-   var aliasUsuario;
-    var nombreUsuario;
+   var cedula_usuario;
+   var alias_usuario;
+    var nombre_usuario;
     var usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-    var cedulaUsuario = window.location.href.slice(window.location.href.indexOf('=') + 1);
+    var cedula_usuario = window.location.href.slice(window.location.href.indexOf('=') + 1);
 
 
 
@@ -76,10 +78,10 @@ function editarUsuarios(){
 
                 if( usuarios[i] != undefined)
             {
-              if(usuarios[i].cedula == cedulaUsuario)
+              if(usuarios[i].cedula == cedula_usuario)
                 {
 
-                  aliasUsuario = usuarios[i].alias;
+                  alias_usuario = usuarios[i].alias;
 
                 }else if (usuarios[i].nombre == nombreUsuario);
 
@@ -104,7 +106,7 @@ function editarUsuarios(){
             {
 
 
-            if(carreras[i].cedula == cedulaUsuario)
+            if(carreras[i].cedula == cedula_usuario)
             {
 
                 usuarios[i].alias = document.getElementById("alias").value;
@@ -123,10 +125,6 @@ function editarUsuarios(){
 
 
 }
-
-
-
-
 
 //funcion que elimina los usuarios
 function  eliminarUsuarios(){
