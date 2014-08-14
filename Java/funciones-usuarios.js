@@ -61,7 +61,7 @@ function mostrarUsuarios(){
 }
 
 // funcion de editar usuarios 
-//function editarUsuarios(){
+function editarUsuarios(){
 
 //    var cedulaUsuario;
 //    var aliasUsuario;
