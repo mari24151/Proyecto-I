@@ -63,68 +63,66 @@ function mostrarUsuarios(){
 // funcion de editar usuarios 
 function editarUsuarios(){
 
-//    var cedulaUsuario;
-//    var aliasUsuario;
-//    var nombreUsuario;
-//    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
+   var cedulaUsuario;
+   var aliasUsuario;
+    var nombreUsuario;
+    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-//    var cedulaUsuario = window.location.href.slice(window.location.href.indexOf('=') + 1);
-
-
-
-//    for (var i = 0; i < usuarios.length; i++) {
-
-//                if( usuarios[i] != undefined)
-//            {
+    var cedulaUsuario = window.location.href.slice(window.location.href.indexOf('=') + 1);
 
 
-//              if(usuarios[i].cedula == cedulaUsuario)
-//                {
 
-//                  aliasUsuario = usuarios[i].alias;
+    for (var i = 0; i < usuarios.length; i++) {
 
-//                }else if (usuarios[i].nombre == nombreUsuario);
+                if( usuarios[i] != undefined)
+            {
+              if(usuarios[i].cedula == cedulaUsuario)
+                {
 
-//            }
+                  aliasUsuario = usuarios[i].alias;
+
+                }else if (usuarios[i].nombre == nombreUsuario);
+
+            }
         
 
-//    };
+    };
 
 
-//    document.getElementById("cedula").value = cedula_usuario;
-//    document.getElementById("alias").value = aliasUsuario;
-//    document.getElementById("nombre").value = nombreUsuario;
+    document.getElementById("cedula").value = cedula_usuario;
+    document.getElementById("alias").value = aliasUsuario;
+    document.getElementById("nombre").value = nombreUsuario;
 
 
-//        $("#btn-editar").click(function() 
+        $("#btn-editar").click(function() 
 
-//            {
+            {
 
-//                for (var i = 0; i < usuarios.length; i++) {
+                for (var i = 0; i < usuarios.length; i++) {
 
-//                if(usuarios[i] != undefined)
-//            {
+                if(usuarios[i] != undefined)
+            {
 
 
-//            if(carreras[i].cedula == cedulaUsuario)
-//            {
+            if(carreras[i].cedula == cedulaUsuario)
+            {
 
-//                usuarios[i].alias = document.getElementById("alias").value;
+                usuarios[i].alias = document.getElementById("alias").value;
 
-//            }else if (carreras[i].nombre == nombreUsuario);
+            }else if (carreras[i].nombre == nombreUsuario);
 
-//            }
+            }
         
 
-//            };
+            };
 
-//            localStorage.setItem('usuarios',JSON.stringify(usuarios));    
+            localStorage.setItem('usuarios',JSON.stringify(usuarios));    
 
  
-//            });
+            });
 
 
-//}
+}
 
 
 
