@@ -83,7 +83,7 @@ function editarUsuarios(){
 
                   alias_usuario = usuarios[i].alias;
 
-                }else if (usuarios[i].nombre == nombreUsuario);
+                }else if (usuarios[i].nombre == nombre_usuario);
 
             }
         
@@ -92,8 +92,8 @@ function editarUsuarios(){
 
 
     document.getElementById("cedula").value = cedula_usuario;
-    document.getElementById("alias").value = aliasUsuario;
-    document.getElementById("nombre").value = nombreUsuario;
+    document.getElementById("alias").value = alias_usuario;
+    document.getElementById("nombre").value = nombre_usuario;
 
 
         $("#btn-editar").click(function() 
@@ -111,7 +111,7 @@ function editarUsuarios(){
 
                 usuarios[i].alias = document.getElementById("alias").value;
 
-            }else if (carreras[i].nombre == nombreUsuario);
+            }else if (carreras[i].nombre == nombre_usuario);
 
             }
         
