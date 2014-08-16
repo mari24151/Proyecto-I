@@ -11,6 +11,11 @@
 <link rel="stylesheet" type="text/css" href="styles/styles-usuarios.css">
  <!--Link de para llamar a las funciones-->
 <script src="Java/funciones-usuarios.js"></script>
+<!--links ventana modal-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
 
@@ -63,11 +68,75 @@
     <!-- Indicates a successful or positive action -->
 <button type="button" class="btn btn-success"><a href="crear-usuario.html">Agregar</a></button>
 
+
+<!--Contenedor del modal-->
+<div class="container" style="margin-top: 60px;">
+
+  <!--estrucutra en la que se crea la ventana-->
+  <div class="modal fade" id="miventana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <!--Botton para cerrar la ventana-->
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4>Editar Usuarios</h4>
+        </div>
+        <!--info de la ventana o cuarpo-->
+        <div class="modal-body">
+           <!--Linea de cargar la información-->
+  <div class="row">
+    <div class="input-group input-group-sm">
+    <span class="input-group-addon">C&eacute;dula</span>
+    <input type="text" id="codigo" class="form-control">
+   </div>
+   
+   </div>
+   <br>
+   <br>
+   <!--Linea de cargar la información-->
+   <div class="row">
+    <div class="input-group input-group-sm">
+    <span class="input-group-addon">Usuario</span>
+    <input type="text" id="nombre" class="form-control">
+   </div>
+   </div>
+     <br>
+   <br>
+   <div class="input-group input-group-sm">
+    <span class="input-group-addon">Role</span>
+    <select class="selectpicker" data-style="btn-primary" id="role">
+    <option>Administrador</option>
+    <option>Director de carrera</option>
+  </select>
+   </div>
+   <br>
+   <br>
+   <div class="input-group input-group-sm">
+    <span class="input-group-addon">Contraseña</span>
+    <input type="text" class="form-control" id="contrasena">
+   </div>
+        </div>
+        <!--parte en la que se encuentra la info de el pie-->
+        <div class="modal-footer">
+            <!-- Indicates a successful or positive action -->
+            <button type="button" class="btn btn-success" id="editar-usuario">Guardar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
 <script type="text/javascript">
   mostrarUsuarios();
-  editarUsuarios();
-  eliminarUsuarios();
-</script>
+  eliminarUsuario();
+  editarUsuario();
+  prepararUsuario();
+  </script>
 
+<!--script que se necesitan para bootstrap y la bentana modal-->
+<script src="https://code.jquery.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
 </body>
 </html>

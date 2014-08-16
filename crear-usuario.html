@@ -7,6 +7,8 @@
    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
    <!--Link de bootstrap css-->
    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-select.css">
    <!--Link de estilos de la pagina propios-->
    <link rel="stylesheet" type="text/css" href="styles/styles-crear-usuario.css">
    <!--Link de para llamar a las funciones-->
@@ -17,6 +19,8 @@
 <body>
 <!-- Latest compiled and minified JavaScript -->
    <script src="js/bootstrap.min.js"></script>
+
+   <script src="js/bootstrap-select.js"></script>
 
 
    <nav class="navbar navbar-inverse" role="navigation">
@@ -48,6 +52,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">Nuevo Usuario</div>
   <div class="panel-body">
+
   <div class="input-group input-group-sm">
     <span class="input-group-addon">C&eacute;dula</span>
     <input type="text" class="form-control" id="cedula">
@@ -55,14 +60,29 @@
    <br>
    <br>
     <div class="input-group input-group-sm">
-    <span class="input-group-addon">Nombre de Usuario</span>
+    <span class="input-group-addon">Usuario</span>
     <input type="text" class="form-control" id="alias">
    </div>
    <br>
    <br>
    <div class="input-group input-group-sm">
-    <span class="input-group-addon">Nombre Completo</span>
+    <span class="input-group-addon">Nombre</span>
     <input type="text" class="form-control" id="nombre">
+   </div>
+    <br>
+   <br>
+   <div class="input-group input-group-sm">
+    <span class="input-group-addon">Role</span>
+    <select class="selectpicker" data-style="btn-primary" id="role">
+    <option>Administrador</option>
+    <option>Director de carrera</option>
+  </select>
+   </div>
+   <br>
+   <br>
+   <div class="input-group input-group-sm">
+    <span class="input-group-addon">Contraseña</span>
+    <input type="text" class="form-control" id="contrasena">
    </div>
   </div>
 </div>

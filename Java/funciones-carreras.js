@@ -1,6 +1,7 @@
 // funcion que llama a agregar para luego mostrar en la ventana  
 function preparar() {   
     $( "#agregar" ).click(function() { guardarCarrera() ;});
+    $( ".editar" ).click(function() { CargarValoresCarrera(this.id) ;});
 }
 
 //guardar carreras
@@ -25,6 +26,8 @@ function guardarCarrera() {
     // volver guardar en localstoraage
     localStorage.setItem('carreras',JSON.stringify(carreras));
 
+    location.href = "Carreras.html";
+
 }
 
 
@@ -47,7 +50,7 @@ function mostrarCarrera(){
             carrera += "<td>";
             carrera += '<div class="btn-group">';
             carrera += ' <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Opciones<span class="caret"></span></button>';
-            carrera += '<ul class="dropdown-menu" role="menu"><li><a class="editar" id="'+carreras[i].codigo+'" href="editar.html?codigo='+carreras[i].codigo+'">Editar</a></li><li><a class="eliminar" id="'+carreras[i].codigo+'" href="#">Eliminar</a></li></ul>';
+            carrera += '<ul class="dropdown-menu" role="menu"><li><a data-toggle="modal" data-target="#miventana" class="editar" id="'+carreras[i].codigo+'">Editar</a></li><li><a class="eliminar" id="'+carreras[i].codigo+'" href="#">Eliminar</a></li></ul>';
             carrera += '</div>';
             carrera += "</td>";
             carrera += "</tr>";
@@ -58,7 +61,7 @@ function mostrarCarrera(){
 }
 
 //editar carreras
-function editarCarrera()
+function CargarValoresCarrera(codigo)
 
 {
 
@@ -66,7 +69,7 @@ function editarCarrera()
     var nombre_carrera;
     var carreras = JSON.parse(localStorage.getItem('carreras'));
 
-    var codigo_carrera = window.location.href.slice(window.location.href.indexOf('=') + 1);
+    var codigo_carrera = codigo;
 
 
 
@@ -91,9 +94,23 @@ function editarCarrera()
     document.getElementById("nombre").value = nombre_carrera;
 
 
-        $("#btn-editar").click(function() 
+}
+
+function editarCarrera()
+{
+
+
+        $("#editar-carrera").click(function() 
 
             {
+              
+
+               var codigo_carrera;
+               var nombre_carrera;
+               var carreras = JSON.parse(localStorage.getItem('carreras'));
+
+               codigo_carrera = document.getElementById('codigo').value;
+               nombre_carrera = document.getElementById('nombre').value;
 
                 for (var i = 0; i < carreras.length; i++) 
                 {
@@ -105,15 +122,20 @@ function editarCarrera()
                           if(carreras[i].codigo == codigo_carrera)
                              {
 
-                                carreras[i].nombre = document.getElementById("nombre").value;
+                                carreras[i].nombre = nombre_carrera;
                              }
                         }
                 };
 
               localStorage.setItem('carreras',JSON.stringify(carreras));
 
-              document.getElementById("mensaje").innerHTML = '<div class="alert alert-info" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Carrera editada con exito!</div>';
+             alert('Carrera modificada con exito');
+
+             location.reload(true);
+
+
             });
+
 }
 
 
@@ -145,11 +167,10 @@ function  eliminarCarrera()
 
                localStorage.setItem('carreras',JSON.stringify(carreras));
 
-               document.getElementById("mensaje").innerHTML = '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Carrera eliminada con exito!</div>';
-        
-                mostrarCarrera();
+                alert('Carrera eliminada');
 
-                eliminarCarrera();
+                location.reload(true);        
+                
             });       
 }
 

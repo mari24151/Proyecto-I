@@ -1,18 +1,22 @@
 // funcion que llama a agregar para luego mostrar en la ventana  
 function prepararUsuario() {   
-    $( "#agregar" ).click(function() { guardarUsuario() ;});
+    $( "#agregar" ).click(function() { guardarUsuario();});
+    $( ".editar" ).click(function() { CargarValoresUsuarios(this.id) ;});
 }
 
 //guardar carreras
 function guardarUsuario() {
 
+debugger;
       // obtener datos del form
     var cedula = document.getElementById('cedula').value;
         alias= document.getElementById('alias').value;
         nombre= document.getElementById('nombre').value;
+        role= document.getElementById('role').value;
+        contrasena= document.getElementById('contrasena').value;
     
     // crear objeto usuarios
-    var usuario = { "cedula": cedula, "alias": alias,"nombre": nombre };
+    var usuario = { "cedula": cedula, "alias": alias,"nombre": nombre, "role": role, "contrasena": contrasena };
     
     // leer los usuarios de localstorage
     var usuarios = JSON.parse(localStorage.getItem('usuarios'));
@@ -26,15 +30,15 @@ function guardarUsuario() {
     // volver guardar en localstoraage
     localStorage.setItem('usuarios',JSON.stringify(usuarios));
 
+    location.href = "Usuarios.html";
 }
-
-
 
 // Mostrar Usuarios en la tabla 
 function mostrarUsuarios(){
 
+debugger;
     //agregar las filas y columnas a la tabla
-        var columnas = "<tr><th>Cedula</th><th>Nombre Usuario</th><th>Nombre</th><th>Opciones</th></tr>";
+        var columnas = "<tr><th>Cedula</th><th>Usuario</th><th>Nombre</th><th>Role</th><th>Contraseña</th><th>Opciones</th></tr>";
 
         var usuarios = JSON.parse(localStorage.getItem('usuarios'));
         var usuario = columnas;
@@ -44,13 +48,15 @@ function mostrarUsuarios(){
             if(usuarios[i] != undefined)
             {
             usuario += "<tr>";
-            usuario += '<td class="lbl-codigo"><a href="#">'+usuarios[i].cedula+'</a></td>';
+            usuario += '<td class="lbl-cedula"><a href="#">'+usuarios[i].cedula+'</a></td>';
             usuario +=  '<td class="lbl-alias">'+usuarios[i].alias+'</td>';
             usuario +=  '<td class="lbl-nombre">'+usuarios[i].nombre+'</td>';
+            usuario +=  '<td class="lbl-role">'+usuarios[i].role+'</td>';
+            usuario +=  '<td class="lbl-contrasena">'+usuarios[i].contrasena+'</td>';
             usuario += "<td>";
             usuario += '<div class="btn-group">';
             usuario += ' <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Opciones<span class="caret"></span></button>';
-            usuario += '<ul class="dropdown-menu" role="menu"><li><a class="editar" id="'+usuarios[i].cedula+'" href="editar.html?codigo='+usuarios[i].cedula+'">Editar</a></li><li><a class="eliminar" id="'+usuarios[i].cedula+'" href="#">Eliminar</a></li></ul>';
+            usuario += '<ul class="dropdown-menu" role="menu"><li><a data-toggle="modal" data-target="#miventana" class="editar" id="'+usuarios[i].cedula+'" href="editar.html?codigo='+usuarios[i].cedula+'">Editar</a></li><li><a class="eliminar" id="'+usuarios[i].cedula+'" href="#">Eliminar</a></li></ul>';
             usuario += '</div>';
             usuario += "</td>";
             usuario += "</tr>";
@@ -63,14 +69,17 @@ function mostrarUsuarios(){
 
 
 // funcion de editar usuarios 
-function editarUsuarios(){
+function CargarValorUsuario(codigo){
 
    var cedula_usuario;
    var alias_usuario;
     var nombre_usuario;
+    var role_usuario;
+    var contrasena_usuario;
+
     var usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-    var cedula_usuario = window.location.href.slice(window.location.href.indexOf('=') + 1);
+    var cedula_usuario = codigo;
 
 
 
@@ -83,7 +92,7 @@ function editarUsuarios(){
 
                   alias_usuario = usuarios[i].alias;
 
-                }else if (usuarios[i].nombre == nombre_usuario);
+                }
 
             }
         
@@ -94,11 +103,31 @@ function editarUsuarios(){
     document.getElementById("cedula").value = cedula_usuario;
     document.getElementById("alias").value = alias_usuario;
     document.getElementById("nombre").value = nombre_usuario;
+    document.getElementById("role").value = role_usuario;
+    document.getElementById("contrasena").value = role_usuario;
 
+}
+
+//editar Usuarios
+function editarUsuario(){
 
         $("#btn-editar").click(function() 
 
             {
+    var cedula_usuario;
+   var alias_usuario;
+    var nombre_usuario;
+    var role_usuario;
+
+    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
+
+
+        cedula = document.getElementById('cedula').value;
+        alias= document.getElementById('alias').value;
+        nombre= document.getElementById('nombre').value;
+        role= document.getElementById('role').value;
+        contrasena= document.getElementById('contrasena').value;
+
 
                 for (var i = 0; i < usuarios.length; i++) {
 
@@ -106,12 +135,12 @@ function editarUsuarios(){
             {
 
 
-            if(carreras[i].cedula == cedula_usuario)
+            if(usuarios[i].usuario == u)
             {
 
-                usuarios[i].alias = document.getElementById("alias").value;
+                usuarios[i].alias = alias_usuario;
 
-            }else if (carreras[i].nombre == nombre_usuario);
+            }
 
             }
         
@@ -120,10 +149,11 @@ function editarUsuarios(){
 
             localStorage.setItem('usuarios',JSON.stringify(usuarios));    
 
+            alert('Usuario modificada con exito');
+
+             location.reload(true);
  
             });
-
-
 }
 
 //funcion que elimina los usuarios
