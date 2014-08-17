@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-	<title>Pefiles UTN</title>
+    <meta charset="UTF-8">
+    <title>Pefiles UTN</title>
     <!--Link de los estilos de css-->
     <link rel="stylesheet" type="text/css" href="styles/styles-login.css">
     <!--Link de bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Link de jquery-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
 
@@ -14,21 +17,27 @@
 
 
 <body>
+    <center>
+        <img src="Imagenes/logo-utn.png" alt="Universidad tecnica nacional" height="100" width="250">
+        <br>
+        <br>
+        <form role="form">
+            <div class="form-group">
+                <label for="usuario" class="color">Usuario</label>
+                <input type="email" class="form-control" id="usuario" placeholder="User">
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="contrasena" class="color">Contraseña</label>
+                <input type="password" class="form-control" id="contrasena" placeholder="Password">
+            </div>
+            <br>
+            <br>
+            <button type="button" class="btn btn-default"><a href="Dahsboard.html" class="c">Ingresar</a>
+            </button>
 
-<img src="Imagenes/logo-utn.png" alt="Universidad tecnica nacional" height="100" width="250">
-<br>
-<br>
-<form role="form">
-  <div class="form-group">
-    <label for="exampleInputEmail1" class="color">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1" class="color">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-      <button type="button" class="btn btn-default"><a href="Dahsboard.html" class="c">Ingresar</a></button>
-
-  </form>
+        </form>
+    </center>
 </body>
+
 </html>
