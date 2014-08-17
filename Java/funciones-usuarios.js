@@ -77,8 +77,7 @@ function mostrarUsuarios() {
 
 
 // funcion de editar usuarios 
-function CargarValorUsuario(codigo) {
-
+function CargarValoresUsuario(codigo) {
 
     var cedula_usuario;
     var alias_usuario;
@@ -117,8 +116,6 @@ function CargarValorUsuario(codigo) {
 //editar Usuarios
 function editarUsuario() {
 
-    debugger;
-
     $("#editar-usuario").click(function()
 
         {
@@ -149,8 +146,6 @@ function editarUsuario() {
                     }
 
                 }
-
-
             };
 
             localStorage.setItem('usuarios', JSON.stringify(usuarios));

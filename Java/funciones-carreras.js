@@ -73,6 +73,7 @@ function CargarValoresCarrera(codigo)
 
     var codigo_carrera;
     var nombre_carrera;
+    
     var carreras = JSON.parse(localStorage.getItem('carreras'));
 
     var codigo_carrera = codigo;
