@@ -1,6 +1,9 @@
 /*Imegen del Login*/
 body{ background-image: url("../Imagenes/fondo.jpg");}
 
+.color{
+  color: #FFF;
+}
 /*posición del Login*/
 #bord{
   margin-top: 150px; 
