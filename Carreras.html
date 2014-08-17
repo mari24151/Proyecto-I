@@ -1,127 +1,141 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<!--Imagen del usurario de la cuenta-->
-<title>Perfiles UTN-Area Administrativa-Carreras</title>
-<!--Link de bootstrap css-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!--Link de estilos-->
-<link rel="stylesheet" type="text/css" href="styles/styles-carreras.css">
-<!--Link de las funciones de javaScript-->
- <script src="Java/funciones-carreras.js"></script>
+    <meta charset="UTF-8">
+    <!--Imagen del usurario de la cuenta-->
+    <title>Perfiles UTN-Area Administrativa-Carreras</title>
+    <!--Link de bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Link de estilos-->
+    <link rel="stylesheet" type="text/css" href="styles/styles-carreras.css">
+    <!--Link de las funciones de javaScript-->
+    <script src="Java/funciones-carreras.js"></script>
     <!--Link de jqueri-->
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-<!--links ventana modal-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="X-UA-Compatible" content="IE-edge">
-<link rel="stylesheet" href="dist/css/bootstrap.min.css">
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <!--links ventana modal-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
 
 
 <body>
-<!-- Latest compiled and minified JavaScript -->
-   <script src="js/bootstrap.min.js"></script>
-<!--Espacio para el menu con bootstrap-->
-   <nav class="navbar navbar-inverse" role="navigation">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">UTN</a>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!--Espacio para el menu con bootstrap-->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">UTN</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-9">
+                <ul class="nav navbar-nav">
+                    <li><a href="Dahsboard.html">Dashboard</a>
+                    </li>
+                    <li class="active"><a href="Carreras.html">Carreras</a>
+                    </li>
+                    <li><a href="Estudiantes.html">Estudiantes</a>
+                    </li>
+                    <li><a href="Usuarios.html">Usuarios</a>
+                    </li>
+                    <li class="posi">
+                        <a href="Login.html">
+                            <span class="  glyphicon glyphicon-off"></span>Salir</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-9">
-          <ul class="nav navbar-nav">
-            <li><a href="Dahsboard.html">Dashboard</a></li>
-            <li class="active"><a href="Carreras.html">Carreras</a></li>
-            <li><a href="Estudiantes.html">Estudiantes</a></li>
-            <li><a href="Usuarios.html">Usuarios</a></li>
-            <li class="posi"><a href="Login.html"> <span class="  glyphicon glyphicon-off"></span>  Salir</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav> 
+        <!-- /.container-fluid -->
+    </nav>
 
 
-<!--lugar del lista de carraras con bootstrap-->
+    <!--lugar del lista de carraras con bootstrap-->
     <div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Listas de Carreras</div>
- 
-  <!-- Tbla donde se encuentran los estudiantes -->
-  <table class="table" id="tabla-carreras">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Listas de Carreras</div>
 
-  </table>
-</div>
-<br>
-<br>
+        <!-- Tbla donde se encuentran los estudiantes -->
+        <table class="table" id="tabla-carreras">
+
+        </table>
+    </div>
+    <br>
+    <br>
     <!-- botton para agregar más carreras -->
-<button type="button" class="btn btn-success"><a href="agregar-carreras.html"><samp class="glyphicon glyphicon-plus"></samp>  Agregar</a></button>
+    <button type="button" class="btn btn-success">
+        <a href="agregar-carreras.html">
+            <samp class="glyphicon glyphicon-plus"></samp>Agregar</a>
+    </button>
 
-<!--Contenedor del modal-->
-<div class="container" style="margin-top: 60px;">
+    <!--Contenedor del modal-->
+    <div class="container" style="margin-top: 60px;">
 
-  <!--estrucutra en la que se crea la ventana-->
-  <div class="modal fade" id="miventana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-        <!--Botton para cerrar la ventana-->
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-          <h4>Editar Carreras</h4>
+        <!--estrucutra en la que se crea la ventana-->
+        <div class="modal fade" id="miventana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!--Botton para cerrar la ventana-->
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4>Editar Carreras</h4>
+                    </div>
+                    <!--info de la ventana o cuarpo-->
+                    <div class="modal-body">
+                        <!--Linea de cargar la información-->
+                        <div class="row">
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon">C&oacute;digo</span>
+                                <input type="text" id="codigo" class="form-control">
+                            </div>
+
+                        </div>
+                        <br>
+                        <br>
+                        <!--Linea de cargar la información-->
+                        <div class="row">
+
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon">Nombre</span>
+                                <input type="text" id="nombre" class="form-control">
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--parte en la que se encuentra la info de el pie-->
+                    <div class="modal-footer">
+                        <!-- Indicates a successful or positive action -->
+                        <button type="button" class="btn btn-success" id="editar-carrera">Guardar</button>
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <!--info de la ventana o cuarpo-->
-        <div class="modal-body">
-           <!--Linea de cargar la información-->
-  <div class="row">
-    <div class="input-group input-group-sm">
-    <span class="input-group-addon">C&oacute;digo</span>
-    <input type="text" id="codigo" class="form-control">
-   </div>
-   
-   </div>
-   <br>
-   <br>
-   <!--Linea de cargar la información-->
-   <div class="row">
-  
-    <div class="input-group input-group-sm">
-    <span class="input-group-addon">Nombre</span>
-    <input type="text" id="nombre" class="form-control">
-   </div>
-   
-   </div>
-        </div>
-        <!--parte en la que se encuentra la info de el pie-->
-        <div class="modal-footer">
-            <!-- Indicates a successful or positive action -->
-          <button type="button" class="btn btn-success" id="editar-carrera">Guardar</button>
-        </div>
-      </div>
+
     </div>
 
-  </div>
+    <!--llamar funciones-->
+    <script type="text/javascript">
+    mostrarCarrera();
+    eliminarCarrera();
+    editarCarrera();
+    preparar();
+    </script>
 
-</div>
-
-<!--llamar funciones-->
-<script type="text/javascript">
-  mostrarCarrera();
-  eliminarCarrera();
-  editarCarrera();
-  preparar();
-</script>
-
-<!--script que se necesitan para bootstrap y la bentana modal-->
-<script src="https://code.jquery.js"></script>
-<script src="dist/js/bootstrap.min.js"></script>
+    <!--script que se necesitan para bootstrap y la bentana modal-->
+    <script src="https://code.jquery.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>

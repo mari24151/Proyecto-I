@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="es">
-<meta charset="UTF-8">
-	<title>Agregar Carreras</title>
-     <!--Link de bootstrap css-->
-   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!--Link de los estilos-->
-   <link rel="stylesheet" type="text/css" href="styles/styles-agregar-carreras.css">
-   <!--Link de las funciones de javaScript-->
-   <script src="Java/funciones-carreras.js"></script>
-   <!--Link jquery-->
-   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Agregar Carreras</title>
+    <!--Link de bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Link de los estilos-->
+    <link rel="stylesheet" type="text/css" href="styles/styles-agregar-carreras.css">
+    <!--Link de las funciones de javaScript-->
+    <script src="Java/funciones-carreras.js"></script>
+    <!--Link jquery-->
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
 
@@ -18,70 +19,80 @@
 
 <body>
 
-<!-- Latest compiled and minified JavaScript -->
-   <script src="js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-     <!--Menu con bootstarp-->
-   <nav class="navbar navbar-inverse" role="navigation">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">UTN</a>
+    <!--Menu con bootstarp-->
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">UTN</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                <ul class="nav navbar-nav">
+                    <li><a href="Dahsboard.html">Dashboard</a>
+                    </li>
+                    <li><a href="Carreras.html">Carreras</a>
+                    </li>
+                    <li><a href="Estudiantes.html">Estudiantes</a>
+                    </li>
+                    <li><a href="Usuarios.html">Usuarios</a>
+                    </li>
+                    <li class="posi">
+                        <a href="Login.html">
+                            <span class="  glyphicon glyphicon-off"></span>Salir</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
+        <!-- /.container-fluid -->
+    </nav>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-          <ul class="nav navbar-nav">
-            <li><a href="Dahsboard.html">Dashboard</a></li>
-            <li><a href="Carreras.html">Carreras</a></li>
-            <li><a href="Estudiantes.html">Estudiantes</a></li>
-            <li><a href="Usuarios.html">Usuarios</a></li>
-            <li class="posi"><a href="Login.html"> <span class="  glyphicon glyphicon-off"></span>  Salir</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav> 
+    <!--Panel donde se encuentra la info-->
+    <div class="panel panel-default">
+        <div class="panel-heading">Nueva Carrera</div>
+        <div class="panel-body">
+            <!--Linea de cargar la información-->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">C&oacute;digo</span>
+                        <input type="text" id="codigo" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <!--Linea de cargar la información-->
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="input-group input-group-sm">
+                        <span class="input-group-addon">Nombre</span>
+                        <input type="text" id="nombre" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <br>
+    <!-- Indicates a successful or positive action -->
+    <button type="button" class="btn btn-success" id="agregar">Agregar</button>
 
-<!--Panel donde se encuentra la info-->
-<div class="panel panel-default">
-  <div class="panel-heading">Nueva Carrera</div>
-  <div class="panel-body">
-   <!--Linea de cargar la información-->
-  <div class="row">
-  <div class="col-md-4">
-  <div class="input-group input-group-sm">
-    <span class="input-group-addon">C&oacute;digo</span>
-    <input type="text" id="codigo" class="form-control">
-   </div>
-   </div>
-   </div>
-   <br>
-   <br>
-   <!--Linea de cargar la información-->
-   <div class="row">
-  <div class="col-md-4">
-    <div class="input-group input-group-sm">
-    <span class="input-group-addon">Nombre</span>
-    <input type="text" id="nombre" class="form-control">
-   </div>
-   </div>
-   </div>
-   <br>
-  </div>
-</div>
-<br>
-   <!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success" id="agregar">Guardar</button> 
-
-<script type="text/javascript">
-  preparar();
-</script>
+    <script type="text/javascript">
+    preparar();
+    </script>
 
 </body>
+
 </html>

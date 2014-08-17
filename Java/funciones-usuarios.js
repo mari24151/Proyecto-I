@@ -1,23 +1,32 @@
 // funcion que llama a agregar para luego mostrar en la ventana  
-function prepararUsuario() {   
-    $( "#agregar" ).click(function() { guardarUsuario();});
-    $( ".editar" ).click(function() { CargarValoresUsuarios(this.id) ;});
+function prepararUsuario() {
+    $("#agregar").click(function() {
+        guardarUsuario();
+    });
+    $(".editar").click(function() {
+        CargarValoresUsuario(this.id);
+    });
 }
 
 //guardar carreras
 function guardarUsuario() {
 
-debugger;
-      // obtener datos del form
+    // obtener datos del form
     var cedula = document.getElementById('cedula').value;
-        alias= document.getElementById('alias').value;
-        nombre= document.getElementById('nombre').value;
-        role= document.getElementById('role').value;
-        contrasena= document.getElementById('contrasena').value;
-    
+    alias = document.getElementById('alias').value;
+    nombre = document.getElementById('nombre').value;
+    role = document.getElementById('role').value;
+    contrasena = document.getElementById('contrasena').value;
+
     // crear objeto usuarios
-    var usuario = { "cedula": cedula, "alias": alias,"nombre": nombre, "role": role, "contrasena": contrasena };
-    
+    var usuario = {
+        "cedula": cedula,
+        "alias": alias,
+        "nombre": nombre,
+        "role": role,
+        "contrasena": contrasena
+    };
+
     // leer los usuarios de localstorage
     var usuarios = JSON.parse(localStorage.getItem('usuarios'));
     if (usuarios === null) {
@@ -28,51 +37,51 @@ debugger;
     usuarios.push(usuario);
 
     // volver guardar en localstoraage
-    localStorage.setItem('usuarios',JSON.stringify(usuarios));
+    localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
     location.href = "Usuarios.html";
 }
 
 // Mostrar Usuarios en la tabla 
-function mostrarUsuarios(){
+function mostrarUsuarios() {
 
-debugger;
+
     //agregar las filas y columnas a la tabla
-        var columnas = "<tr><th>Cedula</th><th>Usuario</th><th>Nombre</th><th>Role</th><th>Contraseña</th><th>Opciones</th></tr>";
+    var columnas = "<tr><th>Cedula</th><th>Usuario</th><th>Nombre</th><th>Role</th><th>Contraseña</th><th>Opciones</th></tr>";
 
-        var usuarios = JSON.parse(localStorage.getItem('usuarios'));
-        var usuario = columnas;
-      //agregar los usuarios a la tabla 
-        for (var i = 0 ; i < usuarios.length; i++) {
-            
-            if(usuarios[i] != undefined)
-            {
+    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
+    var usuario = columnas;
+    //agregar los usuarios a la tabla 
+    for (var i = 0; i < usuarios.length; i++) {
+
+        if (usuarios[i] != undefined) {
             usuario += "<tr>";
-            usuario += '<td class="lbl-cedula"><a href="#">'+usuarios[i].cedula+'</a></td>';
-            usuario +=  '<td class="lbl-alias">'+usuarios[i].alias+'</td>';
-            usuario +=  '<td class="lbl-nombre">'+usuarios[i].nombre+'</td>';
-            usuario +=  '<td class="lbl-role">'+usuarios[i].role+'</td>';
-            usuario +=  '<td class="lbl-contrasena">'+usuarios[i].contrasena+'</td>';
+            usuario += '<td class="lbl-cedula"><a data-toggle="modal" data-target="#miventana">' + usuarios[i].cedula + '</a></td>';
+            usuario += '<td class="lbl-alias">' + usuarios[i].alias + '</td>';
+            usuario += '<td class="lbl-nombre">' + usuarios[i].nombre + '</td>';
+            usuario += '<td class="lbl-role">' + usuarios[i].role + '</td>';
+            usuario += '<td class="lbl-contrasena">' + usuarios[i].contrasena + '</td>';
             usuario += "<td>";
             usuario += '<div class="btn-group">';
             usuario += ' <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Opciones<span class="caret"></span></button>';
-            usuario += '<ul class="dropdown-menu" role="menu"><li><a data-toggle="modal" data-target="#miventana" class="editar" id="'+usuarios[i].cedula+'" href="editar.html?codigo='+usuarios[i].cedula+'">Editar</a></li><li><a class="eliminar" id="'+usuarios[i].cedula+'" href="#">Eliminar</a></li></ul>';
+            usuario += '<ul class="dropdown-menu" role="menu"><li><a data-toggle="modal" data-target="#miventana" class="editar" id="' + usuarios[i].cedula + '" href="editar.html?codigo=' + usuarios[i].cedula + '">Editar</a></li><li><a class="eliminar" id="' + usuarios[i].cedula + '" href="#">Eliminar</a></li></ul>';
             usuario += '</div>';
             usuario += "</td>";
             usuario += "</tr>";
-            }
-        };
-//mostrarlos en la tabla
-        document.getElementById("tabla-usuario").innerHTML = usuario;  
+        }
+    };
+    //mostrarlos en la tabla
+    document.getElementById("tabla-usuario").innerHTML = usuario;
 }
 
 
 
 // funcion de editar usuarios 
-function CargarValorUsuario(codigo){
+function CargarValorUsuario(codigo) {
 
-   var cedula_usuario;
-   var alias_usuario;
+
+    var cedula_usuario;
+    var alias_usuario;
     var nombre_usuario;
     var role_usuario;
     var contrasena_usuario;
@@ -85,18 +94,15 @@ function CargarValorUsuario(codigo){
 
     for (var i = 0; i < usuarios.length; i++) {
 
-                if( usuarios[i] != undefined)
-            {
-              if(usuarios[i].cedula == cedula_usuario)
-                {
+        if (usuarios[i] != undefined) {
 
-                  alias_usuario = usuarios[i].alias;
+            if (usuarios[i].cedula == cedula_usuario) {
 
-                }
+                alias_usuario = usuarios[i].alias;
 
             }
-        
 
+        }
     };
 
 
@@ -109,91 +115,81 @@ function CargarValorUsuario(codigo){
 }
 
 //editar Usuarios
-function editarUsuario(){
+function editarUsuario() {
 
-        $("#btn-editar").click(function() 
+    debugger;
 
-            {
-    var cedula_usuario;
-   var alias_usuario;
-    var nombre_usuario;
-    var role_usuario;
+    $("#editar-usuario").click(function()
 
-    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
-
-
-        cedula = document.getElementById('cedula').value;
-        alias= document.getElementById('alias').value;
-        nombre= document.getElementById('nombre').value;
-        role= document.getElementById('role').value;
-        contrasena= document.getElementById('contrasena').value;
-
-
-                for (var i = 0; i < usuarios.length; i++) {
-
-                if(usuarios[i] != undefined)
-            {
-
-
-            if(usuarios[i].usuario == u)
-            {
-
-                usuarios[i].alias = alias_usuario;
-
-            }
-
-            }
-        
-
-            };
-
-            localStorage.setItem('usuarios',JSON.stringify(usuarios));    
-
-            alert('Usuario modificada con exito');
-
-             location.reload(true);
- 
-            });
-}
-
-//funcion que elimina los usuarios
-function  eliminarUsuarios(){
-
-
-        $(".eliminar").click(function() 
-            {
-
-            var cedula_usuario =  $(this).attr("id");
+        {
+            var cedula_usuario;
+            var alias_usuario;
+            var nombre_usuario;
+            var role_usuario;
 
             var usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
+
+            cedula = document.getElementById('cedula').value;
+            alias = document.getElementById('alias').value;
+            nombre = document.getElementById('nombre').value;
+            role = document.getElementById('role').value;
+            contrasena = document.getElementById('contrasena').value;
+
+
             for (var i = 0; i < usuarios.length; i++) {
 
-                if(usuarios[i] != undefined)
-            {
+                if (usuarios[i] != undefined) {
 
-                if(usuarios[i].cedula == cedula_usuario)
-                {
 
-                        delete usuarios[i];
+                    if (usuarios[i].cedula == cedula_usuario) {
+
+                        alias_usuario = usuarios[i];
+
+                    }
+
+                }
+
+
+            };
+
+            localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+            alert('Usuario modificada con exito');
+
+            location.reload(true);
+
+        });
+}
+
+//funcion que elimina los usuarios
+function eliminarUsuarios() {
+
+    $(".eliminar").click(function() {
+
+        var cedula_usuario = $(this).attr("id");
+
+        var usuarios = JSON.parse(localStorage.getItem('usuarios'));
+
+        for (var i = 0; i < usuarios.length; i++) {
+
+            if (usuarios[i] != undefined) {
+
+                if (usuarios[i].cedula == cedula_usuario) {
+
+                    delete usuarios[i];
 
                 }
             }
 
-            };
+        };
 
-         localStorage.setItem('usuarios',JSON.stringify(usuarios));
+        localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-            document.getElementById("mensaje").innerHTML = '<div class="alert alert-danger" role="alert"><button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>Carrera eliminada con exito!</div>';
-        
-                mostrarUsuarios();
+        alert('Carrera eliminada');
 
-                eliminarUsuarios();
+        location.reload(true);
 
-            });
+
+    });
 }
-
-
-
-
-

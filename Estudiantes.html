@@ -1,12 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head lang="es">
-<meta charset="UTF-8">
-<title>Perfiles UTN-Area Administrativa-Estudiantes</title>
-<!--Link de bootstrap css-->
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<!--Link de los estilos de css-->
-<link rel="stylesheet" type="text/css" href="styles/styles-estudiantes.css">
+    <meta charset="UTF-8">
+    <title>Perfiles UTN-Area Administrativa-Estudiantes</title>
+    <!--Link de bootstrap css-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--Link de los estilos de css-->
+    <link rel="stylesheet" type="text/css" href="styles/styles-estudiantes.css">
+    <!--Link de para llamar a las funciones-->
+    <script src="Java/funciones-estudiante.js"></script>
+    <!--links ventana modal-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
 
 
@@ -16,49 +24,124 @@
 
 <body>
 
-<!-- Latest compiled and minified JavaScript -->
-   <script src="js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
-   <nav class="navbar navbar-inverse" role="navigation">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">UTN</a>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">UTN</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                <ul class="nav navbar-nav">
+                    <li><a href="Dahsboard.html">Dashboard</a>
+                    </li>
+                    <li><a href="Carreras.html">Carreras</a>
+                    </li>
+                    <li class="active"><a href="Estudiantes.html">Estudiantes</a>
+                    </li>
+                    <li><a href="Usuarios.html">Usuarios</a>
+                    </li>
+                    <li class="posi">
+                        <a href="Login.html">
+                            <span class="  glyphicon glyphicon-off"></span>Salir</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
-          <ul class="nav navbar-nav">
-            <li><a href="Dahsboard.html">Dashboard</a></li>
-            <li><a href="Carreras.html">Carreras</a></li>
-            <li class="active"><a href="Estudiantes.html">Estudiantes</a></li>
-            <li><a href="Usuarios.html">Usuarios</a></li>
-            <li class="posi"><a href="Login.html"> <span class="  glyphicon glyphicon-off"></span>  Salir</a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav> 
+        <!-- /.container-fluid -->
+    </nav>
 
 
 
     <div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Listas de Estudiantes</div>
- 
-  <!-- Table -->
-  <table class="table">
-   
-  </table>
-</div>
-<br>
-<br>
-   <!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success"><a href="Agregar-estudiante.html">Agregar</a></button>
+        <!-- Default panel contents -->
+        <div class="panel-heading">Listas de Estudiantes</div>
+
+        <!-- Table -->
+        <table class="table" id="tabla-estudiante">
+
+        </table>
+    </div>
+    <br>
+    <br>
+    <!-- Indicates a successful or positive action -->
+    <button type="button" class="btn btn-success"><a href="Agregar-estudiante.html">Agregar</a>
+    </button>
+    <!--Contenedor del modal-->
+    <div class="container" style="margin-top: 60px;">
+
+        <!--estrucutra en la que se crea la ventana-->
+        <div class="modal fade" id="miventana" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <!--Botton para cerrar la ventana-->
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4>Editar Usuarios</h4>
+                    </div>
+                    <!--info de la ventana o cuarpo-->
+                    <div class="modal-body">
+                        <!--Linea de cargar la información-->
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">Nombre</span>
+                            <input type="text" class="form-control" id="nombre">
+                        </div>
+                        <br>
+                        <br>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">C&eacute;dula</span>
+                            <input type="text" class="form-control" id="cedula">
+                        </div>
+                        <br>
+                        <br>
+                        <div class="input-group input-group-sm">
+                            <span class="input-group-addon">Carrera</span>
+                            <input type="text" class="form-control" id="carrera">
+                        </div>
+                        <br>
+                         <div class="input-group input-group-sm">
+                <span class="input-group-addon">Nivel de Ingl&eacute;s</span>
+                <select class="selectpicker" data-style="btn-primary" id="role">
+                    <option>Alto</option>
+                    <option>Medio</option>
+                    <option>Bajo</option>
+                </select>
+            </div>
+                        <br>
+
+                    </div>
+                    <!--parte en la que se encuentra la info de el pie-->
+                    <div class="modal-footer">
+                        <!-- Indicates a successful or positive action -->
+                        <button type="button" class="btn btn-success" id="editar-usuario">Guardar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+    prepararEstudiantes();
+    mostrarEstudiante();
+    editarEstudiante();
+    eliminarEstudiante();
+    </script>
+    <!--script que se necesitan para bootstrap y la bentana modal-->
+    <script src="https://code.jquery.js"></script>
+    <script src="dist/js/bootstrap.min.js"></script>
 </body>
+
 </html>
