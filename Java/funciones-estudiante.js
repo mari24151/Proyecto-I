@@ -12,10 +12,14 @@ function prepararEstudiante() {
 function guardarEstudiante() {
 
     // obtener datos del form
+
+    debugger;
+
     var cedula = document.getElementById('cedula').value;
     nombre = document.getElementById('nombre').value;
     carrera = document.getElementById('carrera').value;
     role = document.getElementById('role').value;
+    imagen = document.getElementById('imagen').files[0].name;
 
 
     // crear objeto estudiantes
@@ -23,7 +27,8 @@ function guardarEstudiante() {
         "cedula": cedula,
         "nombre": nombre,
         "carrera": carrera,
-        "role": role
+        "role": role,
+        "imagen": imagen
     };
 
     // leer los estudiantes de localstorage
@@ -55,6 +60,7 @@ function mostrarEstudiante() {
 
         if (estudiantes[i] != undefined) {
             estudiante += "<tr>";
+            estudiante += '<td class="lbl-imagen"><img width="100px" heigth="100px" src="Imagenes/'+estudiantes[i].imagen+'"></img></td>';
             estudiante += '<td class="lbl-cedula"><a data-toggle="modal" data-target="#miventana">' + estudiantes[i].cedula + '</a></td>';
             estudiante += '<td class="lbl-nobre">' + estudiantes[i].nombre + '</td>';
             estudiante += '<td class="lbl-carrera">' + estudiantes[i].carrera + '</td>';
