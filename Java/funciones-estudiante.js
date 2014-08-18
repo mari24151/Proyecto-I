@@ -138,7 +138,7 @@ function editarEstudiante() {
                 if (estudiantes[i] != undefined) {
 
 
-                    if (estudiantes[i].cedula== cedula_estudiante) {
+                    if (estudiantes[i].cedula == cedula_estudiante) {
 
                         estudiantes[i].nombre = nombre_estudiante;
                         estudiantes[i].carrera = carrera_estudiante;
@@ -162,7 +162,7 @@ function editarEstudiante() {
 //funcion que elimina los estudiantes
 function eliminarEstudiante() {
 
-    
+
     $(".eliminar").click(function() {
 
         var cedula_estudiante = $(this).attr("id");
@@ -190,4 +190,25 @@ function eliminarEstudiante() {
 
 
     });
+}
+
+function cargarCarrera() {
+
+
+    var carreras = JSON.parse(localStorage.getItem('carreras'));
+    var valores;
+    //agregar los usuarios a la tabla 
+    for (var i = 0; i < carreras.length; i++) {
+
+        if (carreras[i] != undefined) {
+
+            valores += "<option>" + carreras[i].nombre + "</option>";
+
+
+        }
+    };
+    //mostrarlos en la tabla
+    document.getElementById("carrera").innerHTML = valores;
+
+
 }

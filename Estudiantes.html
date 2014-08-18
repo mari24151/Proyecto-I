@@ -108,8 +108,12 @@
                         <br>
                         <br>
                         <div class="input-group input-group-sm">
-                            <span class="input-group-addon">Carrera</span>
-                            <input type="text" class="form-control" id="carrera">
+                            <span class="input-group-addon">Carreras</span>
+                            <select class="selectpicker" data-style="btn-primary" id="carrera">
+                                <option></option>
+                                <option></option>
+                                <option></option>
+                            </select>
                         </div>
                         <br>
                         <div class="input-group input-group-sm">
@@ -139,6 +143,7 @@
     editarEstudiante();
     eliminarEstudiante();
     prepararEstudiante();
+    cargarCarrera();
     </script>
     <!--script que se necesitan para bootstrap y la bentana modal-->
     <script src="https://code.jquery.js"></script>

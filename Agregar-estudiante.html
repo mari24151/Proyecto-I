@@ -10,7 +10,7 @@
     <!--Link de los estilos-->
     <link rel="stylesheet" type="text/css" href="styles/styles-agregar-estudiante.css">
     <!--LLama a las funciones-->
-    <script  src="Java/funciones-estudiante.js"></script>
+    <script src="Java/funciones-estudiante.js"></script>
     <!--Link jquery-->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
@@ -55,7 +55,7 @@
             </div>
         </div>
     </nav>
-<!--Penel donde se encuentra la tabla-->
+    <!--Penel donde se encuentra la tabla-->
     <div class="panel panel-default">
         <div class="panel-heading">Nueva Estudiante</div>
         <!--cuerpo en el que se agrega la info -->
@@ -74,8 +74,10 @@
             <br>
             <br>
             <div class="input-group input-group-sm">
-                <span class="input-group-addon">Carrera</span>
-                <input type="text" class="form-control" id="carrera">
+                <span class="input-group-addon">Carreras</span>
+                <select class="selectpicker" data-style="btn-primary" id="carrera">
+                    
+                                    </select>
             </div>
             <br>
             <div class="input-group input-group-sm">
@@ -92,10 +94,12 @@
     <!--botton que agrega la info a la tabla-->
     <button type="button" class="btn btn-success" id="agregar">Agragar</button>
 
-<!--Script que llama cada funcion del archivo funciones-->
+    <!--Script que llama cada funcion del archivo funciones-->
     <script type="text/javascript">
     prepararEstudiante();
+    cargarCarrera();
     </script>
 
 </body>
+
 </html>

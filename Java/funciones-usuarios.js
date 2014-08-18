@@ -192,7 +192,3 @@ function eliminarUsuarios() {
 
     });
 }
-
-function cargarCarrra(){
-
-}
