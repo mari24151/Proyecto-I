@@ -82,11 +82,12 @@ function mostrarEstudiante() {
 
 // funcion que carga el valor para editarlo 
 function CargarValoresEstudiante(codigo) {
-
+debugger;
     var cedula_estudiante;
     var nombre_estudiante;
     var carrera_estudiante;
     var role_estudiante;
+    var imagen_estudiante;
 
     var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
 
@@ -102,6 +103,7 @@ function CargarValoresEstudiante(codigo) {
                 nombre_estudiante = estudiantes[i].nombre;
                 carrera_estudiante = estudiantes[i].carrera;
                 role_estudiante = estudiantes[i].role;
+                imagen_estudiante= estudiantes[i].imagen;
 
             }
 
@@ -115,6 +117,7 @@ function CargarValoresEstudiante(codigo) {
     document.getElementById("nombre").value = nombre_estudiante;
     document.getElementById("carrera").value = carrera_estudiante;
     document.getElementById("role").value = role_estudiante;
+    document.getElementById("imagen").files[0].name= imagen_estudiante;
 
 }
 
@@ -129,6 +132,7 @@ function editarEstudiante() {
             var nombre_estudiante;
             var carrera_estudiante;
             var role_estudiante;
+            var imagen_estudiante;
 
             var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
 
@@ -137,6 +141,7 @@ function editarEstudiante() {
             nombre_estudiante = document.getElementById('nombre').value;
             carrera_estudiante = document.getElementById('carrera').value;
             role_estudiante = document.getElementById('role').value;
+            imagen_estudiante = document.getElementById('imagen').files[0].name = imagen_estudiante;
 
 
             for (var i = 0; i < estudiantes.length; i++) {
@@ -149,6 +154,7 @@ function editarEstudiante() {
                         estudiantes[i].nombre = nombre_estudiante;
                         estudiantes[i].carrera = carrera_estudiante;
                         estudiantes[i].role = role_estudiante;
+                        estudiantes[i].imagen = imagen_estudiante;
                     }
 
                 }
