@@ -82,7 +82,7 @@ function mostrarEstudiante() {
 
 // funcion que carga el valor para editarlo 
 function CargarValoresEstudiante(codigo) {
-debugger;
+
     var cedula_estudiante;
     var nombre_estudiante;
     var carrera_estudiante;
@@ -117,17 +117,17 @@ debugger;
     document.getElementById("nombre").value = nombre_estudiante;
     document.getElementById("carrera").value = carrera_estudiante;
     document.getElementById("role").value = role_estudiante;
-    document.getElementById("imagen").files[0].name= imagen_estudiante;
+    document.getElementById("imagen").text= imagen_estudiante;
 
 }
 
 //editar estudiantes
 function editarEstudiante() {
-    debugger;
-
+  
     $("#editar-estudiante").click(function()
 
         {
+
             var cedula_estudiante;
             var nombre_estudiante;
             var carrera_estudiante;
@@ -141,7 +141,7 @@ function editarEstudiante() {
             nombre_estudiante = document.getElementById('nombre').value;
             carrera_estudiante = document.getElementById('carrera').value;
             role_estudiante = document.getElementById('role').value;
-            imagen_estudiante = document.getElementById('imagen').files[0].name = imagen_estudiante;
+            imagen_estudiante = document.getElementById('imagen').files[0].name;
 
 
             for (var i = 0; i < estudiantes.length; i++) {
