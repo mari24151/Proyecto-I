@@ -43,7 +43,7 @@ function guardarEstudiante() {
 // Mostrar estudiantes en la tabla 
 function mostrarEstudiante() {
 
-
+debugger;
     //agregar las filas y columnas a la tabla
     var columnas = "<tr><th>Cedula</th><th>Nombre</th><th>Carrera</th><th>Estado de Ingles</th><th>Opciones</th></tr>";
 

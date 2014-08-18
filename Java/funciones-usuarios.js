@@ -45,7 +45,6 @@ function guardarUsuario() {
 // Mostrar Usuarios
 function mostrarUsuarios() {
 
-
     //agregar las filas y columnas a la tabla
     var columnas = "<tr><th>Cedula</th><th>Usuario</th><th>Nombre</th><th>Role</th><th>Contraseña</th><th>Opciones</th></tr>";
 

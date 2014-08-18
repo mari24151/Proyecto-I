@@ -41,7 +41,6 @@ function guardarCarrera() {
 // Mostrar Carreras
 function mostrarCarrera() {
 
-debugger;
     var columnas = "<tr><th>Codigo</th><th>Nombre</th><th>Opciones</th></tr>";
 
     var carreras = JSON.parse(localStorage.getItem('carreras'));
