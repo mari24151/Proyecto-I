@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!--Imagen del usurario de la cuenta-->
+    <!--Titulo de la pagina-->
     <title>Perfiles UTN-Area Administrativa-Carreras</title>
     <!--Link de bootstrap css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -21,12 +21,12 @@
 
 
 <body>
-    <!-- Latest compiled and minified JavaScript -->
+    <!--Link necesario para bootstrap-->
     <script src="js/bootstrap.min.js"></script>
-    <!--Espacio para el menu con bootstrap-->
+    <!--Menú de la pagina-->
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!--Menú desplegable-->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
                     <span class="sr-only">Toggle navigation</span>
@@ -36,7 +36,7 @@
                 </button>
                 <a class="navbar-brand" href="#">UTN</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!--menú que se muestra-->
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-9">
                 <ul class="nav navbar-nav">
                     <li><a href="Dahsboard.html">Dashboard</a>
@@ -53,25 +53,23 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
 
-    <!--lugar del lista de carraras con bootstrap-->
+    <!--panel donde se encuantra la lista-->
     <div class="panel panel-default">
-        <!-- Default panel contents -->
+        <!--lugar donde va el nombre-->
         <div class="panel-heading">Listas de Carreras</div>
 
-        <!-- Tbla donde se encuentran los estudiantes -->
+        <!--Tabla-->
         <table class="table" id="tabla-carreras">
 
         </table>
     </div>
     <br>
     <br>
-    <!-- botton para agregar más carreras -->
+    <!-- botton agregar-->
     <button type="button" class="btn btn-success">
         <a href="agregar-carreras.html">
             <samp class="glyphicon glyphicon-plus"></samp>Agregar</a>
@@ -103,17 +101,15 @@
                         <br>
                         <!--Linea de cargar la información-->
                         <div class="row">
-
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon">Nombre</span>
                                 <input type="text" id="nombre" class="form-control">
                             </div>
-
                         </div>
                     </div>
                     <!--parte en la que se encuentra la info de el pie-->
                     <div class="modal-footer">
-                        <!-- Indicates a successful or positive action -->
+                        <!--botton de guardar-->
                         <button type="button" class="btn btn-success" id="editar-carrera">Guardar</button>
                     </div>
                 </div>
@@ -126,8 +122,8 @@
     <!--llamar funciones-->
     <script type="text/javascript">
     mostrarCarrera();
-    eliminarCarrera();
     editarCarrera();
+    eliminarCarrera();
     preparar();
     </script>
 

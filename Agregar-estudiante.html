@@ -3,13 +3,14 @@
 
 <head lang="es">
     <meta charset="UTF-8">
+    <!--Titulo de la pagina-->
     <title>Agregar Estudiante</title>
     <!--Link de bootstrap css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--Link de los estilos-->
     <link rel="stylesheet" type="text/css" href="styles/styles-agregar-estudiante.css">
     <!--LLama a las funciones-->
-    <script type="text/javascript" href="Java/funciones-estudiante.js"></script>
+    <script  href="Java/funciones-estudiante.js"></script>
     <!--Link jquery-->
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 </head>
@@ -18,13 +19,13 @@
 
 
 <body>
-    <!-- Latest compiled and minified JavaScript -->
+    <!--Script que se necesita para bootstrap-->
     <script src="js/bootstrap.min.js"></script>
 
-
+    <!--Menú-->
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!--menú desplegable-->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
                     <span class="sr-only">Toggle navigation</span>
@@ -35,7 +36,7 @@
                 <a class="navbar-brand" href="#">UTN</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!--menú que se muestra-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
                 <ul class="nav navbar-nav">
                     <li><a href="Dahsboard.html">Dashboard</a>
@@ -52,13 +53,12 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
-
+<!--Penel donde se encuentra la tabla-->
     <div class="panel panel-default">
         <div class="panel-heading">Nueva Estudiante</div>
+        <!--cuerpo en el que se agrega la info -->
         <div class="panel-body">
             <div class="input-group input-group-sm">
                 <span class="input-group-addon">C&eacute;dula</span>
@@ -78,7 +78,7 @@
                 <input type="text" class="form-control" id="carrera">
             </div>
             <br>
-                     <div class="input-group input-group-sm">
+            <div class="input-group input-group-sm">
                 <span class="input-group-addon">Nivel de Ingl&eacute;s</span>
                 <select class="selectpicker" data-style="btn-primary" id="role">
                     <option>Alto</option>
@@ -87,15 +87,15 @@
                 </select>
             </div>
             <br>
-            </div>
-            </div>
-            <!-- Indicates a successful or positive action -->
-            <button type="button" class="btn btn-success" id="agregar">Agragar</button>
+        </div>
+    </div>
+    <!--botton que agrega la info a la tabla-->
+    <button type="button" class="btn btn-success" id="agregar">Agragar</button>
 
-            <script type="text/javascript">
-            prepararEstudiantes();
-            </script>
+<!--Script que llama cada funcion del archivo funciones-->
+    <script type="text/javascript">
+    prepararEstudiante();
+    </script>
 
 </body>
-
 </html>

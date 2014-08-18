@@ -19,13 +19,13 @@
 
 <body>
 
-    <!-- Latest compiled and minified JavaScript -->
+    <!--Script de bootstrap necesario -->
     <script src="js/bootstrap.min.js"></script>
 
     <!--Menu con bootstarp-->
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!--Menú desplegable-->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
                     <span class="sr-only">Toggle navigation</span>
@@ -36,7 +36,7 @@
                 <a class="navbar-brand" href="#">UTN</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!--Menu disponible-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
                 <ul class="nav navbar-nav">
                     <li><a href="Dahsboard.html">Dashboard</a>
@@ -67,7 +67,7 @@
                 <div class="col-md-4">
                     <div class="input-group input-group-sm">
                         <span class="input-group-addon">C&oacute;digo</span>
-                        <input type="text" id="codigo" class="form-control">
+                        <input type="text" class="form-control" id="codigo" >
                     </div>
                 </div>
             </div>
@@ -78,7 +78,7 @@
                 <div class="col-md-4">
                     <div class="input-group input-group-sm">
                         <span class="input-group-addon">Nombre</span>
-                        <input type="text" id="nombre" class="form-control">
+                        <input type="text" class="form-control" id="nombre">
                     </div>
                 </div>
             </div>
@@ -86,9 +86,10 @@
         </div>
     </div>
     <br>
-    <!-- Indicates a successful or positive action -->
+    <!--botton de agregar-->
     <button type="button" class="btn btn-success" id="agregar">Agregar</button>
 
+    <!--script donde se llama las funciones-->
     <script type="text/javascript">
     preparar();
     </script>

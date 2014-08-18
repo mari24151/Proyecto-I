@@ -1,5 +1,5 @@
 // funcion que llama a las dunciones agregar and editar a sus indicados botones  
-function prepararEstudiantes() {
+function prepararEstudiante() {
     $("#agregar").click(function() {
         guardarEstudiante();
     });
@@ -10,12 +10,11 @@ function prepararEstudiantes() {
 
 //guardar Estudiantes
 function guardarEstudiante() {
-
     // obtener datos del form
     var cedula = document.getElementById('cedula').value;
     nombre = document.getElementById('nombre').value;
     carrera = document.getElementById('carrera').value;
-    ingles = document.getElementById('ingles').value;
+    role = document.getElementById('role').value;
 
 
     // crear objeto estudiantes
@@ -23,7 +22,7 @@ function guardarEstudiante() {
         "cedula": cedula,
         "nombre": nombre,
         "carrera": carrera,
-        "ingles": ingles
+        "role": role
     };
 
     // leer los estudiantes de localstorage
@@ -55,10 +54,10 @@ function mostrarEstudiante() {
 
         if (estudiantes[i] != undefined) {
             estudiante += "<tr>";
-            estudiante += '<td class="lbl-cedula"><a href="#">' + estudiantes[i].cedula + '</a></td>';
+            estudiante += '<td class="lbl-cedula"><a data-toggle="modal" data-target="#miventana">' + estudiantes[i].cedula + '</a></td>';
             estudiante += '<td class="lbl-nobre">' + estudiantes[i].nombre + '</td>';
             estudiante += '<td class="lbl-carrera">' + estudiantes[i].carrera + '</td>';
-            estudiante += '<td class="lbl-ingles">' + estudiantes[i].ingles + '</td>';
+            estudiante += '<td class="lbl-role">' + estudiantes[i].role + '</td>';
             estudiante += "<td>";
             estudiante += '<div class="btn-group">';
             estudiante += ' <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Opciones<span class="caret"></span></button>';
@@ -80,7 +79,7 @@ function CargarValoresEstudiante(codigo) {
     var cedula_estudiante;
     var nombre_estudiante;
     var carrera_estudiante;
-    var ingles_estudiantes;
+    var role_estudiante;
 
     var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
 
@@ -91,9 +90,11 @@ function CargarValoresEstudiante(codigo) {
     for (var i = 0; i < estudiantes.length; i++) {
 
         if (estudiantes[i] != undefined) {
-            if (estudiantes[i].cedula == cedula_usuario) {
+            if (estudiantes[i].cedula == cedula_estudiante) {
 
-                alias_usuario = usuarios[i].alias;
+                nombre_estudiante = estudiantes[i].nombre;
+                carrera_estudiante = estudiantes[i].carrera;
+                role_estudiante = estudiantes[i].role;
 
             }
 
@@ -106,28 +107,28 @@ function CargarValoresEstudiante(codigo) {
     document.getElementById("cedula").value = cedula_estudiante;
     document.getElementById("nombre").value = nombre_estudiante;
     document.getElementById("carrera").value = carrera_estudiante;
-    document.getElementById("ingles").value = ingles_estudiante;
+    document.getElementById("role").value = role_estudiante;
 
 }
 
 //editar estudiantes
 function editarEstudiante() {
 
-    $("#btn-editar").click(function()
+    $("#editar-estudiante").click(function()
 
         {
             var cedula_estudiante;
             var nombre_estudiante;
             var carrera_estudiante;
-            var ingles_estudiante;
+            var role_estudiante;
 
             var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
 
 
-            cedula = document.getElementById('cedula').value;
-            nombre = document.getElementById('nombre').value;
-            carrera = document.getElementById('carrera').value;
-            ingles = document.getElementById('ingles').value;
+            cedula_estudiante = document.getElementById('cedula').value;
+            nombre_estudiante = document.getElementById('nombre').value;
+            carrera_estudiante = document.getElementById('carrera').value;
+            role_estudiante = document.getElementById('role').value;
 
 
             for (var i = 0; i < estudiantes.length; i++) {
@@ -135,10 +136,11 @@ function editarEstudiante() {
                 if (estudiantes[i] != undefined) {
 
 
-                    if (estudiantes[i].estudiante == estudiantes) {
+                    if (estudiantes[i].cedula== cedula_estudiante) {
 
-                        estudiantes[i].cedula = cedula_estudiante;
-
+                        estudiantes[i].nombre = nombre_estudiante;
+                        estudiantes[i].carrera = carrera_estudiante;
+                        estudiantes[i].role = role_estudiante;
                     }
 
                 }
@@ -148,7 +150,7 @@ function editarEstudiante() {
 
             localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
 
-            alert('Usuario modificada con exito');
+            alert('Estudiante modificada con exito');
 
             location.reload(true);
 

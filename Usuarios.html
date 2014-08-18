@@ -3,9 +3,8 @@
 
 <head lang="es">
     <meta charset="UTF-8">
+    <!--Titulo de la pagina-->
     <title>Perfiles UTN-Area Administrativa-Usuarios</title>
-    <!--Link jquery-->
-    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <!--Link de bootstrap css-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--Link de los estilos de css-->
@@ -24,13 +23,13 @@
 
 
 <body>
-    <!-- Latest compiled and minified JavaScript -->
+    <!--Link necesario para bootstrap-->
     <script src="js/bootstrap.min.js"></script>
 
     <!--Menú de la pagina-->
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!--menú desplegable-->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
                     <span class="sr-only">Toggle navigation</span>
@@ -41,7 +40,7 @@
                 <a class="navbar-brand" href="#">UTN</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!--menú que se muestra-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
                 <ul class="nav navbar-nav">
                     <li><a href="Dahsboard.html">Dashboard</a>
@@ -58,18 +57,16 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
 
     <!--Panel donde se encuantra la lista-->
     <div class="panel panel-default">
-        <!-- Default panel contents -->
+        <!--lugar donde va el nombre-->
         <div class="panel-heading">Lista de Usuarios</div>
 
-        <!-- Table -->
+        <!--Tabla-->
         <table class="table" id="tabla-usuario">
 
         </table>
@@ -101,7 +98,7 @@
                         <div class="row">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon">C&eacute;dula</span>
-                                <input type="text" id="codigo" class="form-control">
+                                <input type="text" class="form-control" id="cedula">
                             </div>
 
                         </div>
@@ -111,47 +108,56 @@
                         <div class="row">
                             <div class="input-group input-group-sm">
                                 <span class="input-group-addon">Usuario</span>
-                                <input type="text" id="nombre" class="form-control">
+                                <input type="text" class="form-control" id="alias">
+                            </div>
+                            <br>
+                            <br>
+                            <!--Linea de cargar la información-->
+                            <div class="row">
+                                <div class="input-group input-group-sm">
+                                    <span class="input-group-addon">Nombre</span>
+                                    <input type="text" class="form-control" id="nombre">
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon">Role</span>
+                                <select class="selectpicker" data-style="btn-primary" id="role">
+                                    <option>Administrador</option>
+                                    <option>Director de carrera</option>
+                                </select>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="input-group input-group-sm">
+                                <span class="input-group-addon">Contraseña</span>
+                                <input type="text" class="form-control" id="contrasena">
                             </div>
                         </div>
-                        <br>
-                        <br>
-                        <div class="input-group input-group-sm">
-                            <span class="input-group-addon">Role</span>
-                            <select class="selectpicker" data-style="btn-primary" id="role">
-                                <option>Administrador</option>
-                                <option>Director de carrera</option>
-                            </select>
+                        <!--parte en la que se encuentra la info de el pie-->
+                        <div class="modal-footer">
+                            <!--botton de guardar-->
+                            <button type="button" class="btn btn-success" id="editar-usuario">Guardar</button>
                         </div>
-                        <br>
-                        <br>
-                        <div class="input-group input-group-sm">
-                            <span class="input-group-addon">Contraseña</span>
-                            <input type="text" class="form-control" id="contrasena">
-                        </div>
-                    </div>
-                    <!--parte en la que se encuentra la info de el pie-->
-                    <div class="modal-footer">
-                        <!-- Indicates a successful or positive action -->
-                        <button type="button" class="btn btn-success" id="editar-usuario">Guardar</button>
                     </div>
                 </div>
+
             </div>
 
         </div>
 
-    </div>
+        <!--llamar funciones-->
+        <script type="text/javascript">
+        mostrarUsuarios();
+        editarUsuario();
+        eliminarUsuarios();
+        prepararUsuario();
+        </script>
 
-    <script type="text/javascript">
-    prepararUsuario();
-    mostrarUsuarios();
-    eliminarUsuarios();
-    editarUsuario();
-    </script>
-
-    <!--script que se necesitan para bootstrap y la bentana modal-->
-    <script src="https://code.jquery.js"></script>
-    <script src="dist/js/bootstrap.min.js"></script>
+        <!--script que se necesitan para bootstrap y la bentana modal-->
+        <script src="https://code.jquery.js"></script>
+        <script src="dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>

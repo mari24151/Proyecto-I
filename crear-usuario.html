@@ -19,15 +19,15 @@
 
 
 <body>
-    <!-- Latest compiled and minified JavaScript -->
+    <!--Script de bootstrap necesario -->
     <script src="js/bootstrap.min.js"></script>
-<!--Link de estilos de bootstrap vercion mejorada-->
+    <!--Link de estilos de bootstrap vercion mejorada-->
     <script src="js/bootstrap-select.js"></script>
 
-
+    <!--menú de bootstrap-->
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
+            <!--Menú desplegable-->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-9">
                     <span class="sr-only">Toggle navigation</span>
@@ -38,7 +38,7 @@
                 <a class="navbar-brand" href="#">UTN</a>
             </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
+            <!--menú disponible-->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
                 <ul class="nav navbar-nav">
                     <li><a href="Dahsboard.html">Dashboard</a>
@@ -60,10 +60,11 @@
         <!-- /.container-fluid -->
     </nav>
 
+    <!--panel donde se encuantra la info-->
     <div class="panel panel-default">
         <div class="panel-heading">Nuevo Usuario</div>
         <div class="panel-body">
-
+            <!--Linea de carga la info-->
             <div class="input-group input-group-sm">
                 <span class="input-group-addon">C&eacute;dula</span>
                 <input type="text" class="form-control" id="cedula">
@@ -99,9 +100,10 @@
     </div>
     <br>
     <br>
-    <!-- Indicates a successful or positive action -->
+    <!--botton de agregar-->
     <button type="button" class="btn btn-success" id="agregar">Agregar</button>
-
+    
+    <!--script donde se llama las funciones-->
     <script type="text/javascript">
     prepararUsuario();
     </script>

@@ -8,7 +8,7 @@ function prepararUsuario() {
     });
 }
 
-//guardar carreras
+//guardar Usuario
 function guardarUsuario() {
 
     // obtener datos del form
@@ -42,7 +42,7 @@ function guardarUsuario() {
     location.href = "Usuarios.html";
 }
 
-// Mostrar Usuarios en la tabla 
+// Mostrar Usuarios
 function mostrarUsuarios() {
 
 
@@ -98,6 +98,9 @@ function CargarValoresUsuario(codigo) {
             if (usuarios[i].cedula == cedula_usuario) {
 
                 alias_usuario = usuarios[i].alias;
+                nombre_usuario = usuarios[i].nombre;
+                role_usuario = usuarios[i].role;
+                contrasena_usuario = usuarios[i].contrasena;
 
             }
 
@@ -109,13 +112,13 @@ function CargarValoresUsuario(codigo) {
     document.getElementById("alias").value = alias_usuario;
     document.getElementById("nombre").value = nombre_usuario;
     document.getElementById("role").value = role_usuario;
-    document.getElementById("contrasena").value = role_usuario;
+    document.getElementById("contrasena").value = contrasena_usuario;
 
 }
 
 //editar Usuarios
 function editarUsuario() {
-
+debugger;
     $("#editar-usuario").click(function()
 
         {
@@ -127,11 +130,11 @@ function editarUsuario() {
             var usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
 
-            cedula = document.getElementById('cedula').value;
-            alias = document.getElementById('alias').value;
-            nombre = document.getElementById('nombre').value;
-            role = document.getElementById('role').value;
-            contrasena = document.getElementById('contrasena').value;
+            cedula_usuario = document.getElementById('cedula').value;
+            alias_usuario = document.getElementById('alias').value;
+            nombre_usuario = document.getElementById('nombre').value;
+            role_usuario = document.getElementById('role').value;
+            contrasena_usuario = document.getElementById('contrasena').value;
 
 
             for (var i = 0; i < usuarios.length; i++) {
@@ -141,16 +144,18 @@ function editarUsuario() {
 
                     if (usuarios[i].cedula == cedula_usuario) {
 
-                        alias_usuario = usuarios[i];
+                        usuarios[i].alias = alias_usuario;
+                        usuarios[i].nombre = nombre_usuario;
+                        usuarios[i].role = role_usuario;
+                        usuarios[i].contrasena = contrasena_usuario;
 
                     }
-
                 }
             };
 
             localStorage.setItem('usuarios', JSON.stringify(usuarios));
 
-            alert('Usuario modificada con exito');
+            alert('Usuario modificado con exito');
 
             location.reload(true);
 

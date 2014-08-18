@@ -15,7 +15,7 @@ function guardarCarrera() {
     var codigo = document.getElementById('codigo').value;
     nombre = document.getElementById('nombre').value;
 
-    // crear objeto estudiante
+    // crear objeto carrera
     var carrera = {
         "codigo": codigo,
         "nombre": nombre
@@ -41,7 +41,7 @@ function guardarCarrera() {
 // Mostrar Carreras
 function mostrarCarrera() {
 
-
+debugger;
     var columnas = "<tr><th>Codigo</th><th>Nombre</th><th>Opciones</th></tr>";
 
     var carreras = JSON.parse(localStorage.getItem('carreras'));
@@ -67,9 +67,7 @@ function mostrarCarrera() {
 }
 
 //editar carreras
-function CargarValoresCarrera(codigo)
-
-{
+function CargarValoresCarrera(codigo){
 
     var codigo_carrera;
     var nombre_carrera;
@@ -106,8 +104,6 @@ function editarCarrera() {
     $("#editar-carrera").click(function()
 
         {
-
-
             var codigo_carrera;
             var nombre_carrera;
             var carreras = JSON.parse(localStorage.getItem('carreras'));
