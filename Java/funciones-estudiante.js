@@ -10,6 +10,7 @@ function prepararEstudiante() {
 
 //guardar Estudiantes
 function guardarEstudiante() {
+
     // obtener datos del form
     var cedula = document.getElementById('cedula').value;
     nombre = document.getElementById('nombre').value;
@@ -43,7 +44,7 @@ function guardarEstudiante() {
 // Mostrar estudiantes en la tabla 
 function mostrarEstudiante() {
 
-debugger;
+
     //agregar las filas y columnas a la tabla
     var columnas = "<tr><th>Cedula</th><th>Nombre</th><th>Carrera</th><th>Estado de Ingles</th><th>Opciones</th></tr>";
 
@@ -61,7 +62,7 @@ debugger;
             estudiante += "<td>";
             estudiante += '<div class="btn-group">';
             estudiante += ' <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Opciones<span class="caret"></span></button>';
-            estudiante += '<ul class="dropdown-menu" role="menu"><li><a data-toggle="modal" data-target="#miventana" class="editar" id="' + usuarios[i].cedula + '" href="editar.html?codigo=' + usuarios[i].cedula + '">Editar</a></li><li><a class="eliminar" id="' + usuarios[i].cedula + '" href="#">Eliminar</a></li></ul>';
+            estudiante += '<ul class="dropdown-menu" role="menu"><li><a data-toggle="modal" data-target="#miventana" class="editar" id="' + estudiantes[i].cedula + '" href="editar.html?codigo=' + estudiantes[i].cedula + '">Editar</a></li><li><a class="eliminar" id="' + estudiantes[i].cedula + '" href="#">Eliminar</a></li></ul>';
             estudiante += '</div>';
             estudiante += "</td>";
             estudiante += "</tr>";
@@ -113,6 +114,7 @@ function CargarValoresEstudiante(codigo) {
 
 //editar estudiantes
 function editarEstudiante() {
+    debugger;
 
     $("#editar-estudiante").click(function()
 
