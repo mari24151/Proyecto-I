@@ -167,7 +167,7 @@ function eliminarCarrera() {
 }
 
 function CargarVista(codigo){
-
+debugger;
     var codigo_carrera;
     var nombre_carrera;
     
