@@ -6,6 +6,10 @@ function preparar() {
     $(".editar").click(function() {
         CargarValoresCarrera(this.id);
     });
+
+    $(".vista").click(function() {
+        CargarVista(this.id);
+    });
 }
 
 //guardar carreras
@@ -50,7 +54,7 @@ function mostrarCarrera() {
 
         if (carreras[i] != undefined) {
             carrera += "<tr>";
-            carrera += '<td class="lbl-codigo"><a data-toggle="modal" data-target="#modal-vista">' + carreras[i].codigo + '</a></td>';
+            carrera += '<td class="lbl-codigo"><a id="vista" data-toggle="modal" data-target="#modal-vista">' + carreras[i].codigo + '</a></td>';
             carrera += '<td class="lbl-nombre">' + carreras[i].nombre + '</td>';
             carrera += "<td>";
             carrera += '<div class="btn-group">';
@@ -93,8 +97,6 @@ function CargarValoresCarrera(codigo){
 
     document.getElementById("codigo").value = codigo_carrera;
     document.getElementById("nombre").value = nombre_carrera;
-
-
 }
 
 function editarCarrera() {
@@ -162,4 +164,31 @@ function eliminarCarrera() {
         location.reload(true);
 
     });
+}
+
+function CargarVista(codigo){
+
+    var codigo_carrera;
+    var nombre_carrera;
+    
+    var carreras = JSON.parse(localStorage.getItem('carreras'));
+
+    var codigo_carrera = codigo;
+
+
+
+    for (var i = 0; i < carreras.length; i++) {
+
+        if (carreras[i] != undefined) {
+
+
+            if (carreras[i].codigo == codigo_carrera) {
+
+                nombre_carrera = carreras[i].nombre;
+
+            }
+        }
+    };
+    document.getElementById("codigo-vista").value = codigo_carrera;
+    document.getElementById("nombre-vista").value = nombre_carrera;
 }
