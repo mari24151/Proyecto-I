@@ -7,10 +7,11 @@ function prepararLogin() {
 
 // funcion donde se revisa el usuario y contraseña
 function cargar() {
-debugger;
+    debugger;
     // tomar los valores de las cajas
     var usuario = document.getElementById('usuario').value;
-    contrasena = document.getElementById('contrasena').value;
+    var contrasena = document.getElementById('contrasena').value;
+    var correcto = false;
 
     // leer valores
     var usuarios = JSON.parse(localStorage.getItem('usuarios'));
@@ -23,12 +24,19 @@ debugger;
             if (usuarios[i].alias == usuario && usuarios[i].contrasena == contrasena) {
                 // envia al dashboard en caso correcto
                 location.href = "Dahsboard.html";
+                correcto = true;
                 break;
-            } else {
-            	//muestra alerta en caso contrario
-                alert('Su Usuario o Contraseña es incorrecta');
             }
-            location.reload(true);
+
+
         }
     };
+
+    if (correcto == false) {
+
+
+        //muestra alerta en caso contrario
+        alert('Su Usuario o Contraseña es incorrecta');
+
+    }
 }

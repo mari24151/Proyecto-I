@@ -28,3 +28,11 @@ body {
     background-image: url("../Imagenes/fondo.jpg");
 
 }
+
+/*Tamaño del select*/
+
+.selectpicker {
+
+    height: 30px;
+
+}

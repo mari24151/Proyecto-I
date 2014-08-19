@@ -22,3 +22,11 @@ body {
     margin-left: 820px;
 
 }
+
+/*Tamaño del select*/
+
+.selectpicker {
+
+    height: 30px;
+
+}
