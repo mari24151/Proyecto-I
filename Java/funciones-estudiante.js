@@ -51,7 +51,7 @@ function mostrarEstudiante() {
 
 
     //agregar las filas y columnas a la tabla
-    var columnas = "<tr><th>Cedula</th><th>Nombre</th><th>Carrera</th><th>Estado de Ingles</th><th>Opciones</th></tr>";
+    var columnas = "<tr><th>Foto</th><th>Cedula</th><th>Nombre</th><th>Carrera</th><th>Estado de Ingles</th><th>Opciones</th></tr>";
 
     var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
     var estudiante = columnas;
