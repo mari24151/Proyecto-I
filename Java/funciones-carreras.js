@@ -50,7 +50,7 @@ function mostrarCarrera() {
 
         if (carreras[i] != undefined) {
             carrera += "<tr>";
-            carrera += '<td class="lbl-codigo"><a data-toggle="modal" data-target="#miventana">' + carreras[i].codigo + '</a></td>';
+            carrera += '<td class="lbl-codigo"><a data-toggle="modal" data-target="#modal-vista">' + carreras[i].codigo + '</a></td>';
             carrera += '<td class="lbl-nombre">' + carreras[i].nombre + '</td>';
             carrera += "<td>";
             carrera += '<div class="btn-group">';

@@ -13,8 +13,6 @@ function guardarEstudiante() {
 
     // obtener datos del form
 
-    debugger;
-
     var cedula = document.getElementById('cedula').value;
     nombre = document.getElementById('nombre').value;
     carrera = document.getElementById('carrera').value;
@@ -60,7 +58,7 @@ function mostrarEstudiante() {
 
         if (estudiantes[i] != undefined) {
             estudiante += "<tr>";
-            estudiante += '<td class="lbl-imagen"><img width="100px" heigth="100px" src="Imagenes/'+estudiantes[i].imagen+'"></img></td>';
+            estudiante += '<td class="lbl-imagen"><img width="100px" heigth="100px" src="Imagenes/' + estudiantes[i].imagen + '"></img></td>';
             estudiante += '<td class="lbl-cedula"><a data-toggle="modal" data-target="#miventana">' + estudiantes[i].cedula + '</a></td>';
             estudiante += '<td class="lbl-nobre">' + estudiantes[i].nombre + '</td>';
             estudiante += '<td class="lbl-carrera">' + estudiantes[i].carrera + '</td>';
@@ -103,7 +101,7 @@ function CargarValoresEstudiante(codigo) {
                 nombre_estudiante = estudiantes[i].nombre;
                 carrera_estudiante = estudiantes[i].carrera;
                 role_estudiante = estudiantes[i].role;
-                imagen_estudiante= estudiantes[i].imagen;
+                imagen_estudiante = estudiantes[i].imagen;
 
             }
 
@@ -117,13 +115,13 @@ function CargarValoresEstudiante(codigo) {
     document.getElementById("nombre").value = nombre_estudiante;
     document.getElementById("carrera").value = carrera_estudiante;
     document.getElementById("role").value = role_estudiante;
-    document.getElementById("imagen").text= imagen_estudiante;
+    document.getElementById("imagen").text = imagen_estudiante;
 
 }
 
 //editar estudiantes
 function editarEstudiante() {
-  
+
     $("#editar-estudiante").click(function()
 
         {
@@ -215,8 +213,6 @@ function cargarCarrera() {
         if (carreras[i] != undefined) {
 
             valores += "<option>" + carreras[i].nombre + "</option>";
-
-
         }
     };
     //mostrarlos en la tabla
