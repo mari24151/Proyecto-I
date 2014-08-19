@@ -7,8 +7,8 @@ function preparar() {
         CargarValoresCarrera(this.id);
     });
 
-    $(".vista").click(function() {
-        CargarVista(this.id);
+    $("#vista").click(function() {
+        VistaCarrera(this.text);
     });
 }
 
@@ -44,9 +44,9 @@ function guardarCarrera() {
 
 // Mostrar Carreras
 function mostrarCarrera() {
-
+//mostrar columnas en la tabla
     var columnas = "<tr><th>Codigo</th><th>Nombre</th><th>Opciones</th></tr>";
-
+// leer las carreras
     var carreras = JSON.parse(localStorage.getItem('carreras'));
     var carrera = columnas;
 
@@ -54,7 +54,7 @@ function mostrarCarrera() {
 
         if (carreras[i] != undefined) {
             carrera += "<tr>";
-            carrera += '<td class="lbl-codigo"><a id="vista" data-toggle="modal" data-target="#modal-vista">' + carreras[i].codigo + '</a></td>';
+            carrera += '<td class="lbl-codigo"><a id="vista" data-toggle="modal" data-target="#vista-carrera">' + carreras[i].codigo + '</a></td>';
             carrera += '<td class="lbl-nombre">' + carreras[i].nombre + '</td>';
             carrera += "<td>";
             carrera += '<div class="btn-group">';
@@ -166,8 +166,8 @@ function eliminarCarrera() {
     });
 }
 
-function CargarVista(codigo){
-debugger;
+function VistaCarrera(codigo){
+
     var codigo_carrera;
     var nombre_carrera;
     
