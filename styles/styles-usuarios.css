@@ -1,17 +1,30 @@
 
 /*color de la letra del usuario*/
-.cl{
-	color: white;
+
+.cl {
+
+    color: white;
+
 }
 
+/*Posicion del menu*/
 
-/*Posicion del salir*/
-.posi{
-	margin-left: 786px;
+.posi {
+
+    margin-left: 820px;
+
 }
-.d{
-width: 517px;
+
+.d {
+
+    width: 517px;
+
 }
 
 /*Imegen del Login*/
-body{ background-image: url("../Imagenes/fondo.jpg");}
+
+body {
+
+    background-image: url("../Imagenes/fondo.jpg");
+
+}

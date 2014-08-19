@@ -1,135 +1,24 @@
-/*Estilo posición del salir*/
-.der{
-margin-right: 0px;
-margin-bottom: 20px;
-margin-left: 63em;
-position: absolute;
-z-index: 2;
-color: white;
-}
 
-/*Diseño del div donde va la información*/
-#dis{
-	background: white;
-    width: 615px;
-    height: 377px;
-    border: 8px double #000080;
-    margin-left: 360px;
-    position: absolute;
-    z-index: 2;
-}
 /*Diseño del fondo de la página*/
-body{background-image: url("../Imagenes/fondo.jpg");}
 
-/*Posicion de la imagen de salida*/
-#salir{
-margin: -5px;
-position: absolute;
-padding-left: 11px;
-width: 45px;
-}
+body {
 
-/*Fondo de la franja*/
-.fond{
-	background: transparent;
-}
-/*Posición de la franja*/
-.franja{
-background: rgba(26, 253, 6, 0.4);
-width: 1139px;
-height: 901px;
-position: absolute;
-margin-top: -178px;
-margin-left: 6%;
-}
+    background-image: url("../Imagenes/fondo.jpg");
 
-/*posicion de la imagen de perfil*/
-.im{
-	margin-left: 132px;
-	position: absolute;
-    z-index: 2;	
-}
-
-/*Posicion del Dashboard*/
-.con{
-	margin-left: 258px;
-	color: white;
-}
-/*direcion del menu*/
-.mn{
-	margin-left: 360px;
-}
-
-/*estilos del pie de página*/
-div.nbt{
-	margin-left: 339px;
-	text-align: center;
-    position: relative;
-    z-index: 4;
-    margin-top: 400px;
-}
-
-span.nft{
-	display: inline-block;
-	font-weight: bold;
-	height: 24px;
-	padding: 2px 5px;
-	color: white;
-}
-
-span.nfb{
-	display: inline-block;
-	font-weight: bold;
-	width: 27px;
-	height: 53px;
-	text-align: center;
-	cursor: default;
-	padding-top: 4px;
-	color: white;
-}
-
-/*Diseño del menú*/
-#menu {
-	font-family: Arial;
-	font-size: 19px;
-	position: absolute;
-    z-index: 3;
-}
-
-#menu li {
-	float: left;
-	list-style-type: none;
-}
-
-#menu ul {
-	margin: 0;
-	padding: 0;
-}
-
-#menu a {
-display: inline;
-text-decoration: none;
-color: #020202;
-background: #FAA4FA;
-padding: 3px 10px 3px 10px;
-text-align: center;
-border: 1px solid #191A19;
-border-width: 1px 1px 1px 1px;
-}
-
-#menu a#primero {
-border: 1px solid #0C0C0C;
-background-color: rgb(250, 3, 230);
-}
-#menu a:hover {
-	background: #d6ccff;
 }
 
 /*color de la letra del usuario*/
-.cl{
-	color: white;
+
+.cl {
+
+    color: white;
+
 }
-/*Posicion del salir*/
-.posi{
-	margin-left: 786px;
+
+/*Posicion del menu*/
+
+.posi {
+
+    margin-left: 820px;
+
 }

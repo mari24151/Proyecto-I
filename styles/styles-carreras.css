@@ -1,17 +1,16 @@
 /*estilo del fonde de la pagina*/
-body{background-image: url("../Imagenes/fondo.jpg");}
 
+body {
+    background-image: url("../Imagenes/fondo.jpg");
+}
 /*color de la letra del usuario*/
-.cl{
-	color: white;
+
+.cl {
+    color: white;
+}
+/*Posicion del menu*/
+
+.posi {
+    margin-left: 820px;
 }
 
-/*Posicion del salir*/
-.posi{
-	margin-left: 786px;
-}
-
-/*estilo para el boton de agregar*/
-#col{
-	color: black;
-}
