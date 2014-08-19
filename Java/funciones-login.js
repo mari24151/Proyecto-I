@@ -23,7 +23,8 @@ debugger;
             if (usuarios[i].alias == usuario && usuarios[i].contrasena == contrasena) {
                 // envia al dashboard en caso correcto
                 location.href = "Dahsboard.html";
-                break;
+                return " ";
+                //break;
             } else {
             	//muestra alerta en caso contrario
                 alert('Su Usuario o Contraseña es incorrecta');
