@@ -1,12 +1,13 @@
 // funcion que llama a las dunciones agregar and editar a sus indicados botones  
 function prepararEstudiante() {
+    // funcion del boton
     $("#agregar").click(function() {
         guardarEstudiante();
     });
     $(".editar").click(function() {
         CargarValoresEstudiante(this.id);
     });
-     $(".vista").click(function() {
+    $(".vista").click(function() {
         VistaEstudiante(this.text);
     });
 }
@@ -53,12 +54,12 @@ function mostrarEstudiante() {
 
     //agregar las filas y columnas a la tabla
     var columnas = "<tr><th>Foto</th><th>Cedula</th><th>Nombre</th><th>Carrera</th><th>Estado de Ingles</th><th>Opciones</th></tr>";
-
+    // leer datos
     var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
     var estudiante = columnas;
     //agregar los usuarios a la tabla 
     for (var i = 0; i < estudiantes.length; i++) {
-
+        //agregar datos de forma html a la tabla
         if (estudiantes[i] != undefined) {
             estudiante += "<tr>";
             estudiante += '<td class="lbl-imagen"><img width="100px" heigth="100px" src="Imagenes/' + estudiantes[i].imagen + '"></img></td>';
@@ -95,7 +96,7 @@ function CargarValoresEstudiante(codigo) {
     var cedula_estudiante = codigo;
 
 
-
+    // funcion de recorrido
     for (var i = 0; i < estudiantes.length; i++) {
 
         if (estudiantes[i] != undefined) {
@@ -113,7 +114,7 @@ function CargarValoresEstudiante(codigo) {
 
     };
 
-
+    // mostrar los valores
     document.getElementById("cedula").value = cedula_estudiante;
     document.getElementById("nombre").value = nombre_estudiante;
     document.getElementById("carrera").value = carrera_estudiante;
@@ -124,7 +125,7 @@ function CargarValoresEstudiante(codigo) {
 
 //editar estudiantes
 function editarEstudiante() {
-
+    // funcion botton 
     $("#editar-estudiante").click(function()
 
         {
@@ -137,7 +138,7 @@ function editarEstudiante() {
 
             var estudiantes = JSON.parse(localStorage.getItem('estudiantes'));
 
-
+            // extraer datos
             cedula_estudiante = document.getElementById('cedula').value;
             nombre_estudiante = document.getElementById('nombre').value;
             carrera_estudiante = document.getElementById('carrera').value;
@@ -162,11 +163,11 @@ function editarEstudiante() {
 
 
             };
-
+            //guardar datos nuevos
             localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
-
+            //alert
             alert('Estudiante modificada con exito');
-
+            // refrescar
             location.reload(true);
 
         });
@@ -174,7 +175,7 @@ function editarEstudiante() {
 
 //funcion que elimina los estudiantes
 function eliminarEstudiante() {
-
+    //funcion al botton 
 
     $(".eliminar").click(function() {
 
@@ -196,34 +197,36 @@ function eliminarEstudiante() {
         };
 
         localStorage.setItem('estudiantes', JSON.stringify(estudiantes));
-
+        // alert
         alert('Estudiante eliminada');
-
+        // refrescar
         location.reload(true);
 
 
     });
 }
 
+// cargar carreras en el select
 function cargarCarrera() {
 
-
+    // leer valores
     var carreras = JSON.parse(localStorage.getItem('carreras'));
     var valores;
-    //agregar los usuarios a la tabla 
-    for (var i = 0; i < carreras.length; i++) {
 
+    for (var i = 0; i < carreras.length; i++) {
+        // condicion 
         if (carreras[i] != undefined) {
 
             valores += "<option>" + carreras[i].nombre + "</option>";
         }
     };
-    //mostrarlos en la tabla
+    //mostrarlos en el select
     document.getElementById("carrera").innerHTML = valores;
 
 
 }
 
+// funcion para ver los datos del estudiante
 function VistaEstudiante(codigo) {
     debugger;
 
@@ -247,16 +250,17 @@ function VistaEstudiante(codigo) {
                 nombre_estudiante = estudiantes[i].nombre;
                 carrera_estudiante = estudiantes[i].carrera;
                 role_estudiante = estudiantes[i].role;
-                imagen_estudiante= estudiantes[i].imagen;
+                imagen_estudiante = estudiantes[i].imagen;
 
             }
 
         }
     };
+    // mostrar los datos
     document.getElementById("cedula-vista").value = cedula_estudiante;
     document.getElementById("nombre-vista").value = nombre_estudiante;
     document.getElementById("carrera-vista").value = carrera_estudiante;
     document.getElementById("role-vista").value = role_estudiante;
-    document.getElementById("imagen-vista").src= "Imagenes/"+imagen_estudiante;
+    document.getElementById("imagen-vista").src = "Imagenes/" + imagen_estudiante;
 
 }

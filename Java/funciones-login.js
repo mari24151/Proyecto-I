@@ -1,5 +1,6 @@
 //llamar la funcion para agregarla a la funcion 
 function prepararLogin() {
+    // funcion para el botton
     $("#iniciar").click(function() {
         cargar();
     });
@@ -7,7 +8,7 @@ function prepararLogin() {
 
 // funcion donde se revisa el usuario y contraseña
 function cargar() {
-    debugger;
+
     // tomar los valores de las cajas
     var usuario = document.getElementById('usuario').value;
     var contrasena = document.getElementById('contrasena').value;
@@ -31,7 +32,7 @@ function cargar() {
 
         }
     };
-
+    // si es falso mostrar mensaje
     if (correcto == false) {
 
 

@@ -69,7 +69,7 @@ function mostrarCarrera() {
     document.getElementById("tabla-carreras").innerHTML = carrera;
 }
 
-//editar carreras
+//Cargar carreras
 function CargarValoresCarrera(codigo) {
 
     var codigo_carrera;
@@ -159,14 +159,15 @@ function eliminarCarrera() {
         };
 
         localStorage.setItem('carreras', JSON.stringify(carreras));
-
+        // alert
         alert('Carrera eliminada');
-
+        // refrescar
         location.reload(true);
 
     });
 }
 
+// vista de las carreras
 function VistaCarrera(codigo) {
 
     var codigo_carrera;
@@ -177,7 +178,7 @@ function VistaCarrera(codigo) {
     var codigo_carrera = codigo;
 
 
-
+    // condicion  recorrer
     for (var i = 0; i < carreras.length; i++) {
 
         if (carreras[i] != undefined) {
@@ -190,6 +191,7 @@ function VistaCarrera(codigo) {
             }
         }
     };
+    // obtener info 
     document.getElementById("codigo-vista").value = codigo_carrera;
     document.getElementById("nombre-vista").value = nombre_carrera;
 }
