@@ -99,6 +99,7 @@ function CargarValoresCarrera(codigo){
     document.getElementById("nombre").value = nombre_carrera;
 }
 
+// edita la carrera
 function editarCarrera() {
 
 
