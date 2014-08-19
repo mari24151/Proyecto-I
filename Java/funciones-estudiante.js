@@ -6,7 +6,7 @@ function prepararEstudiante() {
     $(".editar").click(function() {
         CargarValoresEstudiante(this.id);
     });
-     $("#vista").click(function() {
+     $(".vista").click(function() {
         VistaEstudiante(this.text);
     });
 }
@@ -62,7 +62,7 @@ function mostrarEstudiante() {
         if (estudiantes[i] != undefined) {
             estudiante += "<tr>";
             estudiante += '<td class="lbl-imagen"><img width="100px" heigth="100px" src="Imagenes/' + estudiantes[i].imagen + '"></img></td>';
-            estudiante += '<td class="lbl-cedula"><a id="vista" data-toggle="modal" data-target="#vista-estudiante">' + estudiantes[i].cedula + '</a></td>';
+            estudiante += '<td class="lbl-cedula"><a class="vista" data-toggle="modal" data-target="#vista-estudiante">' + estudiantes[i].cedula + '</a></td>';
             estudiante += '<td class="lbl-nobre">' + estudiantes[i].nombre + '</td>';
             estudiante += '<td class="lbl-carrera">' + estudiantes[i].carrera + '</td>';
             estudiante += '<td class="lbl-role">' + estudiantes[i].role + '</td>';

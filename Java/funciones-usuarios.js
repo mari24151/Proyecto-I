@@ -6,7 +6,8 @@ function prepararUsuario() {
     $(".editar").click(function() {
         CargarValoresUsuario(this.id);
     });
-    $("#vista").click(function() {
+
+    $(".vista").click(function() {
         vistaUsuario(this.text);
     });
 }
@@ -58,7 +59,7 @@ function mostrarUsuarios() {
 
         if (usuarios[i] != undefined) {
             usuario += "<tr>";
-            usuario += '<td class="lbl-cedula"><a id="vista" data-toggle="modal" data-target="#vista-usuarios">' + usuarios[i].cedula + '</a></td>';
+            usuario += '<td class="lbl-cedula"><a class="vista" data-toggle="modal" data-target="#vista-usuarios">' + usuarios[i].cedula + '</a></td>';
             usuario += '<td class="lbl-alias">' + usuarios[i].alias + '</td>';
             usuario += '<td class="lbl-nombre">' + usuarios[i].nombre + '</td>';
             usuario += '<td class="lbl-role">' + usuarios[i].role + '</td>';
@@ -120,7 +121,7 @@ function CargarValoresUsuario(codigo) {
 
 //editar Usuarios
 function editarUsuario() {
-debugger;
+    debugger;
     $("#editar-usuario").click(function()
 
         {
