@@ -6,6 +6,9 @@ function prepararUsuario() {
     $(".editar").click(function() {
         CargarValoresUsuario(this.id);
     });
+    $("#vista").click(function() {
+        vistaUsuario(this.text);
+    });
 }
 
 //guardar Usuario
@@ -55,7 +58,7 @@ function mostrarUsuarios() {
 
         if (usuarios[i] != undefined) {
             usuario += "<tr>";
-            usuario += '<td class="lbl-cedula"><a data-toggle="modal" data-target="#miventana">' + usuarios[i].cedula + '</a></td>';
+            usuario += '<td class="lbl-cedula"><a data-toggle="modal" data-target="#vista-usuarios">' + usuarios[i].cedula + '</a></td>';
             usuario += '<td class="lbl-alias">' + usuarios[i].alias + '</td>';
             usuario += '<td class="lbl-nombre">' + usuarios[i].nombre + '</td>';
             usuario += '<td class="lbl-role">' + usuarios[i].role + '</td>';
@@ -191,4 +194,44 @@ function eliminarUsuarios() {
 
 
     });
+}
+
+
+function vistaUsuario(codigo) {
+
+    var cedula_usuario;
+    var alias_usuario;
+    var nombre_usuario;
+    var role_usuario;
+    var contrasena_usuario;
+
+    var usuarios = JSON.parse(localStorage.getItem('usuarios'));
+
+    var cedula_usuario = codigo;
+
+
+
+    for (var i = 0; i < usuarios.length; i++) {
+
+        if (usuarios[i] != undefined) {
+
+            if (usuarios[i].cedula == cedula_usuario) {
+
+                alias_usuario = usuarios[i].alias;
+                nombre_usuario = usuarios[i].nombre;
+                role_usuario = usuarios[i].role;
+                contrasena_usuario = usuarios[i].contrasena;
+
+            }
+
+        }
+    };
+
+
+    document.getElementById("cedula-vista").value = cedula_usuario;
+    document.getElementById("alias-vista").value = alias_usuario;
+    document.getElementById("nombre-vista").value = nombre_usuario;
+    document.getElementById("role-vista").value = role_usuario;
+    document.getElementById("contrasena-vista").value = contrasena_usuario;
+
 }

@@ -225,6 +225,7 @@ function cargarCarrera() {
 }
 
 function VistaEstudiante(codigo) {
+    debugger;
 
     var cedula_estudiante;
     var nombre_estudiante;
