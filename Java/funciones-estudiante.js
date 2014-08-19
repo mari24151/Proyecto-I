@@ -251,11 +251,7 @@ function VistaEstudiante(codigo) {
             }
 
         }
-
-
     };
-
-
     document.getElementById("cedula-vista").value = cedula_estudiante;
     document.getElementById("nombre-vista").value = nombre_estudiante;
     document.getElementById("carrera-vista").value = carrera_estudiante;
