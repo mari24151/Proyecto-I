@@ -1,12 +1,14 @@
 // funcion que llama a agregar para luego mostrar en la ventana  
 function prepararUsuario() {
+    // llama funcion al dar click en el botton
     $("#agregar").click(function() {
         guardarUsuario();
     });
+    // llama funcion al dar click en el botton
     $(".editar").click(function() {
         CargarValoresUsuario(this.id);
     });
-
+    // llama funcion al dar click en el botton
     $(".vista").click(function() {
         vistaUsuario(this.text);
     });
@@ -42,7 +44,7 @@ function guardarUsuario() {
 
     // volver guardar en localstoraage
     localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
+    // lo debuelve a la ventana 
     location.href = "Usuarios.html";
 }
 
@@ -51,12 +53,12 @@ function mostrarUsuarios() {
 
     //agregar las filas y columnas a la tabla
     var columnas = "<tr><th>Cedula</th><th>Usuario</th><th>Nombre</th><th>Role</th><th>Contraseña</th><th>Opciones</th></tr>";
-
+    // lee los usuarios
     var usuarios = JSON.parse(localStorage.getItem('usuarios'));
     var usuario = columnas;
     //agregar los usuarios a la tabla 
     for (var i = 0; i < usuarios.length; i++) {
-
+        //agregar de forma html la informacion
         if (usuarios[i] != undefined) {
             usuario += "<tr>";
             usuario += '<td class="lbl-cedula"><a class="vista" data-toggle="modal" data-target="#vista-usuarios">' + usuarios[i].cedula + '</a></td>';
@@ -81,23 +83,23 @@ function mostrarUsuarios() {
 
 // funcion de editar usuarios 
 function CargarValoresUsuario(codigo) {
-
+    // se define variables
     var cedula_usuario;
     var alias_usuario;
     var nombre_usuario;
     var role_usuario;
     var contrasena_usuario;
-
+    // se lee los usuarios
     var usuarios = JSON.parse(localStorage.getItem('usuarios'));
-
+    // cargar los valores
     var cedula_usuario = codigo;
 
 
-
+    // se recorre el arreglo
     for (var i = 0; i < usuarios.length; i++) {
-
+        // preguntar si es null
         if (usuarios[i] != undefined) {
-
+            // condicion de comprobar la informacion
             if (usuarios[i].cedula == cedula_usuario) {
 
                 alias_usuario = usuarios[i].alias;
@@ -110,7 +112,7 @@ function CargarValoresUsuario(codigo) {
         }
     };
 
-
+    // extraer la informacion
     document.getElementById("cedula").value = cedula_usuario;
     document.getElementById("alias").value = alias_usuario;
     document.getElementById("nombre").value = nombre_usuario;
@@ -121,7 +123,7 @@ function CargarValoresUsuario(codigo) {
 
 //editar Usuarios
 function editarUsuario() {
-    debugger;
+    //crear funcion al usuario
     $("#editar-usuario").click(function()
 
         {
@@ -132,19 +134,19 @@ function editarUsuario() {
 
             var usuarios = JSON.parse(localStorage.getItem('usuarios'));
 
-
+            //devolver valor digitado
             cedula_usuario = document.getElementById('cedula').value;
             alias_usuario = document.getElementById('alias').value;
             nombre_usuario = document.getElementById('nombre').value;
             role_usuario = document.getElementById('role').value;
             contrasena_usuario = document.getElementById('contrasena').value;
 
-
+            // condicion de recorrer
             for (var i = 0; i < usuarios.length; i++) {
 
                 if (usuarios[i] != undefined) {
 
-
+                    // condicion de pregunta
                     if (usuarios[i].cedula == cedula_usuario) {
 
                         usuarios[i].alias = alias_usuario;
@@ -155,11 +157,11 @@ function editarUsuario() {
                     }
                 }
             };
-
+            // guardar los datos
             localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
+            // alerta
             alert('Usuario modificado con exito');
-
+            // refrescar
             location.reload(true);
 
         });
@@ -167,7 +169,7 @@ function editarUsuario() {
 
 //funcion que elimina los usuarios
 function eliminarUsuarios() {
-
+    // funcion para el boton 
     $(".eliminar").click(function() {
 
         var cedula_usuario = $(this).attr("id");
@@ -186,9 +188,9 @@ function eliminarUsuarios() {
             }
 
         };
-
+        // guardar los cambios
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
-
+        // alerta
         alert('Carrera eliminada');
 
         location.reload(true);
@@ -197,7 +199,7 @@ function eliminarUsuarios() {
     });
 }
 
-
+// caragar los valores para verlos
 function vistaUsuario(codigo) {
 
     var cedula_usuario;
@@ -211,7 +213,7 @@ function vistaUsuario(codigo) {
     var cedula_usuario = codigo;
 
 
-
+    // condicion de recorrer
     for (var i = 0; i < usuarios.length; i++) {
 
         if (usuarios[i] != undefined) {
@@ -228,7 +230,7 @@ function vistaUsuario(codigo) {
         }
     };
 
-
+    // cargar valores
     document.getElementById("cedula-vista").value = cedula_usuario;
     document.getElementById("alias-vista").value = alias_usuario;
     document.getElementById("nombre-vista").value = nombre_usuario;
