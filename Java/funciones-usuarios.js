@@ -58,7 +58,7 @@ function mostrarUsuarios() {
 
         if (usuarios[i] != undefined) {
             usuario += "<tr>";
-            usuario += '<td class="lbl-cedula"><a data-toggle="modal" data-target="#vista-usuarios">' + usuarios[i].cedula + '</a></td>';
+            usuario += '<td class="lbl-cedula"><a id="vista" data-toggle="modal" data-target="#vista-usuarios">' + usuarios[i].cedula + '</a></td>';
             usuario += '<td class="lbl-alias">' + usuarios[i].alias + '</td>';
             usuario += '<td class="lbl-nombre">' + usuarios[i].nombre + '</td>';
             usuario += '<td class="lbl-role">' + usuarios[i].role + '</td>';
